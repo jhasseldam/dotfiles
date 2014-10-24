@@ -1,0 +1,34 @@
+[user]
+  name = Roman Kuznetsov
+  email = kuznero@gmail.com
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  la = log --pretty=oneline --graph --abbrev-commit
+  l = log --pretty=oneline --graph --abbrev-commit --first-parent
+  br = branch
+  d = diff
+  dt = difftool --diff-filter=ACMRTUXB
+  m = merge
+  mt = mergetool
+  cl = clean -x -d -f
+[color]
+  ui = true
+[diff]
+  tool = bc3
+[difftool]
+  prompt = false
+[difftool "bc3"]
+  path = c:/program files (x86)/beyond compare 4/bcomp.exe
+[merge]
+  tool = bc3
+[mergetool]
+  prompt = false
+[mergetool "bc3"]
+  path = c:/program files (x86)/beyond compare 4/bcomp.exe
+[push]
+  default = simple

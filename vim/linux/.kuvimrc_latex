@@ -1,0 +1,15 @@
+" recognize latex format
+au BufEnter *.tex set filetype=tex
+au BufEnter *.tex set syntax=tex
+
+function! CompilePdfDocument(filename)
+  execute ":!pdflatex ".a:filename
+endfunction
+
+function! OpenPdfDocument(filename)
+  execute ":!xdg-open ".a:filename
+endfunction
+
+au BufEnter *.tex nnoremap <buffer> <F7> :call CompilePdfDocument(expand('%:p:t'))<CR>
+au BufEnter *.tex nnoremap <buffer> <S-F7> :call OpenPdfDocument(strpart(expand('%:p:t'), 0, strlen(expand('%:p:t')) - 3)."pdf")<CR>
+

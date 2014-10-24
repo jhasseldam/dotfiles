@@ -1,0 +1,72 @@
+" Common {{{1
+" remap leader
+" let mapleader = "`"
+" save current file
+:nnoremap <F2> :w<CR>
+" search in files
+:nnoremap <F3> :call SearchInFiles()<CR>
+:nnoremap <S-F3> :lclose<CR>
+" rename only one occurence of a word under cursor
+:nnoremap <C-h> :s/\<<C-r><C-w>\>//g<Left><Left>
+" rename all occurencies of a word under cursor
+:nnoremap <C-S-h> :%s/\<<C-r><C-w>\>//g<Left><Left>
+" close current file without saving it
+":nnoremap CC :q!<CR>
+" clearing highlighted search
+:nnoremap <leader><leader> :nohlsearch<CR>
+" user leader as colon
+":nnoremap <leader> :
+" save current file
+":nnoremap <C-S> :w<CR>
+" open file
+":nnoremap <C-O> :e.<CR>
+
+" Diff Current File {{{1
+:nnoremap _dt :diffthis<CR>
+:nnoremap _du :diffupdate<CR>
+:nnoremap _do :diffoff<CR>
+
+" Three-Way Merge {{{1
+:nnoremap _mr :diffget RE<CR>
+:nnoremap _mb :diffget BA<CR>
+:nnoremap _ml :diffget LO<CR>
+
+" " CamelCase Motion {{{1
+" map w <Plug>CamelCaseMotion_w
+" map b <Plug>CamelCaseMotion_b
+" map e <Plug>CamelCaseMotion_e
+" sunmap w
+" sunmap b
+" sunmap e
+" omap iw <Plug>CamelCaseMotion_iw
+" xmap iw <Plug>CamelCaseMotion_iw
+" omap ib <Plug>CamelCaseMotion_ib
+" xmap ib <Plug>CamelCaseMotion_ib
+" omap ie <Plug>CamelCaseMotion_ie
+" xmap ie <Plug>CamelCaseMotion_ie
+
+" Fuzzy Finder {{{1
+:nnoremap <C-j> :<C-u>FufFile **/<CR>
+
+" Errors view
+au BufEnter *.hs nnoremap <F12> :copen<CR> :set wrap<CR>
+au BufEnter *.hs nnoremap <S-F12> :cclose<CR>
+
+" NERDTree {{{1
+
+function! NTToggle()
+  if exists("t:NERDTreeBufName")
+    let s:ntree = bufwinnr(t:NERDTreeBufName)
+  else
+    let s:ntree = -1
+  endif
+  if (s:ntree != -1)
+    :NERDTreeClose
+  else
+    ":NERDTreeFind
+    :NERDTree %:p:h
+  endif
+endfunction
+
+:nmap <silent> <C-D> :call NTToggle()<CR>
+

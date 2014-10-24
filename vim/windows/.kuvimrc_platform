@@ -1,0 +1,4 @@
+function! OpenInBrowser( target )
+  execute ':silent !sensible-browser "'.a:target.'"'
+endfunction
+

@@ -1,0 +1,25 @@
+There are essentially two versions of wxWidgets:
+  1. 2.8.x (maintenance version) --- this is the version of choise
+  2. 2.9.x (plenty of new things)
+
+And consequently there are two versions of wxHaskell that supports different versions of wxWidgets:
+  1. 0.13 wrapping wxWidgets 2.8.x (maintenance version)
+  2. 0.90 wrapping wxWidgets 2.9.x
+
+[ Installation ]
+
+[ 1]. Prerequisites
+  - sudo apt-get install -y build-essential g++ libglu1-mesa-dev wx2.8-headers libwxgtk2.8-0 libwxgtk2.8-dev wx2.8-doc
+
+[ 2]. Setup links correctly
+  - cd /usr/include
+  - ls | grep wx # you should see a folder called wx-2.8 (comes with wx2.8-headers)
+  - sudo ln -sv wx-2.8/wx wx
+  - wx-config --cxxflags # this should produce compiling parameters
+  - wx-config --libs # this should produce library parameters
+
+[ 3]. Install wxHaskell
+  - cabal install wx-0.13.2.3
+
+[ 4]. Install wxFormBuilder
+  - sudo apt-get install wxformbuilder

@@ -1,0 +1,53 @@
+-- initial instructions were adopted from [http://www.scribd.com/doc/38034374/20100923-WxHaskell-Setup]
+
+There are essentially two versions of wxWidgets:
+  1. 2.8.x (maintenance version) --- this is the version of choise
+  2. 2.9.x (plenty of new things)
+
+And consequently there are two versions of wxHaskell that supports different versions of wxWidgets:
+  1. 0.13 wrapping wxWidgets 2.8.x (maintenance version)
+  2. 0.90 wrapping wxWidgets 2.9.x
+
+[ Installation ]
+
+[ 1]. Prerequisites
+  - Install MinGW
+    from [http://sourceforge.net/projects/mingw/files/]
+    into [C:\Bin\MinGW]
+    - C++ Compiler
+    - Developer Toolkit
+  - Copy wx-config.exe
+    from [http://wx-config-win.googlecode.com/svn/binary/wx-config.exe]
+    into [C:\Bin\wx-config]
+  - Install wxWidgets for Windows
+    from [http://prdownloads.sourceforge.net/wxwindows/wxMSW-2.8.12-Setup.exe]
+    into [C:\Bin\wxWidgets-2.8.12]
+  - Install wxPack with `MinGW GCC Only` option
+    from [https://github.com/rjpcomputing/wxpack/wiki]
+    into [C:\Bin\wxWidgets-2.8.12] (libraries sources path)
+  - Set environment variables:
+    - WXCFG=gcc_dll\mswu
+    - WXWIN=C:\Bin\wxWidgets-2.8.12
+    - PATH=...;C:\Bin\MinGW\msys\1.0\bin;C:\Bin\wx-config;C:\Bin\wxWidgets-2.8.12\lib\gcc_dll
+
+[ 2]. Install wxHaskell
+  - cabal update
+  - cabal install wx-0.13.2.3
+
+[ Notes ]
+
+Mind the Gaps…
+a) For some reason, when I first tried to run theHello.hstest program, I was greetedwith some ‘
+mingwm10.dll
+’ error nonsense. This was solved by making the following‘additional’ append to the
+PATH
+variable (see Section2.3for details on how to dothis):
+C:\Program Files\Haskell Platform\2010.2.0.0\mingw\bin
+b) If you want to avoid any nasty ‘
+can’t load .so/.DLL for: std c++
+’ tantrums, Irecommend using GHC (as opposed to GHCi) to compile your wxWidgetsexecutables, eg:
+> ghc –package wx Hello.hs –o hello
+…or, if you don’t want the annoying
+Command Prompt
+popping up every time yourun your executable:
+> ghc–optl-mwindows–package wx Hello.hs –o hello

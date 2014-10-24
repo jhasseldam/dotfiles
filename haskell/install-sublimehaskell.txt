@@ -1,0 +1,50 @@
+[ Installation ]
+
+[ 1]. Prerequisites
+  - # install Sublime Text 2
+  - # install package manager from [https://sublime.wbond.net/installation#st2]
+  - # restart Sublime Text 2
+  - cabal install ghc-mod
+  - # on linux
+    - cabal install hdevtools
+  - # on windows
+    - git clone https://github.com/mvoidex/hdevtools.git
+    - cd hdevtools
+    - cabal install --dependencies-only
+    - cabal configure
+    - cabal install
+  - cabal install hlint
+  - cabal install hoogle
+  - # on windows
+    - Extrace wget
+      from [http://gnuwin32.sourceforge.net/packages/wget.htm]
+      into [C:\Bin\GnuWin32]
+    - Extrace tar
+      from [http://gnuwin32.sourceforge.net/packages/gtar.htm]
+      into [C:\Bin\GnuWin32]
+    - Extrace gzip
+      from [http://gnuwin32.sourceforge.net/packages/gzip.htm]
+      into [C:\Bin\GnuWin32]
+    - Extrace libintl-2 and libintl-3
+      from [http://sourceforge.net/projects/gnuwin32/files/libintl/0.11.5-2/libintl-0.11.5-2-bin.zip/download] and
+      from [http://sourceforge.net/projects/gnuwin32/files/libintl/0.14.4/libintl-0.14.4-bin.zip/download] respectively
+      into [C:\Bin\GnuWin32]
+    - Extrace libiconv
+      from [http://gnuwin32.sourceforge.net/packages/libiconv.htm]
+      into [C:\Bin\GnuWin32]
+    - # Change PATH environment variable to include the following paths (order matters):
+      [C:\Bin\GnuWin32\bin]
+    - # In case you have Git installed, make sure [C:\Bin\GnuWin32\bin] path is resolved first
+    - Install Visual C++ 2008 Redistributables
+      from [http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF]
+    - Install Win32 OpenSSL ([http://slproweb.com/products/Win32OpenSSL.html])
+      from [http://slproweb.com/download/Win32OpenSSL_Light-1_0_1e.exe]
+      into [C:\Bin\OpenSSL-Win32]
+      with `Copy OpenSSL DLLs to: The Windows system directory` option
+    - # Restart your console to take new variables into account
+  - hoogle data # Make sure not to use PowerShell (on Windows) as it has wget defined as alias to Invoke-WebRequest
+  - cabal install haddock
+
+[ 2]. Install SublimeHaskell plugin
+  - # CTRL-SHIFT-P, then type `Install Package`, Enter
+  - # Type `SublimeHaskell`, Enter

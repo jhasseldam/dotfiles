@@ -1,0 +1,30 @@
+[user]
+  name = Roman Kuznetsov
+  email = kuznero@gmail.com
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  la = log --pretty=oneline --graph --abbrev-commit
+  l = log --pretty=oneline --graph --abbrev-commit --first-parent
+  br = branch
+  d = diff
+  dt = difftool --diff-filter=ACMRTUXB
+  m = merge
+  mt = mergetool
+  cl = clean -x -d -f
+[color]
+  ui = true
+[diff]
+  tool = kdiff3
+[difftool]
+  prompt = false
+[merge]
+  tool = kdiff3
+[mergetool]
+  prompt = false
+[push]
+  default = simple

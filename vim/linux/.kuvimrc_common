@@ -1,0 +1,26 @@
+function! GetCurrentFileName()
+  let result = expand( '%:t' )
+  return result
+endfunction
+
+function! GetCurrentFilePath()
+  let result = expand( '%:p:h' )
+  return result
+endfunction
+
+function! CreateFolder( path )
+  if isdirectory( a:path ) == 0
+    call mkdir( a:path, "p" )
+  endif
+endfunction
+
+function! SearchInFiles()
+  let result = input( "Search Pattern: " )
+  let target = input( "Filename Pattern: " )
+  try
+    execute ":silent lvim /" . result . "/gj **/" . target
+    lopen
+  catch /.*/
+  endtry
+endfunction
+

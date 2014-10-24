@@ -1,4 +1,3 @@
-config
-======
+# Configuration Settings
 
-Developer tool chain configuration
+Developer tool chain configuration settings.

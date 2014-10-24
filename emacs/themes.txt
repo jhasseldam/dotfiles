@@ -1,0 +1,11 @@
+Nice Themes:
+  * odersky
+  * spolsky
+  * tangotango
+  * toxi
+  * tronesque
+  * underwater
+  * zenburn
+  * deeper-blue
+  * dichromacy
+  * tsdh-dark
