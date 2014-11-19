@@ -101,16 +101,15 @@ set_prompt ()
 
   PS1=""
   PS1+="$BPurple${debian_chroot:+($debian_chroot)}\u@\h "
-  PS1+="$Red($Lambda) "
   PS1+="$Color_Off[$BCyan\w$Color_Off]"
   if [[ $LastStatusCode == 0 ]]; then
     PS1+="\n"
     # PS1+="$BCyan$CheckMark "
-    PS1+="$BBlue#"
+    PS1+="$BBlue$Lambda"
   else
     PS1+=" $Color_Off(error: $BRed$LastStatusCode$Color_Off)\n"
     # PS1+="$BRed$ErrorMark "
-    PS1+="$BRed#"
+    PS1+="$BRed$Lambda"
   fi
   PS1+="$Color_Off "
 }
