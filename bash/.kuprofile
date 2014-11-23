@@ -18,10 +18,10 @@ e()
   nautilus ./ > /dev/null 2>&1 &
 }
 
-start-sshagent() {
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_rsa
-}
+# start-sshagent() {
+#   eval "$(ssh-agent -s)"
+#   ssh-add ~/.ssh/id_rsa
+# }
 
 prompt() {
   local __result=$1
@@ -351,3 +351,4 @@ set_prompt ()
   PS1+="$Color_Off "
 }
 PROMPT_COMMAND='set_prompt'
+
