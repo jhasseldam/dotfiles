@@ -3,7 +3,7 @@
   email = kuznero@gmail.com
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = 'C:/Program Files/Sublime Text 3/subl.exe' -w
 [alias]
   st = status
   ci = commit
