@@ -1,6 +1,6 @@
 ## ls ## {{{
 alias ls='ls -hF --color=auto'
-alias ll='ls -lah'
+alias ll='ls -lh'
 alias lr='ls -R'                    # recursive ls
 alias la='ll -A'
 alias lx='ll -BX'                   # sort by extension
