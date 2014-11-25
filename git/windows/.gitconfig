@@ -12,7 +12,7 @@
   l = log --pretty=oneline --graph --abbrev-commit --first-parent
   br = branch
   d = diff
-  dt = difftool --diff-filter=ACMRTUXB
+  dt = difftool --diff-filter=ACMRTUXB --prompt
   m = merge
   mt = mergetool
   cl = clean -x -d -f
