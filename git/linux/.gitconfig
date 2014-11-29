@@ -3,7 +3,8 @@
   email = kuznero@gmail.com
 [core]
   excludesfile = ~/.gitignore
-  editor = subl -n -w
+  # editor = subl -n -w
+  editor = vim
 [alias]
   st = status
   ci = commit
