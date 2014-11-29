@@ -25,10 +25,10 @@ if filereadable( s:rc )
 endif
 
 " Haskell Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_haskell" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
+"let s:rc = expand( "$HOME/.kuvimrc_haskell" )
+"if filereadable( s:rc )
+"  execute ':source '.s:rc
+"endif
 
 " Mapping Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_mapping" )
@@ -57,27 +57,35 @@ endif
 " setup runtime path to vundle
 let &runtimepath.=','.s:rc
 call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'mbbill/fencview'
-Bundle 'scrooloose/nerdtree'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'csharp.vim'
-Bundle 'PProvost/vim-ps1'
+Plugin 'gmarik/vundle'
+Plugin 'mbbill/fencview'
+Plugin 'scrooloose/nerdtree'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+Plugin 'csharp.vim'
+Plugin 'PProvost/vim-ps1'
+Plugin 'mhinz/vim-signify'
+Plugin 'scrooloose/syntastic'
 " Color schemes
-Bundle 'kuznero/kuvim-themes'
-Bundle 'flazz/vim-colorschemes'
-" Haskell
-"Bundle 'bitc/vim-hdevtools'
-Bundle 'lukerandall/haskellmode-vim'
-"Bundle 'Shougo/vimproc.vim'
-"Bundle 'eagletmt/ghcmod-vim'
-Bundle 'scrooloose/syntastic'
-"Bundle 'ujihisa/neco-ghc'
-"Bundle 'Hoogle'
+"Plugin 'kuznero/kuvim-themes'
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
+" Haske ll
+"Plugin 'bitc/vim-hdevtools'
+"Plugin 'lukerandall/haskellmode-vim'
+"Plugin 'Shougo/vimproc.vim'
+"Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'ujihisa/neco-ghc'
+"Plugin 'Hoogle'
 if s:justCloned == 1
   " Install all referenced bundles
-  execute ':silent BundleInstall!'
+  execute ':silent PluginInstall!'
 endif
 
 " General {{{1
@@ -108,10 +116,7 @@ if has( "gui_running" )
   " enable current line highlight
   set nocursorline
   " load a colorscheme
-  colorscheme kuznero-dark-regular
-    " badwolf
-    " autumnleaf
-    " kuznero-dark-regular
+  colorscheme base16-apathy
   " startup maximized
   "au GUIEnter * simalt ~x
   " set window size explicitly
@@ -127,21 +132,8 @@ if has( "gui_running" )
 endif
 " display the current mode
 set showmode
-" customize status line
-if has( "statusline" )
-  " always show status line
-  set laststatus=2
-  " filename
-  set statusline=%<%f\
-  " options
-  set statusline+=%w%h%m%r
-  " filetype
-  set statusline+=\ [%{&ff}/%Y]
-  " current dir
-  set statusline+=\ [%{getcwd()}]
-  " right aligned file nav info
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%%
-endif
+" always show status line
+set laststatus=2
 " backspace for dummys
 set backspace=indent,eol,start
 " no extra spaces between rows
