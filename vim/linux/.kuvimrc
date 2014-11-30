@@ -72,7 +72,7 @@ call vundle#rc()
   Plugin 'mhinz/vim-signify'
 " [ COLOR SCHEMES ]
   Plugin 'chriskempson/base16-vim'
-  "Plugin 'kuznero/kuvim-themes'
+  Plugin 'kuznero/kuvim-themes'
   "Plugin 'flazz/vim-colorschemes'
 " [ HASKELL ]
   Plugin 'scrooloose/syntastic'
@@ -116,7 +116,8 @@ if has( "gui_running" )
   " enable current line highlight
   set nocursorline
   " load a colorscheme
-  colorscheme base16-apathy
+  colorscheme kuznero-dark-regular
+  "colorscheme base16-apathy
   " startup maximized
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
