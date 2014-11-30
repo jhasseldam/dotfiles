@@ -56,32 +56,33 @@ endif
 " setup runtime path to vundle
 let &runtimepath.=','.s:rc
 call vundle#rc()
-Plugin 'gmarik/vundle'
-Plugin 'mbbill/fencview'
-Plugin 'scrooloose/nerdtree'
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
-let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
-Plugin 'csharp.vim'
-Plugin 'PProvost/vim-ps1'
-Plugin 'mhinz/vim-signify'
-Plugin 'scrooloose/syntastic'
-" Color schemes
-"Plugin 'kuznero/kuvim-themes'
-"Plugin 'flazz/vim-colorschemes'
-Plugin 'chriskempson/base16-vim'
-" Haske ll
-"Plugin 'bitc/vim-hdevtools'
-"Plugin 'lukerandall/haskellmode-vim'
-"Plugin 'Shougo/vimproc.vim'
-"Plugin 'eagletmt/ghcmod-vim'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'ujihisa/neco-ghc'
-"Plugin 'Hoogle'
+" [ GENERAL ]
+  Plugin 'gmarik/vundle'
+  Plugin 'mbbill/fencview'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'L9'
+  Plugin 'FuzzyFinder'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'bling/vim-bufferline'
+  Plugin 'bling/vim-airline'
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme='powerlineish'
+  Plugin 'csharp.vim'
+  Plugin 'PProvost/vim-ps1'
+  Plugin 'mhinz/vim-signify'
+" [ COLOR SCHEMES ]
+  Plugin 'chriskempson/base16-vim'
+  "Plugin 'kuznero/kuvim-themes'
+  "Plugin 'flazz/vim-colorschemes'
+" [ HASKELL ]
+  Plugin 'scrooloose/syntastic'
+  Plugin 'Shougo/vimproc'
+  Plugin 'eagletmt/ghcmod-vim'
+  "Plugin 'bitc/vim-hdevtools'
+  "Plugin 'lukerandall/haskellmode-vim'
+  "Plugin 'Shougo/vimproc.vim'
+  "Plugin 'ujihisa/neco-ghc'
+  "Plugin 'Hoogle'
 if s:justCloned == 1
   " Install all referenced bundles
   execute ':silent PluginInstall!'
