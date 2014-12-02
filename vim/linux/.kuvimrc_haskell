@@ -1,13 +1,27 @@
+" neco-ghc
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" ghc-mod
+au BufEnter *.hs nnoremap <buffer> <F12> :GhcModInfoPreview<CR>
+au BufEnter *.hs nnoremap <buffer> <C-F12> :GhcModInfo<CR>
+au BufEnter *.hs nnoremap <buffer> <F11> :GhcModTypeInsert<CR>
+au BufEnter *.hs nnoremap <buffer> <F7> :GhcModCheck<CR>
+au BufEnter *.hs nnoremap <buffer> <F8> :GhcModLint<CR>
+
+"*************************************************************
+" -- ghc-mod plugin
+"*************************************************************
+
 " use ghc functionality for haskell files
-au BufEnter *.hs compiler ghc
+"au BufEnter *.hs compiler ghc
 "au BufEnter *.hs nnoremap <buffer> <F7> :make<CR>
 "au BufEnter *.hs nnoremap <buffer> <F5> :!runhaskell %<CR>
 
 " use ghc functionality for literate haskell files
-au BufEnter *.lhs compiler ghc
+"au BufEnter *.lhs compiler ghc
 "au BufEnter *.lhs nnoremap <buffer> <F7> :make<CR>
 "au BufEnter *.lhs nnoremap <buffer> <F5> :!runhaskell %<CR>
 
 " configure browser for haskell_doc.vim
-let g:haddock_browser = "sensible-browser"
+"let g:haddock_browser = "sensible-browser"
 
