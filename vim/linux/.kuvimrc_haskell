@@ -1,21 +1,13 @@
 " use ghc functionality for haskell files
 au BufEnter *.hs compiler ghc
-au BufEnter *.hs nnoremap <buffer> <F7> :make<CR>
-au BufEnter *.hs nnoremap <buffer> <F5> :!runhaskell %<CR>
+"au BufEnter *.hs nnoremap <buffer> <F7> :make<CR>
+"au BufEnter *.hs nnoremap <buffer> <F5> :!runhaskell %<CR>
+
 " use ghc functionality for literate haskell files
 au BufEnter *.lhs compiler ghc
-au BufEnter *.lhs nnoremap <buffer> <F7> :make<CR>
-au BufEnter *.lhs nnoremap <buffer> <F5> :!runhaskell %<CR>
-
-"" use proper highlighting for Shakespearian file types
-"au BufEnter *.hamlet set syntax=html
-"au BufEnter *.julius set syntax=javascript
-"au BufEnter *.lucius set syntax=css
-"au BufEnter *.casius set syntax=css
+"au BufEnter *.lhs nnoremap <buffer> <F7> :make<CR>
+"au BufEnter *.lhs nnoremap <buffer> <F5> :!runhaskell %<CR>
 
 " configure browser for haskell_doc.vim
 let g:haddock_browser = "sensible-browser"
-
-"" configure GHC compiler
-"let g:ghc = "\"C:/Program Files (x86)/Haskell Platform/2013.2.0.0/bin/ghc.exe\""
 
