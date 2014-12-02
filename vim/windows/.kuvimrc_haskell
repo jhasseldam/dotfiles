@@ -8,8 +8,13 @@ au BufEnter *.hs nnoremap <buffer> <F11> :GhcModTypeInsert<CR>
 au BufEnter *.hs nnoremap <buffer> <F7> :GhcModCheck<CR>
 au BufEnter *.hs nnoremap <buffer> <F8> :GhcModLint<CR>
 
+" try gf on import line, or ctrl-x ctrl-i, or [I, [i, ..
+autocmd FileType haskell setlocal include=^import\\s*\\(qualified\\)\\?\\s*
+autocmd FileType haskell setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.'
+autocmd FileType haskell setlocal suffixesadd=hs,lhs,hsc
+
 "*************************************************************
-" -- ghc-mod plugin
+" -- haskellmode plugin
 "*************************************************************
 
 " use ghc functionality for haskell files
