@@ -107,6 +107,11 @@ set nobackup
 set noswapfile
 " disable undo files
 set noundofile
+" enable spell check
+set spell spelllang=en
+" text width
+set textwidth=79
+set colorcolumn=80
 
 " UI {{{1
 " gui specific settings
