@@ -71,6 +71,7 @@ call vundle#rc()
   Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
   Plugin 'mhinz/vim-signify'
+  Plugin 'nelstrom/vim-markdown-folding'
 " [ COLOR SCHEMES ]
   Plugin 'chriskempson/base16-vim'
   Plugin 'kuznero/kuvim-themes'
