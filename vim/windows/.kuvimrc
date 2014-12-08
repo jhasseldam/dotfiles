@@ -126,7 +126,7 @@ if has( "gui_running" )
   "au GUIEnter * simalt ~x
   " set window size explicitly
   set lines=40
-  set columns=140
+  set columns=100
   " remove menu bar
   set guioptions-=m
   " remove toolbar

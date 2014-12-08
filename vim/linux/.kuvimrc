@@ -125,7 +125,7 @@ if has( "gui_running" )
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
   set lines=40
-  set columns=140
+  set columns=100
   " remove menu bar
   set guioptions-=m
   " remove toolbar
