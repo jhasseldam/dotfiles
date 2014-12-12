@@ -102,17 +102,16 @@ set fileencodings=utf-8
 set history=1000
 " disable spell checking
 set nospell
+" set spell spelllang=en
 " disable backups
 set nobackup
 " disable swap files
 set noswapfile
 " disable undo files
 set noundofile
-" enable spell check
-set spell spelllang=en
 " text width
-set textwidth=79
-set colorcolumn=80
+set textwidth=99
+set colorcolumn=100
 
 " UI {{{1
 " gui specific settings
@@ -126,7 +125,7 @@ if has( "gui_running" )
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
   set lines=40
-  set columns=100
+  set columns=120
   " remove menu bar
   set guioptions-=m
   " remove toolbar
