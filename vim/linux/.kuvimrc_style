@@ -1,0 +1,17 @@
+" GUI font
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+" Download patched fonts from https://github.com/Lokaltog/powerline-fonts
+
+" color scheme
+if has( "gui_running" )
+  colorscheme kuznero-light-regular
+  "colorscheme base16-apathy
+endif
+
+" Working with plugins: 'bling/vim-bufferline', 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+" let g:airline_theme='powerlineish'
+" let g:airline_theme='base16'
+" let g:airline_theme='molokai'
+let g:airline_theme='light'
+

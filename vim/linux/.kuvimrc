@@ -36,12 +36,6 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
-" Fonts Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_fonts" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
 " Environment {{{1
 " by iMproved
 set nocompatible
@@ -65,8 +59,6 @@ call vundle#rc()
   Plugin 'tpope/vim-fugitive'
   Plugin 'bling/vim-bufferline'
   Plugin 'bling/vim-airline'
-  let g:airline_powerline_fonts = 1
-  let g:airline_theme='powerlineish'
   Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
   Plugin 'mhinz/vim-signify'
@@ -118,9 +110,6 @@ set colorcolumn=100
 if has( "gui_running" )
   " enable current line highlight
   set nocursorline
-  " load a colorscheme
-  colorscheme kuznero-dark-regular
-  "colorscheme base16-apathy
   " startup maximized
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
@@ -185,4 +174,10 @@ set softtabstop=2
 " Diff {{{1
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
+
+" Style Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_style" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
 
