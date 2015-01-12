@@ -2,7 +2,7 @@
 " remap leader
 " let mapleader = "`"
 " save current file
-:nnoremap <F2> :w<CR>
+" :nnoremap <F2> :w<CR>
 " search in files
 :nnoremap <F3> :call SearchInFiles()<CR>
 :nnoremap <S-F3> :lclose<CR>
