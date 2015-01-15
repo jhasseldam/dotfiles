@@ -115,8 +115,8 @@ if has("gui_running")
   " startup maximized
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
-  set lines=40
-  set columns=120
+  set columns=140
+  set lines=45
   " remove menu bar
   set guioptions-=m
   " remove toolbar
