@@ -152,7 +152,7 @@ set nofoldenable
 set list
 " highlight problematic whitespace
 "set listchars=eol:$,tab:>-,trail:.,extends:#,nbsp:.
-set listchars=tab:>-,trail:.,extends:#,nbsp:.
+set listchars=tab:>-,trail:.,extends:#,nbsp:.,eol:¬
 "set linebreak
 "set showbreak=>>
 
