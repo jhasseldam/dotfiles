@@ -1,10 +1,10 @@
 " GUI font
-set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cRUSSIAN
+set guifont=DejaVu_Sans_Mono_for_Powerline:h10:cRUSSIAN
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme
 if has( "gui_running" )
-  colorscheme kuznero-black-regular
+  colorscheme kuznero-dark-regular
   "colorscheme base16-apathy
 endif
 

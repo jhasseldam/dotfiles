@@ -41,7 +41,7 @@ endif
 set nocompatible
 
 " Vundle {{{1
-let s:rc = expand( "$HOME/.vim/bundle/vundle" )
+let s:rc = expand("$HOME/.vim/bundle/vundle")
 let s:justCloned = 0
 if !isdirectory( s:rc )
   execute ':silent !git clone https://github.com/gmarik/vundle.git "'.s:rc.'"'
@@ -58,7 +58,9 @@ call vundle#rc()
   Plugin 'FuzzyFinder'
   Plugin 'tpope/vim-fugitive'
   Plugin 'bling/vim-bufferline'
+if has("gui_running")
   Plugin 'bling/vim-airline'
+endif
   Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
   Plugin 'mhinz/vim-signify'
@@ -107,7 +109,7 @@ set colorcolumn=100
 
 " UI {{{1
 " gui specific settings
-if has( "gui_running" )
+if has("gui_running")
   " enable current line highlight
   set nocursorline
   " startup maximized
@@ -151,7 +153,11 @@ set nofoldenable
 set list
 " highlight problematic whitespace
 "set listchars=eol:$,tab:>-,trail:.,extends:#,nbsp:.
-set listchars=tab:>-,trail:.,extends:#,nbsp:.,eol:¬
+if has("gui_running")
+  set listchars=tab:>-,trail:.,extends:#,nbsp:.,eol:¬
+else
+  set listchars=tab:>-,trail:.,extends:#,nbsp:.
+endif
 "set linebreak
 "set showbreak=>>
 
