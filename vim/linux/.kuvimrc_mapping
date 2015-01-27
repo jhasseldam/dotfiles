@@ -21,6 +21,9 @@
 " open file
 ":nnoremap <C-O> :e.<CR>
 
+" Auto detect current file encoding
+:nnoremap <leader>f :FencAutoDetect<CR>
+
 " Diff Current File {{{1
 :nnoremap _dt :diffthis<CR>
 :nnoremap _du :diffupdate<CR>
