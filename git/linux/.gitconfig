@@ -27,5 +27,3 @@
   tool = bc3
 [mergetool]
   prompt = false
-[push]
-  default = simple
