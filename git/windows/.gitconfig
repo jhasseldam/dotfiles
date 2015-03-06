@@ -31,3 +31,5 @@
   prompt = false
 [mergetool "bc3"]
   path = c:/program files (x86)/beyond compare 4/bcomp.exe
+[push]
+  default = simple
