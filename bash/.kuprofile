@@ -358,5 +358,6 @@ set_prompt ()
   PS1+="$Color_Off "
 }
 PROMPT_COMMAND='set_prompt'
+pathadd $HOME/bin
 pathadd $HOME/bin/ghc/7.8.4/bin
 pathadd $HOME/.cabal/bin
