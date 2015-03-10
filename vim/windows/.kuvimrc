@@ -112,7 +112,7 @@ set colorcolumn=100
 " gui specific settings
 if has("gui_running")
   " enable current line highlight
-  set nocursorline
+  set cursorline
   " startup maximized
   "au GUIEnter * simalt ~x
   " set window size explicitly

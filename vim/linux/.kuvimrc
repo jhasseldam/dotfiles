@@ -111,7 +111,7 @@ set colorcolumn=100
 " gui specific settings
 if has("gui_running")
   " enable current line highlight
-  set nocursorline
+  set cursorline
   " startup maximized
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
