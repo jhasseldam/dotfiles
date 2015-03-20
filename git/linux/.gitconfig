@@ -5,6 +5,7 @@
   excludesfile = ~/.gitignore
   # editor = subl -n -w
   editor = vim
+  autocrlf = input
 [alias]
   st = status
   ci = commit

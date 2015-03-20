@@ -5,6 +5,7 @@
   excludesfile = ~/.gitignore
   # editor = 'C:/Program Files/Sublime Text 3/subl.exe' -w
   editor = vim
+  autocrlf = input
 [alias]
   st = status
   ci = commit
