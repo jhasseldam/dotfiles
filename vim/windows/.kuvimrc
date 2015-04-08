@@ -150,8 +150,8 @@ set smartcase
 set foldmethod=marker
 " auto fold enabled
 set nofoldenable
-" show list characters
-set list
+" do not show list characters
+set nolist
 " highlight problematic whitespace
 "set listchars=eol:$,tab:>-,trail:.,extends:#,nbsp:.
 if has("gui_running")

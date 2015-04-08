@@ -4,7 +4,7 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 
 " color scheme
 if has( "gui_running" )
-  colorscheme kuznero-darkblue-regular
+  colorscheme kuznero-light-bold
   "colorscheme base16-apathy
 endif
 

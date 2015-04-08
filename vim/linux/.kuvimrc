@@ -43,7 +43,7 @@ set nocompatible
 " Vundle {{{1
 let s:rc = expand("$HOME/.vim/bundle/vundle")
 let s:justCloned = 0
-if !isdirectory( s:rc )
+if !isdirectory(s:rc)
   execute ':silent !git clone https://github.com/gmarik/vundle.git "'.s:rc.'"'
   let s:justCloned = 1
 endif
@@ -58,9 +58,9 @@ call vundle#rc()
   Plugin 'FuzzyFinder'
   Plugin 'tpope/vim-fugitive'
   Plugin 'bling/vim-bufferline'
-if has("gui_running")
-  Plugin 'bling/vim-airline'
-endif
+  " if has("gui_running")
+  "   Plugin 'bling/vim-airline'
+  " endif
   Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
   Plugin 'mhinz/vim-signify'
@@ -116,7 +116,7 @@ if has("gui_running")
   "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
   set columns=140
-  set lines=45
+  set lines=35
   " remove menu bar
   set guioptions-=m
   " remove toolbar
@@ -149,8 +149,8 @@ set smartcase
 set foldmethod=marker
 " auto fold enabled
 set nofoldenable
-" show list characters
-set list
+" do not show list characters
+set nolist
 " highlight problematic whitespace
 "set listchars=eol:$,tab:>-,trail:.,extends:#,nbsp:.
 if has("gui_running")
