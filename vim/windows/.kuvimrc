@@ -59,9 +59,9 @@ call vundle#rc()
   Plugin 'FuzzyFinder'
   Plugin 'tpope/vim-fugitive'
   Plugin 'bling/vim-bufferline'
-if has("gui_running")
-  Plugin 'bling/vim-airline'
-endif
+  " if has("gui_running")
+  "   Plugin 'bling/vim-airline'
+  " endif
   Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
   Plugin 'mhinz/vim-signify'
@@ -117,7 +117,7 @@ if has("gui_running")
   "au GUIEnter * simalt ~x
   " set window size explicitly
   set columns=140
-  set lines=45
+  set lines=35
   " remove menu bar
   set guioptions-=m
   " remove toolbar
