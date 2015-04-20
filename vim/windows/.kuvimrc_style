@@ -1,10 +1,10 @@
 " GUI font
-set guifont=Consolas:h11:cRUSSIAN
+set guifont=PragmataPro:h11:cRUSSIAN
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme
 if has( "gui_running" )
-  colorscheme kuznero-light-bold
+  colorscheme kuznero-darkblue-regular
   "colorscheme base16-apathy
 endif
 
