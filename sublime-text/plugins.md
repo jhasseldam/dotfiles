@@ -4,3 +4,5 @@
 * Git
 * SideBarEnhancements
 * Theme - Glacier
+* PowerShell
+* SublimeREPL
