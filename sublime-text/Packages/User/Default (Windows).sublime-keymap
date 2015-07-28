@@ -4,5 +4,6 @@
   { "keys": ["alt+w"], "command": "close" },
   { "keys": ["ctrl+alt+w"], "command": "toggle_setting", "args" : {"setting": "word_wrap"} },
   { "keys": ["ctrl+alt+n"], "command": "new_window" },
-  { "keys": ["alt+."], "command": "expand_selection_to_paragraph" }
+  { "keys": ["alt+."], "command": "expand_selection_to_paragraph" },
+  { "keys": ["ctrl+e"], "command": "recent_active_files" }
 ]
