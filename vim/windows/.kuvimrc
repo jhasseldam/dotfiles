@@ -107,6 +107,9 @@ set noundofile
 " text width
 set textwidth=99
 set colorcolumn=100
+" open new buffers to the right and below current buffer
+set splitright
+set splitbelow
 
 " UI {{{1
 " gui specific settings
