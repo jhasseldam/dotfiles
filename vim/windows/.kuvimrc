@@ -24,11 +24,11 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
-" Haskell Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_haskell" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
+"" Haskell Include {{{1
+"let s:rc = expand( "$HOME/.kuvimrc_haskell" )
+"if filereadable( s:rc )
+"  execute ':source '.s:rc
+"endif
 
 " Mapping Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_mapping" )
@@ -73,8 +73,8 @@ call vundle#rc()
 " [ HASKELL ]
   Plugin 'scrooloose/syntastic'
   Plugin 'Shougo/vimproc'
-  Plugin 'eagletmt/ghcmod-vim'
-  Plugin 'eagletmt/neco-ghc'
+  "Plugin 'eagletmt/ghcmod-vim'
+  "Plugin 'eagletmt/neco-ghc'
   let g:necoghc_enable_detailed_browse = 1
   "Plugin 'Hoogle'
 if s:justCloned == 1
