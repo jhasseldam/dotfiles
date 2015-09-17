@@ -359,7 +359,4 @@ set_prompt ()
 }
 PROMPT_COMMAND='set_prompt'
 pathadd $HOME/bin
-pathadd $HOME/bin/ghc/7.8.4/bin
-pathadd $HOME/bin/ghc/7.10.1/bin
-pathadd $HOME/bin/ghc/7.10.2/bin
-pathadd $HOME/.cabal/bin
+pathadd $HOME/.local/bin
