@@ -1,5 +1,5 @@
 " GUI font
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=Droid\ Sans\ Mono\ 12
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme
