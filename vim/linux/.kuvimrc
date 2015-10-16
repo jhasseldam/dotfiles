@@ -53,29 +53,18 @@ call vundle#rc()
 " [ GENERAL ]
   Plugin 'gmarik/vundle'
   Plugin 'mbbill/fencview'
+  Plugin 'Shougo/vimproc'
   Plugin 'scrooloose/nerdtree'
   Plugin 'L9'
   Plugin 'FuzzyFinder'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'bling/vim-bufferline'
-  " if has("gui_running")
-  "   Plugin 'bling/vim-airline'
-  " endif
-  Plugin 'csharp.vim'
   Plugin 'PProvost/vim-ps1'
-  Plugin 'mhinz/vim-signify'
-  Plugin 'nelstrom/vim-markdown-folding'
 " [ COLOR SCHEMES ]
   Plugin 'chriskempson/base16-vim'
   Plugin 'kuznero/kuvim-themes'
-  "Plugin 'flazz/vim-colorschemes'
+" [ C# ]
+  Plugin 'csharp.vim'
 " [ HASKELL ]
   Plugin 'scrooloose/syntastic'
-  Plugin 'Shougo/vimproc'
-  Plugin 'eagletmt/ghcmod-vim'
-  Plugin 'eagletmt/neco-ghc'
-  let g:necoghc_enable_detailed_browse = 1
-  "Plugin 'Hoogle'
 if s:justCloned == 1
   " Install all referenced bundles
   execute ':silent PluginInstall!'
