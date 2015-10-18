@@ -58,6 +58,8 @@ call vundle#rc()
   Plugin 'L9'
   Plugin 'FuzzyFinder'
   Plugin 'PProvost/vim-ps1'
+  Plugin 'bling/vim-bufferline'
+  Plugin 'bling/vim-airline'
 " [ COLOR SCHEMES ]
   Plugin 'chriskempson/base16-vim'
   Plugin 'kuznero/kuvim-themes'
