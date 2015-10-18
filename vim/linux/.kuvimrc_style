@@ -3,9 +3,12 @@ set guifont=Droid\ Sans\ Mono\ 12
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme
+syntax enable
+colorscheme solarized
 if has( "gui_running" )
-  colorscheme kuznero-light-regular
-  "colorscheme base16-apathy
+  set background=light
+else
+  set background=dark
 endif
 
 " Working with plugins: 'bling/vim-bufferline', 'bling/vim-airline'

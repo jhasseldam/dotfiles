@@ -3,14 +3,17 @@ set guifont=Droid_Sans_Mono:h11:cRUSSIAN
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme
+syntax enable
+colorscheme solarized
 if has( "gui_running" )
-  colorscheme kuznero-darkblue-regular
-  "colorscheme base16-apathy
+  set background=light
+else
+  set background=dark
 endif
 
 " Working with plugins: 'bling/vim-bufferline', 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 " let g:airline_theme='powerlineish'
 " let g:airline_theme='base16'
-let g:airline_theme='molokai'
+" let g:airline_theme='molokai'
 " let g:airline_theme='light'

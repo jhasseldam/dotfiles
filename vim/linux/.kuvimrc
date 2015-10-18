@@ -61,8 +61,7 @@ call vundle#rc()
   Plugin 'bling/vim-bufferline'
   Plugin 'bling/vim-airline'
 " [ COLOR SCHEMES ]
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'kuznero/kuvim-themes'
+  Plugin 'altercation/vim-colors-solarized'
 " [ C# ]
   Plugin 'csharp.vim'
 " [ HASKELL ]
@@ -73,8 +72,6 @@ if s:justCloned == 1
 endif
 
 " General {{{1
-" syntax highlighting
-syntax on
 " enable filetype detection, plus loading of filetype plugins
 filetype plugin indent on
 " automatically enable mouse usage
