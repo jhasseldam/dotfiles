@@ -26,6 +26,14 @@ let g:cabal_indent_section = 2
 
 " [ eagletmt/ghcmod-vim ] {{{1
 
+au BufEnter *.hs nnoremap <buffer> <F1> :GhcModType<CR>
+au BufEnter *.hs nnoremap <buffer> <C-F1> :GhcModTypeClear<CR>
+au BufEnter *.hs nnoremap <buffer> <S-F1> :GhcModTypeInsert<CR>
+au BufEnter *.hs nnoremap <buffer> <F2> :GhcModInfo<CR>
+au BufEnter *.hs nnoremap <buffer> <C-F2> :GhcModInfoPreview<CR>
+au BufEnter *.hs nnoremap <buffer> <F7> :GhcModCheck<CR>
+au BufEnter *.hs nnoremap <buffer> <C-F7> :GhcModLint<CR>
+
 " If you'd like to give GHC options, set g:ghcmod_ghc_options.
 " let g:ghcmod_ghc_options = ['-idir1', '-idir2']
 
@@ -42,12 +50,15 @@ let g:cabal_indent_section = 2
 " If you'd like to pass options to hlint, set g:ghcmod_hlint_options.
 " let g:ghcmod_hlint_options = ['--ignore=Redundant $']
 
-" You can run check and/or lint asynchronously. This would be useful when you'd like to run check and/or lint automatically (especially on BufWritePost).
+" You can run check and/or lint asynchronously. This would be useful when you'd like to run check
+" and/or lint automatically (especially on BufWritePost).
+
 " :GhcModCheckAsync
 " :GhcModLintAsync
 " :GhcModCheckAndLintAsync
 
 " You can see the expansion of splices by :GhcModExpand and they are available in quickfix window.
+
 " :GhcModExpand
 
 " [ scrooloose/syntastic ] {{{1
