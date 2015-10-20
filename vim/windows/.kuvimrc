@@ -63,9 +63,12 @@ call vundle#rc()
   Plugin 'bling/vim-airline'
 " [ COLOR SCHEMES ]
   Plugin 'altercation/vim-colors-solarized'
+  Plugin 'kuznero/kuvim-themes'
 " [ C# ]
   Plugin 'csharp.vim'
 " [ HASKELL ]
+  Plugin 'neovimhaskell/haskell-vim'
+  Plugin 'eagletmt/ghcmod-vim'
   Plugin 'scrooloose/syntastic'
 if s:justCloned == 1
   " Install all referenced bundles

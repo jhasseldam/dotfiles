@@ -1,39 +1,65 @@
-" make sure [~/.cabal/bin] is in $PATH variable
-let $PATH = $PATH . ':' . expand('~/.cabal/bin')
+filetype plugin indent on
 
-" neco-ghc
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" [ neovimhaskell/haskell-vim ] {{{1
 
-" ghc-mod
-au BufEnter *.hs nnoremap <buffer> <F12> :GhcModInfoPreview<CR>
-au BufEnter *.hs nnoremap <buffer> <C-F12> :GhcModInfo<CR>
-au BufEnter *.hs nnoremap <buffer> <F11> :GhcModTypeInsert<CR>
-au BufEnter *.hs nnoremap <buffer> <F7> :GhcModCheck<CR>
-au BufEnter *.hs nnoremap <buffer> <F8> :GhcModLint<CR>
+" to enable highlighting of forall
+let g:haskell_enable_quantification = 1
+" to enable highlighting of mdo and rec
+let g:haskell_enable_recursivedo = 1
+" to enable highlighting of proc
+let g:haskell_enable_arrowsyntax = 1
+" to enable highlighting of pattern
+let g:haskell_enable_pattern_synonyms = 1
+" to enable highlighting of type roles
+let g:haskell_enable_typeroles = 1
+" to enable highlighting of static
+let g:haskell_enable_static_pointers = 1
 
-" try gf on import line, or ctrl-x ctrl-i, or [I, [i, ..
-autocmd FileType haskell setlocal include=^import\\s*\\(qualified\\)\\?\\s*
-autocmd FileType haskell setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.'
-autocmd FileType haskell setlocal suffixesadd=hs,lhs,hsc
+" indentation
+let g:haskell_indent_if = 3
+let g:haskell_indent_case = 2
+let g:haskell_indent_let = 4
+let g:haskell_indent_where = 6
+let g:haskell_indent_do = 3
+let g:haskell_indent_in = 1
+let g:cabal_indent_section = 2
 
-"*************************************************************
-" -- haskellmode plugin
-"*************************************************************
+" [ eagletmt/ghcmod-vim ] {{{1
 
-" use ghc functionality for haskell files
-"au BufEnter *.hs compiler ghc
-"au BufEnter *.hs nnoremap <buffer> <F7> :make<CR>
-"au BufEnter *.hs nnoremap <buffer> <F5> :!runhaskell %<CR>
+" If you'd like to give GHC options, set g:ghcmod_ghc_options.
+" let g:ghcmod_ghc_options = ['-idir1', '-idir2']
 
-" use ghc functionality for literate haskell files
-"au BufEnter *.lhs compiler ghc
-"au BufEnter *.lhs nnoremap <buffer> <F7> :make<CR>
-"au BufEnter *.lhs nnoremap <buffer> <F5> :!runhaskell %<CR>
+" :GhcModType
+" :GhcModTypeClear
 
-" configure browser for haskell_doc.vim
-"let g:haddock_browser = "C:/Program Files (x86)/Internet Explorer/iexplore.exe"
-"let g:haddock_docdir = substitute( $APPDATA."/cabal/doc", "\\", "/", "g" )
+" Sub-expressions are highlighted as Search by default.
+" hi ghcmodType ctermbg=yellow
+" let g:ghcmod_type_highlight = 'ghcmodType'
 
-"" configure GHC compiler
-"let g:ghc = "\"C:/Program Files (x86)/Haskell Platform/2013.2.0.0/bin/ghc.exe\""
+" :GhcModCheck
+" :GhcModLint
 
+" If you'd like to pass options to hlint, set g:ghcmod_hlint_options.
+" let g:ghcmod_hlint_options = ['--ignore=Redundant $']
+
+" You can run check and/or lint asynchronously. This would be useful when you'd like to run check and/or lint automatically (especially on BufWritePost).
+" :GhcModCheckAsync
+" :GhcModLintAsync
+" :GhcModCheckAndLintAsync
+
+" You can see the expansion of splices by :GhcModExpand and they are available in quickfix window.
+" :GhcModExpand
+
+" [ scrooloose/syntastic ] {{{1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+
+map <silent> <Leader>e :Errors<CR>
+map <Leader>s :SyntasticToggleMode<CR>
