@@ -3,7 +3,6 @@
   email = kuznero@gmail.com
 [core]
   excludesfile = ~/.gitignore
-  # editor = subl -n -w
   editor = vim
   autocrlf = input
 [alias]
@@ -21,11 +20,11 @@
 [color]
   ui = true
 [diff]
-  tool = bc3
+  tool = gvimdiff
 [difftool]
   prompt = false
 [merge]
-  tool = bc3
+  tool = gvimdiff
 [mergetool]
   prompt = false
 [push]
