@@ -107,7 +107,7 @@ if has("gui_running")
   " enable current line highlight
   set cursorline
   " startup maximized
-  "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
+  au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
   " set window size explicitly
   set columns=140
   set lines=35

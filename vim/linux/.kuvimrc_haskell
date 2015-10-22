@@ -63,9 +63,11 @@ au BufEnter *.hs nnoremap <buffer> <C-F7> :GhcModLint<CR>
 
 " [ scrooloose/syntastic ] {{{1
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+if has( "gui_running" )
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+endif
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1

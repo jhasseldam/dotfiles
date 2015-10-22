@@ -5,7 +5,7 @@ set guifont=Droid\ Sans\ Mono\ 11
 " color scheme
 syntax enable
 if has( "gui_running" )
-  colorscheme kuznero-light-regular
+  colorscheme kuznero-black-regular
 endif
 
 " [ bling/vim-bufferline, bling/vim-airline ] {{{1
