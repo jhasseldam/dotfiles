@@ -30,6 +30,12 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
+" PlantUML Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_plantuml" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
 " Mapping Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_mapping" )
 if filereadable( s:rc )
@@ -70,6 +76,8 @@ call vundle#rc()
   Plugin 'neovimhaskell/haskell-vim'
   Plugin 'eagletmt/ghcmod-vim'
   Plugin 'scrooloose/syntastic'
+" [ PlantUML ]
+  Plugin 'aklt/plantuml-syntax'
 if s:justCloned == 1
   " Install all referenced bundles
   execute ':silent PluginInstall!'
