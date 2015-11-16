@@ -1,0 +1,6 @@
+autocmd BufRead,BufNewFile * :if getline(1) =~ '^.*startuml.*$'|  setfiletype plantuml | endif
+autocmd BufRead,BufNewFile *.pu,*.uml,*.plantuml set filetype=plantuml
+let g:plantuml_executable_script="plantuml.jar"
+autocmd Filetype plantuml let &l:makeprg=g:plantuml_executable_script . " " .  fnameescape(expand("%"))
+setlocal comments=s1:/',mb:',ex:'/,:' commentstring=/'%s'/ formatoptions-=t formatoptions+=croql
+"au BufEnter *.pu,*.uml,*.plantuml nnoremap <buffer> <F5> :make<CR>
