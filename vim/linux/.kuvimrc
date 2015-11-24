@@ -71,6 +71,8 @@ call vundle#rc()
   Plugin 'kuznero/kuvim-themes'
 " [ C# ]
   Plugin 'csharp.vim'
+" [ PowerShell ]
+  Plugin 'PProvost/vim-ps1'
 " [ HASKELL ]
   Plugin 'neovimhaskell/haskell-vim'
   Plugin 'eagletmt/ghcmod-vim'
