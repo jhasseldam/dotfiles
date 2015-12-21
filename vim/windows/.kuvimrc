@@ -76,6 +76,7 @@ call vundle#rc()
 " [ HASKELL ]
   Plugin 'neovimhaskell/haskell-vim'
   Plugin 'eagletmt/ghcmod-vim'
+  Plugin 'eagletmt/neco-ghc'
   Plugin 'scrooloose/syntastic'
 " [ PlantUML ]
   Plugin 'aklt/plantuml-syntax'

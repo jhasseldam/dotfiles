@@ -61,6 +61,14 @@ au BufEnter *.hs nnoremap <buffer> <C-F7> :GhcModLint<CR>
 
 " :GhcModExpand
 
+" [ eagletmt/neco-ghc ] {{{1
+
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc=0
+" Very useful, but can make it rather slow
+let g:necoghc_enable_detailed_browse=1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
 " [ scrooloose/syntastic ] {{{1
 
 if has( "gui_running" )
