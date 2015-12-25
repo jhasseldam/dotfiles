@@ -20,13 +20,14 @@ echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH EXTENSIONS \e[0m"
 echo ""
 cp -v bash/.kuprofile ~/
 echo ""
-read -p "Do you want to modify ~/.bash_profile to include new bash extensions? " -n 1 -r
+read -p "Do you want to modify ~/.bash_profile and ~/.bashrc to include new extensions? " -n 1 -r
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo 'if [ -f "$HOME/bin/bashrc.sh" ]; then' >> ~/.bash_profile
-  echo '  . "$HOME/bin/bashrc.sh"' >> ~/.bash_profile
+  echo 'if [ -f "$HOME/.kuprofile" ]; then' >> ~/.bash_profile
+  echo '  . "$HOME/.kuprofile"' >> ~/.bash_profile
   echo 'fi' >> ~/.bash_profile
-  echo '. ~/.bash_profile' >> ~/.bashrc
-  echo '. ~/.kuprofile' >> ~/.bashrc
+  echo 'if [ -f "$HOME/.kuprofile" ]; then' >> ~/.bashrc
+  echo '  . "$HOME/.kuprofile"' >> ~/.bashrc
+  echo 'fi' >> ~/.bashrc
   echo "done."
 fi
