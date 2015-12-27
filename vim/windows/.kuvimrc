@@ -66,6 +66,7 @@ call vundle#rc()
   Plugin 'FuzzyFinder'
   Plugin 'bling/vim-bufferline'
   Plugin 'bling/vim-airline'
+  Plugin 'derekmcloughlin/gvimfullscreen_win32'
 " [ COLOR SCHEMES ]
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'kuznero/kuvim-themes'
