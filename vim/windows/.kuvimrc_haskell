@@ -26,13 +26,13 @@ let g:cabal_indent_section = 2
 
 " [ eagletmt/ghcmod-vim ] {{{1
 
-au BufEnter *.hs nnoremap <buffer> <F1> :GhcModType<CR>
-au BufEnter *.hs nnoremap <buffer> <C-F1> :GhcModTypeClear<CR>
-au BufEnter *.hs nnoremap <buffer> <S-F1> :GhcModTypeInsert<CR>
-au BufEnter *.hs nnoremap <buffer> <F2> :GhcModInfo<CR>
-au BufEnter *.hs nnoremap <buffer> <C-F2> :GhcModInfoPreview<CR>
-au BufEnter *.hs nnoremap <buffer> <F7> :GhcModCheck<CR>
-au BufEnter *.hs nnoremap <buffer> <C-F7> :GhcModLint<CR>
+au BufEnter *.hs nnoremap <leader>st :GhcModType<CR>
+au BufEnter *.hs nnoremap <leader>ct :GhcModTypeClear<CR>
+au BufEnter *.hs nnoremap <leader>it :GhcModTypeInsert<CR>
+au BufEnter *.hs nnoremap <leader>si :GhcModInfo<CR>
+au BufEnter *.hs nnoremap <leader>pi :GhcModInfoPreview<CR>
+au BufEnter *.hs nnoremap <leader>b :GhcModCheck<CR>
+au BufEnter *.hs nnoremap <leader>l :GhcModLint<CR>
 
 " If you'd like to give GHC options, set g:ghcmod_ghc_options.
 " let g:ghcmod_ghc_options = ['-idir1', '-idir2']

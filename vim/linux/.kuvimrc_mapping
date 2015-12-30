@@ -25,14 +25,14 @@
 :nnoremap <leader>f :FencAutoDetect<CR>
 
 " Diff Current File {{{1
-:nnoremap _dt :diffthis<CR>
-:nnoremap _du :diffupdate<CR>
-:nnoremap _do :diffoff<CR>
+:nnoremap <leader>dt :diffthis<CR>
+:nnoremap <leader>du :diffupdate<CR>
+:nnoremap <leader>do :diffoff<CR>
 
 " Three-Way Merge {{{1
-:nnoremap _mr :diffget RE<CR>
-:nnoremap _mb :diffget BA<CR>
-:nnoremap _ml :diffget LO<CR>
+:nnoremap <leader>mr :diffget RE<CR>
+:nnoremap <leader>mb :diffget BA<CR>
+:nnoremap <leader>ml :diffget LO<CR>
 
 " " CamelCase Motion {{{1
 " map w <Plug>CamelCaseMotion_w
