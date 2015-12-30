@@ -31,7 +31,7 @@ au BufEnter *.hs nnoremap <leader>ct :GhcModTypeClear<CR>
 au BufEnter *.hs nnoremap <leader>it :GhcModTypeInsert<CR>
 au BufEnter *.hs nnoremap <leader>si :GhcModInfo<CR>
 au BufEnter *.hs nnoremap <leader>pi :GhcModInfoPreview<CR>
-au BufEnter *.hs nnoremap <leader>b :GhcModCheck<CR>
+au BufEnter *.hs nnoremap <leader>c :GhcModCheck<CR>
 au BufEnter *.hs nnoremap <leader>l :GhcModLint<CR>
 
 " If you'd like to give GHC options, set g:ghcmod_ghc_options.
