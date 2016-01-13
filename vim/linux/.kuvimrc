@@ -190,3 +190,5 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
+" Fold method setup {{{1
+au BufReadPre *.xml setlocal foldmethod=indent
