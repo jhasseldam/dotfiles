@@ -30,6 +30,18 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
+" Xml Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_xml" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
+" Powershell Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_powershell" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
 " PlantUML Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_plantuml" )
 if filereadable( s:rc )
@@ -189,6 +201,3 @@ let s:rc = expand( "$HOME/.kuvimrc_style" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Fold method setup {{{1
-au BufReadPre *.xml setlocal foldmethod=indent

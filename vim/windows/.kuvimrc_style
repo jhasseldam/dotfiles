@@ -5,7 +5,7 @@ set guifont=Ubuntu_Mono:h12:cRUSSIAN
 " color scheme
 syntax enable
 if has( "gui_running" )
-  colorscheme kuznero-black-regular
+  colorscheme kuznero-dark-regular
 endif
 
 " [ bling/vim-bufferline, bling/vim-airline ] {{{1
