@@ -1,2 +1,0 @@
-" recognize Powershell format
-au BufEnter *.ps1 set filetype=ps1

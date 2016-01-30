@@ -54,46 +54,78 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 
-" Environment {{{1
-" by iMproved
-set nocompatible
-
-" Vundle {{{1
-let s:rc = expand("$HOME/.vim/bundle/vundle")
+" NeoBundle {{{1
+if has('win32')
+  let s:rc_raw = expand("$HOME/vimfiles/bundle/vundle")
+  let s:rc = substitute(s:rc_raw, "\\", "/", "g")
+elseif has('unix')
+  let s:rc = expand("$HOME/.vim/bundle/neobundle.vim")
+endif
 let s:justCloned = 0
 if !isdirectory(s:rc)
-  execute ':silent !git clone https://github.com/gmarik/vundle.git "'.s:rc.'"'
+  execute ':silent !git clone https://github.com/Shougo/neobundle.vim "'.s:rc.'"'
   let s:justCloned = 1
 endif
-" setup runtime path to vundle
-let &runtimepath.=','.s:rc
-call vundle#rc()
-" [ GENERAL ]
-  Plugin 'gmarik/vundle'
-  Plugin 'mbbill/fencview'
-  Plugin 'Shougo/vimproc'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'L9'
-  Plugin 'FuzzyFinder'
-  Plugin 'bling/vim-bufferline'
-  Plugin 'bling/vim-airline'
-" [ COLOR SCHEMES ]
-  Plugin 'altercation/vim-colors-solarized'
-  Plugin 'kuznero/kuvim-themes'
-" [ C# ]
-  Plugin 'csharp.vim'
-" [ PowerShell ]
-  Plugin 'PProvost/vim-ps1'
-" [ HASKELL ]
-  Plugin 'neovimhaskell/haskell-vim'
-  Plugin 'eagletmt/ghcmod-vim'
-  Plugin 'scrooloose/syntastic'
-" [ PlantUML ]
-  Plugin 'aklt/plantuml-syntax'
-if s:justCloned == 1
-  " Install all referenced bundles
-  execute ':silent PluginInstall!'
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+if &compatible
+  set nocompatible               " Be iMproved
 endif
+if has('win32')
+  set runtimepath^=$HOME/vimfiles/bundle/neobundle.vim/
+  call neobundle#begin(expand('$HOME/vimfiles/bundle/'))
+elseif has('unix')
+  set runtimepath^=$HOME/.vim/bundle/neobundle.vim/
+  call neobundle#begin(expand('$HOME/.vim/bundle/'))
+endif
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+" [ GENERAL ]
+NeoBundle 'mbbill/fencview'
+NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': 'make'}}
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'bling/vim-airline'
+if has('win32')
+  NeoBundle 'derekmcloughlin/gvimfullscreen_win32'
+endif
+" [ COLOR SCHEMES ]
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'kuznero/kuvim-themes'
+" [ C# ]
+NeoBundle 'csharp.vim'
+" [ F# ]
+NeoBundle 'fsharp/vim-fsharp'
+NeoBundle 'fsharp/vim-fsharp', {
+           \ 'description': 'F# support for Vim',
+           \ 'lazy': 1,
+           \ 'autoload': {'filetypes': 'fsharp'},
+           \ 'build': {
+           \   'unix':  'make fsautocomplete',
+           \ },
+           \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
+           \}
+" [ PowerShell ]
+NeoBundle 'PProvost/vim-ps1'
+" [ HASKELL ]
+NeoBundle 'neovimhaskell/haskell-vim'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'scrooloose/syntastic'
+" [ PlantUML ]
+NeoBundle 'aklt/plantuml-syntax'
+call neobundle#end()
+" Required:
+filetype plugin indent on
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " General {{{1
 " enable filetype detection, plus loading of filetype plugins
@@ -128,7 +160,11 @@ if has("gui_running")
   " enable current line highlight
   set cursorline
   " startup maximized
-  au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
+  if has('win32')
+    "au GUIEnter * simalt ~x
+  elseif has('unix')
+    au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
+  endif
   " set window size explicitly
   set columns=140
   set lines=35

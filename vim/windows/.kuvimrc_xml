@@ -1,4 +1,0 @@
-" recognize Xml format
-au BufEnter *.xml set filetype=xml
-au BufEnter *.xml set syntax=xml
-au BufReadPre *.xml setlocal foldmethod=indent

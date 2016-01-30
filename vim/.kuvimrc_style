@@ -1,5 +1,9 @@
 " GUI font
-set guifont=Ubuntu\ Mono\ 15
+if has('win32')
+  set guifont=NovaMono:h12:cANSI
+elseif has('unix')
+  set guifont=NovaMono\ 11
+endif
 " Download patched fonts from https://github.com/Lokaltog/powerline-fonts
 
 " color scheme

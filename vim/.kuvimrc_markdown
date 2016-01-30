@@ -26,7 +26,14 @@ function! BuildPandocDocument(format)
 endfunction
 
 au BufEnter *.md nnoremap <buffer> <F7> :call BuildPandocDocument("html")<CR>
-au BufEnter *.md nnoremap <buffer> <S-F7> :!xdg-open %.html<CR>
+if has('win32')
+  au BufEnter *.md nnoremap <buffer> <S-F7> :!%.html<CR>
+elseif has('unix')
+  au BufEnter *.md nnoremap <buffer> <S-F7> :!xdg-open %.html<CR>
+endif
 au BufEnter *.md nnoremap <buffer> <F8> :call BuildPandocDocument("rtf")<CR>
-au BufEnter *.md nnoremap <buffer> <S-F8> :!xdg-open %.rtf<CR>
-
+if has('win32')
+  au BufEnter *.md nnoremap <buffer> <S-F8> :!%.rtf<CR>
+elseif has('unix')
+  au BufEnter *.md nnoremap <buffer> <S-F8> :!xdg-open %.rtf<CR>
+endif

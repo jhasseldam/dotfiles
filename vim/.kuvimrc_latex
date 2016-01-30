@@ -7,7 +7,11 @@ function! CompilePdfDocument(filename)
 endfunction
 
 function! OpenPdfDocument(filename)
-  execute ":!".a:filename
+  if has('win32')
+    execute ":!".a:filename
+  elseif has('unix')
+    execute ":!xdg-open ".a:filename
+  endif
 endfunction
 
 au BufEnter *.tex nnoremap <buffer> <F7> :call CompilePdfDocument(expand('%:p:t'))<CR>
