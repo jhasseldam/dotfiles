@@ -1,6 +1,6 @@
 " GUI font
 if has('win32')
-  set guifont=NovaMono:h12:cANSI
+  set guifont=NovaMono:h11:cANSI
 elseif has('unix')
   set guifont=NovaMono\ 11
 endif
