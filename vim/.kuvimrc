@@ -96,7 +96,6 @@ if has('win32')
   NeoBundle 'derekmcloughlin/gvimfullscreen_win32'
 endif
 " [ COLOR SCHEMES ]
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'kuznero/kuvim-themes'
 " [ C# ]
 NeoBundle 'csharp.vim'
