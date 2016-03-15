@@ -61,10 +61,8 @@ if has('win32')
 elseif has('unix')
   let s:rc = expand("$HOME/.vim/bundle/neobundle.vim")
 endif
-let s:justCloned = 0
 if !isdirectory(s:rc)
   execute ':silent !git clone https://github.com/Shougo/neobundle.vim "'.s:rc.'"'
-  let s:justCloned = 1
 endif
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
