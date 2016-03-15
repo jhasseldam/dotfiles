@@ -9,8 +9,7 @@
   st = status
   ci = commit
   co = checkout
-  la = log --pretty=oneline --graph --abbrev-commit
-  l = log --pretty=oneline --graph --abbrev-commit --first-parent
+  l = log --graph --oneline --decorate --all
   br = branch
   d = diff
   dt = difftool --diff-filter=ACMRTUXB --prompt
