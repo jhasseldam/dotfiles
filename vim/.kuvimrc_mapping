@@ -28,6 +28,11 @@ endif
 :nnoremap <leader>mb :diffget BA<CR>
 :nnoremap <leader>ml :diffget LO<CR>
 
+" Buffer management {{{1
+:nnoremap <C-h> :bp<CR>
+:nnoremap <C-l> :bn<CR>
+:nnoremap <C-j> :bd<CR>
+
 " NERDTree {{{1
 function! NTToggle()
   if exists("t:NERDTreeBufName")
