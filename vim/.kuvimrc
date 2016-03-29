@@ -88,6 +88,7 @@ NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': 'make'}}
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled=1
