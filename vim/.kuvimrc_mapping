@@ -33,6 +33,9 @@ endif
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-j> :bd<CR>
 
+" Unite-based Search {{{1
+:nnoremap <leader>f :Unite file_rec<CR>
+
 " NERDTree {{{1
 function! NTToggle()
   if exists("t:NERDTreeBufName")
