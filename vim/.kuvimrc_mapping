@@ -36,6 +36,9 @@ endif
 " Unite-based Search {{{1
 :nnoremap <leader>f :Unite file_rec<CR>
 
+" Auto-detect encoding
+:nnoremap <leader>x :FencAutoDetect<CR>
+
 " NERDTree {{{1
 function! NTToggle()
   if exists("t:NERDTreeBufName")
