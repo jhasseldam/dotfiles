@@ -9,7 +9,7 @@
   st = status
   ci = commit
   co = checkout
-  l = log --graph --oneline --decorate --all
+  l = log --graph --oneline --decorate --all -n 20
   br = branch
   d = diff
   dt = difftool --diff-filter=ACMRTUXB --prompt
