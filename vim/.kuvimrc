@@ -126,6 +126,13 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" Unite {{{1
+" set wildignore=.stack-work/,.git*,bin/,obj/
+if neobundle#is_installed('unite.vim')
+  " call unite#custom#source('file_rec/async', 'ignore_globs', split(&wildignore, ','))
+  call unite#custom#source('file_rec/async', 'ignore_globs', ['.stack-work/','.git*','bin/','obj/'])
+end
+
 " General {{{1
 " enable filetype detection, plus loading of filetype plugins
 filetype plugin indent on
