@@ -206,15 +206,9 @@ set smartcase
 set foldmethod=marker
 " auto fold enabled
 set nofoldenable
-" do not show list characters
-set list
-" highlight problematic whitespace
+" show list characters
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
-" if has("gui_running")
-"   set listchars=tab:>-,trail:.,extends:#,nbsp:.,eol:¬
-" else
-"   set listchars=tab:>-,trail:.,extends:#,nbsp:.
-" endif
+set list
 "set linebreak
 "set showbreak=>>
 
