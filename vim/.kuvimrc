@@ -131,6 +131,7 @@ NeoBundleCheck
 if neobundle#is_installed('unite.vim')
   " call unite#custom#source('file_rec/async', 'ignore_globs', split(&wildignore, ','))
   call unite#custom#source('file_rec/async', 'ignore_globs', ['.stack-work/','.git*','bin/','obj/'])
+  call unite#custom#source('file_rec', 'ignore_globs', ['.stack-work/','.git*','bin/','obj/'])
 end
 
 " General {{{1

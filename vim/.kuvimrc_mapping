@@ -15,9 +15,6 @@ endif
 " set scrolloff to toggle always placing cursor in the middle
 :nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 
-" Auto detect current file encoding
-:nnoremap <leader>f :FencAutoDetect<CR>
-
 " Diff Current File {{{1
 :nnoremap <leader>dt :diffthis<CR>
 :nnoremap <leader>du :diffupdate<CR>
@@ -34,7 +31,7 @@ endif
 :nnoremap <C-j> :bd<CR>
 
 " Unite-based Search {{{1
-:nnoremap <leader>f :Unite file_rec/async<CR>
+:nnoremap <leader>f :Unite file_rec<CR>
 
 " Auto-detect encoding
 :nnoremap <leader>x :FencAutoDetect<CR>
