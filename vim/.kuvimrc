@@ -130,6 +130,11 @@ NeoBundleCheck
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
+if has('win32')
+  set wildignore+=*\\.stack-work\\*
+else
+  set wildignore+=*/.stack-work/*
+endif
 
 
 " General {{{1
