@@ -30,9 +30,6 @@ endif
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-j> :bd<CR>
 
-" Unite-based Search {{{1
-:nnoremap <leader>f :Unite file_rec<CR>
-
 " Auto-detect encoding
 :nnoremap <leader>x :FencAutoDetect<CR>
 

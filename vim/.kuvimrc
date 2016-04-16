@@ -86,7 +86,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'mbbill/fencview'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': 'make'}}
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline'
@@ -126,13 +126,11 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" Unite {{{1
-" set wildignore=.stack-work/,.git*,bin/,obj/
-if neobundle#is_installed('unite.vim')
-  " call unite#custom#source('file_rec/async', 'ignore_globs', split(&wildignore, ','))
-  call unite#custom#source('file_rec/async', 'ignore_globs', ['.stack-work/','.git*','bin/','obj/'])
-  call unite#custom#source('file_rec', 'ignore_globs', ['.stack-work/','.git*','bin/','obj/'])
-end
+" CtrlP {{{1
+let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_path_nolim = 1
+
 
 " General {{{1
 " enable filetype detection, plus loading of filetype plugins
