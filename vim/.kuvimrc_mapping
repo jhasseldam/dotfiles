@@ -29,6 +29,7 @@ endif
 :nnoremap <C-h> :bp<CR>
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-j> :bd<CR>
+:nnoremap <C-k> :tabnew<CR>
 
 " Auto-detect encoding
 :nnoremap <leader>x :FencAutoDetect<CR>
