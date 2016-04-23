@@ -113,10 +113,10 @@ NeoBundle 'fsharp/vim-fsharp', {
 " [ PowerShell ]
 NeoBundle 'PProvost/vim-ps1'
 " [ Haskell ]
-NeoBundle 'neovimhaskell/haskell-vim'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'ervandew/supertab'
 " [ PlantUML ]
 NeoBundle 'aklt/plantuml-syntax'
 call neobundle#end()
