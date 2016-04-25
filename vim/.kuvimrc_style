@@ -2,7 +2,7 @@
 if has('win32')
   set guifont=Monoid:h10:cRUSSIAN
 elseif has('unix')
-  set guifont=Cousine\ for\ Powerline\ 11
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
 
 " Color scheme {{{1
