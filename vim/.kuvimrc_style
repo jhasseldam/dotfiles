@@ -1,6 +1,6 @@
 " GUI font {{{1
 if has('win32')
-  set guifont=Monoid:h10:cRUSSIAN
+  set guifont=Monaco_for_Powerline:h10:cANSI
 elseif has('unix')
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
