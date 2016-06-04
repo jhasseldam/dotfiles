@@ -98,6 +98,7 @@ endif
 NeoBundle 'kuznero/kuvim-themes'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'chriskempson/base16-vim'
 " [ C# ]
 NeoBundle 'csharp.vim'
 " [ F# ]
