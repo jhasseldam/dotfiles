@@ -118,6 +118,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'ervandew/supertab'
+" [ Elm ]
+NeoBundle 'ElmCast/elm-vim'
 " [ PlantUML ]
 NeoBundle 'aklt/plantuml-syntax'
 " [ Todo ]
