@@ -1,8 +1,8 @@
 " GUI font {{{1
 if has('win32')
-  set guifont=Monaco_for_Powerline:h10:cANSI
+  set guifont=Code_New_Roman:h12:cRUSSIAN
 elseif has('unix')
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+  set guifont=Code\ New\ Roman\\,\ 14
 endif
 
 " Color scheme {{{1
