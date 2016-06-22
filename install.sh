@@ -1,6 +1,11 @@
 #!/bin/bash
 
 echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m EMACS \e[0m"
+echo ""
+cp -v emacs/.emacs $HOME
+
+echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m GIT \e[0m"
 echo ""
 cp -v git/linux/.gitconfig $HOME
