@@ -22,7 +22,7 @@
 (setq scroll-conservatively 10000)
 
 ;; Line numbers
-(global-linum-mode t)
+;; (global-linum-mode t)
 
 ;; Packages
 (require 'package)
@@ -31,6 +31,9 @@
 (package-initialize)
 (unless package-archive-contents (package-refresh-contents))
 
+;; Install Git Gutter
+(unless (package-installed-p 'git-gutter) (package-install 'git-gutter))
+
 ;; Install Intero
 (unless (package-installed-p 'intero) (package-install 'intero))
 (add-hook 'haskell-mode-hook 'intero-mode)
@@ -38,12 +41,16 @@
 ;; Install Markdown Mode
 (unless (package-installed-p 'markdown-mode) (package-install 'markdown-mode))
 
+;; Install C# Mode
+(unless (package-installed-p 'csharp-mode) (package-install 'csharp-mode))
+
 ;; Install F# Mode
 (unless (package-installed-p 'fsharp-mode) (package-install 'fsharp-mode))
 
-;; Install Monokai Theme
+;; Install Themes
 (unless (package-installed-p 'monokai-theme) (package-install 'monokai-theme))
-(load-theme 'monokai t)
+(unless (package-installed-p 'meacupla-theme) (package-install 'meacupla-theme))
+(load-theme 'meacupla t)
 
 ;; Key bindings
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-regiod)
