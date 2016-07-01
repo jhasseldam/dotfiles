@@ -3,15 +3,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(tool-bar-mode nil)
- '(menu-bar-mode nil))
+ '(menu-bar-mode nil)
+ '(tool-bar-mode nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Code New Roman" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
+ '(default ((t (:family "Code New Roman" :foundry "CNR " :slant normal :weight normal :height 143 :width normal)))))
 
 ;; Inhibit splash/startup screens
 (setq inhibit-splash-screen t)
@@ -54,3 +54,12 @@
 
 ;; Key bindings
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-regiod)
+
+;; Set Frame width/height
+(defun arrange-frame (w h x y)
+  "Set the width, height, and x/y position of the current frame"
+  (let ((frame (selected-frame)))
+    (delete-other-windows)
+    (set-frame-position frame x y)
+    (set-frame-size frame w h)))
+(arrange-frame 120 40 10 10)
