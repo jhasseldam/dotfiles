@@ -56,10 +56,12 @@
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-regiod)
 
 ;; Set Frame width/height
-(defun arrange-frame (w h x y)
-  "Set the width, height, and x/y position of the current frame"
-  (let ((frame (selected-frame)))
-    (delete-other-windows)
-    (set-frame-position frame x y)
-    (set-frame-size frame w h)))
-(arrange-frame 120 40 10 10)
+(when (display-graphic-p)
+  (defun arrange-frame (w h x y)
+    "Set the width, height, and x/y position of the current frame"
+    (let ((frame (selected-frame)))
+      (delete-other-windows)
+      (set-frame-position frame x y)
+      (set-frame-size frame w h)))
+  (arrange-frame 120 40 10 10)
+)
