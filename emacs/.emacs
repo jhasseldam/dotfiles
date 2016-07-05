@@ -47,10 +47,15 @@
 ;; Install F# Mode
 (unless (package-installed-p 'fsharp-mode) (package-install 'fsharp-mode))
 
+;; Install PureScript Mode
+(unless (package-installed-p 'purescript-mode) (package-install 'purescript-mode))
+
 ;; Install Themes
-(unless (package-installed-p 'monokai-theme) (package-install 'monokai-theme))
-(unless (package-installed-p 'meacupla-theme) (package-install 'meacupla-theme))
-(load-theme 'meacupla t)
+(when (display-graphic-p)
+  (unless (package-installed-p 'monokai-theme) (package-install 'monokai-theme))
+  (unless (package-installed-p 'meacupla-theme) (package-install 'meacupla-theme))
+  (load-theme 'meacupla t)
+)
 
 ;; Key bindings
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-regiod)
