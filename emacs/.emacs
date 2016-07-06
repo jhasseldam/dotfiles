@@ -11,18 +11,33 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Code New Roman" :foundry "CNR " :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Code New Roman" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
 
 ;; Inhibit splash/startup screens
-(setq inhibit-splash-screen t)
-(setq inhibit-startup-message t)
+(setq-default inhibit-splash-screen t)
+(setq-default inhibit-startup-message t)
 
 ;; Smooth scrolling without jumping screens
-(setq scroll-step 1)
-(setq scroll-conservatively 10000)
+(setq-default scroll-step 1)
+(setq-default scroll-conservatively 10000)
 
 ;; Line numbers
 ;; (global-linum-mode t)
+
+;; Whitespace Mode
+(global-whitespace-mode t)
+
+;; Use 2 spaces as tab
+(defun setup-indentation ()
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq indent-line-function 'insert-tab))
+(add-hook 'text-mode-hook 'setup-indentation)
+(add-hook 'haskell-mode-hook 'setup-indentation)
+(add-hook 'fsharp-mode-hook 'setup-indentation)
+(add-hook 'csharp-mode-hook 'setup-indentation)
+(add-hook 'markdown-mode-hook 'setup-indentation)
+(add-hook 'js-mode-hook 'setup-indentation)
 
 ;; Packages
 (require 'package)
