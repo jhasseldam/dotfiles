@@ -49,6 +49,9 @@
 (package-initialize)
 (unless package-archive-contents (package-refresh-contents))
 
+;; Install Fiplr
+(unless (package-installed-p 'fiplr) (package-install 'fiplr))
+
 ;; Install Git Gutter
 (unless (package-installed-p 'magit) (package-install 'magit))
 
