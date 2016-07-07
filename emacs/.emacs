@@ -21,17 +21,20 @@
 (setq-default scroll-step 1)
 (setq-default scroll-conservatively 10000)
 
+;; Do not truncate lines by default
+(setq-default truncate-lines t)
+
 ;; Line numbers
 ;; (global-linum-mode t)
 
 ;; Whitespace Mode
-(global-whitespace-mode t)
+;; (global-whitespace-mode t)
 
 ;; Use 2 spaces as tab
 (defun setup-indentation ()
-  (setq-default indent-tabs-mode nil)
-  (setq-default tab-width 2)
-  (setq indent-line-function 'insert-tab))
+  (setq indent-tabs-mode nil)
+  (setq tab-width 2))
+  ;;(setq indent-line-function 'insert-tab))
 (add-hook 'text-mode-hook 'setup-indentation)
 (add-hook 'haskell-mode-hook 'setup-indentation)
 (add-hook 'fsharp-mode-hook 'setup-indentation)
@@ -73,7 +76,7 @@
 )
 
 ;; Key bindings
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-regiod)
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; Set Frame width/height
 (when (display-graphic-p)
