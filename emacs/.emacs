@@ -50,7 +50,7 @@
 (unless package-archive-contents (package-refresh-contents))
 
 ;; Install Git Gutter
-(unless (package-installed-p 'git-gutter) (package-install 'git-gutter))
+(unless (package-installed-p 'magit) (package-install 'magit))
 
 ;; Install Intero
 (unless (package-installed-p 'intero) (package-install 'intero))
@@ -72,7 +72,7 @@
 (when (display-graphic-p)
   (unless (package-installed-p 'monokai-theme) (package-install 'monokai-theme))
   (unless (package-installed-p 'meacupla-theme) (package-install 'meacupla-theme))
-  (load-theme 'meacupla t)
+  (load-theme 'monokai t)
 )
 
 ;; Key bindings
