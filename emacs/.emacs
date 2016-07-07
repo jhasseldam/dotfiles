@@ -43,42 +43,104 @@
 (add-hook 'js-mode-hook 'setup-indentation)
 
 ;; Packages
+(require 'cl)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 ;; (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
-(unless package-archive-contents (package-refresh-contents))
 
-;; Install Fiplr
-(unless (package-installed-p 'fiplr) (package-install 'fiplr))
+(defvar my-packages
+  '(
+    use-package
+    neotree
+    grizzl
+    fiplr
+    magit
+    intero
+    markdown-mode
+    csharp-mode
+    fsharp-mode
+    purescript-mode
+    monokai-theme
+    suscolors-theme
+   )
+)
 
-;; Install Git Gutter
-(unless (package-installed-p 'magit) (package-install 'magit))
+;; http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
+(setq url-http-attempt-keepalives nil)
 
-;; Install Intero
-(unless (package-installed-p 'intero) (package-install 'intero))
+(defun packages-installed-p ()
+  (loop for p in my-packages
+        when (not (package-installed-p p)) do (return nil)
+        finally (return t)))
+
+(unless (packages-installed-p)
+  ;; check for new packages (package versions)
+  (message "%s" "Emacs is now refreshing its package database...")
+  (unless package-archive-contents (package-refresh-contents))
+  (message "%s" " done.")
+  ;; install the missing packages
+  (dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
+
+;; Setup fiplr
+(use-package fiplr)
+;; (setq-default fiplr-root-markers '(".git" ".svn"))
+(setq-default fiplr-ignored-globs
+  '(
+    (directories
+     (
+      ".git"
+      ".svn"
+      ".hg"
+      ".bzr"
+      "node_modules"
+      "bower_components"
+     )
+    )
+    (files
+     (
+      ".#*"
+      "*~"
+      "*.dll"
+      "*.exe"
+      "*.so"
+      "*.o"
+      "*.obj"
+      "*.jpg"
+      "*.png"
+      "*.gif"
+      "*.pdf"
+      "*.gz"
+      "*.zip"
+     )
+    )
+  )
+)
+
+;; Setup intero
 (add-hook 'haskell-mode-hook 'intero-mode)
 
-;; Install Markdown Mode
-(unless (package-installed-p 'markdown-mode) (package-install 'markdown-mode))
-
-;; Install C# Mode
-(unless (package-installed-p 'csharp-mode) (package-install 'csharp-mode))
-
-;; Install F# Mode
-(unless (package-installed-p 'fsharp-mode) (package-install 'fsharp-mode))
-
-;; Install PureScript Mode
-(unless (package-installed-p 'purescript-mode) (package-install 'purescript-mode))
-
-;; Install Themes
+;; Setup theme
 (when (display-graphic-p)
-  (unless (package-installed-p 'monokai-theme) (package-install 'monokai-theme))
-  (unless (package-installed-p 'meacupla-theme) (package-install 'meacupla-theme))
-  (load-theme 'monokai t)
+  (load-theme 'suscolors t)
+)
+
+;; Adjust PATH on Windows (remember to install find utils from GnuWin32 package)
+(when (string-equal system-type "windows-nt")
+  (setenv "PATH"
+    (concat
+      "C:/Program Files (x86)/GnuWin32/bin" ";"
+      (getenv "PATH")
+    )
+  )
+  (setq exec-path '("C:/Program Files (x86)/GnuWin32/bin"))
 )
 
 ;; Key bindings
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
+(global-set-key (kbd "C-x d") 'fiplr-find-directory)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; Set Frame width/height
