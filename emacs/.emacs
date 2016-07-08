@@ -61,6 +61,9 @@
     csharp-mode
     fsharp-mode
     purescript-mode
+    gitignore-mode
+    dockerfile-mode
+    yaml-mode
     monokai-theme
     suscolors-theme
    )
@@ -97,6 +100,10 @@
       ".bzr"
       "node_modules"
       "bower_components"
+      "packages"
+      "bin"
+      "obj"
+      "tools"
      )
     )
     (files
@@ -131,16 +138,18 @@
 (when (string-equal system-type "windows-nt")
   (setenv "PATH"
     (concat
-      "C:/Program Files (x86)/GnuWin32/bin" ";"
+     "C:/Program Files (x86)/GnuWin32/bin" ";"
+     "C:/Program Files/Git/bin" ";"
       (getenv "PATH")
     )
   )
   (setq exec-path '("C:/Program Files (x86)/GnuWin32/bin"))
+  (setq exec-path '("C:/Program Files/Git/bin"))
 )
 
 ;; Key bindings
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
-(global-set-key (kbd "C-x d") 'fiplr-find-directory)
+(global-set-key (kbd "C-x d") 'neotree)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; Set Frame width/height
