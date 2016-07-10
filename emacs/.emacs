@@ -87,6 +87,9 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
+;; Setup F# mode
+(setq-default fsharp-indent-offset 2)
+
 ;; Setup fiplr
 (use-package fiplr)
 ;; (setq-default fiplr-root-markers '(".git" ".svn"))
