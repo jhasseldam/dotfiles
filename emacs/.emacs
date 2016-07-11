@@ -123,7 +123,8 @@
 ;; Key bindings
 (global-set-key (kbd "C-x d") 'neotree)
 (global-set-key (kbd "C-x f") 'helm-projectile)
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-x c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-x t") 'toggle-truncate-lines)
 
 ;; Set Frame width/height
 (when (display-graphic-p)
