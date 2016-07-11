@@ -90,13 +90,16 @@
 ;; Setup projectile
 (projectile-mode 1)
 
-;; ;; Setup Ido mode
-;; (setq ido-enable-flex-matching t)
-;; (setq ido-everywhere t)
-;; (ido-mode 1)
+;; Setup Ido mode
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 
 ;; Setup intero
 (add-hook 'haskell-mode-hook 'intero-mode)
+
+;; Setup fsharp
+(setq-default fsharp-indent-offset 2)
 
 ;; Setup theme
 (when (display-graphic-p)
