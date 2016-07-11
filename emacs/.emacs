@@ -53,8 +53,8 @@
   '(
     use-package
     neotree
-    grizzl
-    fiplr
+    projectile
+    helm-projectile
     magit
     intero
     markdown-mode
@@ -87,47 +87,13 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-;; Setup F# mode
-(setq-default fsharp-indent-offset 2)
+;; Setup projectile
+(projectile-mode 1)
 
-;; Setup fiplr
-(use-package fiplr)
-;; (setq-default fiplr-root-markers '(".git" ".svn"))
-(setq-default fiplr-ignored-globs
-  '(
-    (directories
-     (
-      ".git"
-      ".svn"
-      ".hg"
-      ".bzr"
-      "node_modules"
-      "bower_components"
-      "packages"
-      "bin"
-      "obj"
-      "tools"
-     )
-    )
-    (files
-     (
-      ".#*"
-      "*~"
-      "*.dll"
-      "*.exe"
-      "*.so"
-      "*.o"
-      "*.obj"
-      "*.jpg"
-      "*.png"
-      "*.gif"
-      "*.pdf"
-      "*.gz"
-      "*.zip"
-     )
-    )
-  )
-)
+;; ;; Setup Ido mode
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-everywhere t)
+;; (ido-mode 1)
 
 ;; Setup intero
 (add-hook 'haskell-mode-hook 'intero-mode)
@@ -151,8 +117,8 @@
 )
 
 ;; Key bindings
-(global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-x d") 'neotree)
+(global-set-key (kbd "C-x f") 'helm-projectile)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; Set Frame width/height
