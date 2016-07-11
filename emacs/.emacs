@@ -33,7 +33,8 @@
 ;; Use 2 spaces as tab
 (defun setup-indentation ()
   (setq indent-tabs-mode nil)
-  (setq tab-width 2))
+  (setq tab-width 2)
+  (setq require-final-newline nil))
   ;;(setq indent-line-function 'insert-tab))
 (add-hook 'text-mode-hook 'setup-indentation)
 (add-hook 'haskell-mode-hook 'setup-indentation)
@@ -122,7 +123,7 @@
 ;; Key bindings
 (global-set-key (kbd "C-x d") 'neotree)
 (global-set-key (kbd "C-x f") 'helm-projectile)
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
 ;; Set Frame width/height
 (when (display-graphic-p)
