@@ -125,6 +125,10 @@
 (global-set-key (kbd "C-x f") 'helm-projectile)
 (global-set-key (kbd "C-x c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-x t") 'toggle-truncate-lines)
+(global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-M-<down>") 'shrink-window)
+(global-set-key (kbd "C-M-<up>") 'enlarge-window)
 
 ;; Set Frame width/height
 (when (display-graphic-p)
