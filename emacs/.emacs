@@ -67,6 +67,7 @@
     yaml-mode
     monokai-theme
     suscolors-theme
+    twilight-bright-theme
    )
 )
 
@@ -104,7 +105,8 @@
 
 ;; Setup theme
 (when (display-graphic-p)
-  (load-theme 'suscolors t)
+  (require 'twilight-bright-theme)
+  (load-theme 'twilight-bright t)
 )
 
 ;; Adjust PATH on Windows (remember to install find utils from GnuWin32 package)
