@@ -105,8 +105,9 @@
 
 ;; Setup theme
 (when (display-graphic-p)
-  (require 'twilight-bright-theme)
-  (load-theme 'twilight-bright t)
+  ;; (require 'twilight-bright-theme)
+  ;; (load-theme 'twilight-bright t)
+  (load-theme 'wombat t)
 )
 
 ;; Adjust PATH on Windows (remember to install find utils from GnuWin32 package)
