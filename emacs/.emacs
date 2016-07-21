@@ -110,17 +110,9 @@
   (load-theme 'wombat t)
 )
 
-;; Adjust PATH on Windows (remember to install find utils from GnuWin32 package)
+;; Use findstr for grep-find function on Windows
 (when (string-equal system-type "windows-nt")
-  (setenv "PATH"
-    (concat
-     "C:/Program Files (x86)/GnuWin32/bin" ";"
-     "C:/Program Files/Git/bin" ";"
-      (getenv "PATH")
-    )
-  )
-  (setq exec-path '("C:/Program Files (x86)/GnuWin32/bin"))
-  (setq exec-path '("C:/Program Files/Git/bin"))
+  (setq grep-find-command '("findstr /sn *" . 13))
 )
 
 ;; Key bindings
