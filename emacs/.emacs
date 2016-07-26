@@ -125,13 +125,13 @@
 (global-set-key (kbd "C-M-<down>") 'shrink-window)
 (global-set-key (kbd "C-M-<up>") 'enlarge-window)
 
-;; Set Frame width/height
-(when (display-graphic-p)
-  (defun arrange-frame (w h x y)
-    "Set the width, height, and x/y position of the current frame"
-    (let ((frame (selected-frame)))
-      (delete-other-windows)
-      (set-frame-position frame x y)
-      (set-frame-size frame w h)))
-  (arrange-frame 120 40 10 10)
-)
+;; ;; Set Frame width/height
+;; (when (display-graphic-p)
+;;   (defun arrange-frame (w h x y)
+;;     "Set the width, height, and x/y position of the current frame"
+;;     (let ((frame (selected-frame)))
+;;       (delete-other-windows)
+;;       (set-frame-position frame x y)
+;;       (set-frame-size frame w h)))
+;;   (arrange-frame 120 40 10 10)
+;; )
