@@ -135,3 +135,7 @@
 ;;       (set-frame-size frame w h)))
 ;;   (arrange-frame 120 40 10 10)
 ;; )
+
+(defun close-all-buffers ()
+(interactive)
+  (mapc 'kill-buffer (buffer-list)))
