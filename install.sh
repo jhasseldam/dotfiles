@@ -26,6 +26,12 @@ echo ""
 cp -v tmux/.* $HOME
 
 echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH SCRIPTS \e[0m"
+echo ""
+mkdir -p ~/bin
+cp -v bash/*.sh $HOME/bin
+
+echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH EXTENSIONS \e[0m"
 echo ""
 cp -v bash/.kuprofile $HOME
