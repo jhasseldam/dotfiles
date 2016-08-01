@@ -104,11 +104,11 @@
 (setq-default fsharp-indent-offset 2)
 
 ;; Setup theme
-(when (display-graphic-p)
+;; (when (display-graphic-p)
   ;; (require 'twilight-bright-theme)
   ;; (load-theme 'twilight-bright t)
-  (load-theme 'wombat t)
-)
+  ;; (load-theme 'wombat t)
+;; )
 
 ;; Use findstr for grep-find function on Windows
 (when (string-equal system-type "windows-nt")
