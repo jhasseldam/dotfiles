@@ -65,9 +65,7 @@
     gitignore-mode
     dockerfile-mode
     yaml-mode
-    monokai-theme
-    suscolors-theme
-    twilight-bright-theme
+    base16-theme
    )
 )
 
@@ -104,11 +102,9 @@
 (setq-default fsharp-indent-offset 2)
 
 ;; Setup theme
-;; (when (display-graphic-p)
-  ;; (require 'twilight-bright-theme)
-  ;; (load-theme 'twilight-bright t)
-  ;; (load-theme 'wombat t)
-;; )
+(when (display-graphic-p)
+  (load-theme 'base16-solarized-dark t)
+)
 
 ;; Use findstr for grep-find function on Windows
 (when (string-equal system-type "windows-nt")
