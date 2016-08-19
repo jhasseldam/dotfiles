@@ -1,59 +1,5 @@
 " Roman Kuznetsov's profile settings
 
-" Common Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_common" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Platform Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_platform" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" LaTex Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_latex" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Markdown Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_markdown" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Haskell Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_haskell" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Xml Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_xml" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Powershell Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_powershell" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" PlantUML Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_plantuml" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
-" Mapping Include {{{1
-let s:rc = expand( "$HOME/.kuvimrc_mapping" )
-if filereadable( s:rc )
-  execute ':source '.s:rc
-endif
-
 " NeoBundle {{{1
 if has('win32')
   let s:rc_raw = expand("$HOME/vimfiles/bundle/neobundle.vim")
@@ -67,7 +13,7 @@ endif
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 if has('win32')
   set runtimepath^=$HOME/vimfiles/bundle/neobundle.vim/
@@ -77,11 +23,7 @@ elseif has('unix')
   call neobundle#begin(expand('$HOME/.vim/bundle/'))
 endif
 " Let NeoBundle manage NeoBundle
-" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
 " [ GENERAL ]
 NeoBundle 'mbbill/fencview'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': 'make'}}
@@ -91,13 +33,10 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-if has('win32')
-  NeoBundle 'derekmcloughlin/gvimfullscreen_win32'
-endif
 " [ COLOR SCHEMES ]
-NeoBundle 'kuznero/kuvim-themes'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tomasr/molokai'
+" NeoBundle 'kuznero/kuvim-themes'
+" NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/base16-vim'
 " [ C# ]
 NeoBundle 'csharp.vim'
@@ -113,19 +52,12 @@ NeoBundle 'fsharp/vim-fsharp', {
            \}
 " [ PowerShell ]
 NeoBundle 'PProvost/vim-ps1'
-" [ Haskell ]
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'eagletmt/neco-ghc'
-NeoBundle 'ervandew/supertab'
-" [ Elm ]
-NeoBundle 'ElmCast/elm-vim'
-" [ PlantUML ]
-NeoBundle 'aklt/plantuml-syntax'
-" [ Todo ]
-NeoBundle 'irrationalistic/vim-tasks'
+" " [ Haskell ]
+" NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'eagletmt/ghcmod-vim'
+" NeoBundle 'eagletmt/neco-ghc'
+" NeoBundle 'ervandew/supertab'
 call neobundle#end()
-" Required:
 filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -140,7 +72,6 @@ if has('win32')
 else
   set wildignore+=*/.stack-work/*
 endif
-
 
 " General {{{1
 " enable filetype detection, plus loading of filetype plugins
@@ -165,26 +96,20 @@ set noundofile
 " text width
 set textwidth=99
 set colorcolumn=0
-" open new buffers to the right and below current buffer
-set splitright
-set splitbelow
+" " open new buffers to the right and below current buffer
+" set splitright
+" set splitbelow
 
 " UI {{{1
 " gui specific settings
 if has("gui_running")
   " enable current line highlight
   set cursorline
-  " startup maximized
-  if has('win32')
-    "au GUIEnter * simalt ~x
-  elseif has('unix')
-    "au GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
-  endif
   " set window size explicitly
   set columns=140
   set lines=35
-  " remove menu bar
-  set guioptions-=m
+  " " remove menu bar
+  " set guioptions-=m
   " remove toolbar
   set guioptions-=T
   " remove scroll bars
@@ -219,7 +144,7 @@ set nofoldenable
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
 set list
 "set linebreak
-"set showbreak=>>
+set showbreak=>>\ 
 
 " Formatting {{{1
 " wrap long lines
@@ -240,6 +165,24 @@ set softtabstop=2
 " Diff {{{1
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
+
+" Markdown Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_markdown" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
+" Xml Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_xml" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
+" Mapping Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_mapping" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
 
 " Style Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_style" )

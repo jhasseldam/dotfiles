@@ -2,38 +2,38 @@
 au BufEnter *.md set filetype=markdown
 au BufEnter *.md set syntax=markdown
 
-function! BuildPandocDocument(format)
-  let styles =
-    \ [ 'Select highlighting style:'
-    \ , '  1. pygments'
-    \ , '  2. kate'
-    \ , '  3. monochrome'
-    \ , '  4. espresso'
-    \ , '  5. haddock'
-    \ , '  6. tango'
-    \ , '  7. zenburn'
-    \ ]
-  let index = inputlist(styles)
-  if index == 0
-    return
-  endif
-  let styleName = "pygments"
-  if index > 0 && index < 8
-    let styleName = strpart(styles[index], 5)
-  endif
-  echo " "
-  execute ":!pandoc -f markdown -t " . a:format . " % -o %." . a:format . " -s --highlight-style " . styleName
-endfunction
-
-au BufEnter *.md nnoremap <buffer> <F7> :call BuildPandocDocument("html")<CR>
-if has('win32')
-  au BufEnter *.md nnoremap <buffer> <S-F7> :!%.html<CR>
-elseif has('unix')
-  au BufEnter *.md nnoremap <buffer> <S-F7> :!xdg-open %.html<CR>
-endif
-au BufEnter *.md nnoremap <buffer> <F8> :call BuildPandocDocument("rtf")<CR>
-if has('win32')
-  au BufEnter *.md nnoremap <buffer> <S-F8> :!%.rtf<CR>
-elseif has('unix')
-  au BufEnter *.md nnoremap <buffer> <S-F8> :!xdg-open %.rtf<CR>
-endif
+" function! BuildPandocDocument(format)
+"   let styles =
+"     \ [ 'Select highlighting style:'
+"     \ , '  1. pygments'
+"     \ , '  2. kate'
+"     \ , '  3. monochrome'
+"     \ , '  4. espresso'
+"     \ , '  5. haddock'
+"     \ , '  6. tango'
+"     \ , '  7. zenburn'
+"     \ ]
+"   let index = inputlist(styles)
+"   if index == 0
+"     return
+"   endif
+"   let styleName = "pygments"
+"   if index > 0 && index < 8
+"     let styleName = strpart(styles[index], 5)
+"   endif
+"   echo " "
+"   execute ":!pandoc -f markdown -t " . a:format . " % -o %." . a:format . " -s --highlight-style " . styleName
+" endfunction
+" 
+" au BufEnter *.md nnoremap <buffer> <F7> :call BuildPandocDocument("html")<CR>
+" if has('win32')
+"   au BufEnter *.md nnoremap <buffer> <S-F7> :!%.html<CR>
+" elseif has('unix')
+"   au BufEnter *.md nnoremap <buffer> <S-F7> :!xdg-open %.html<CR>
+" endif
+" au BufEnter *.md nnoremap <buffer> <F8> :call BuildPandocDocument("rtf")<CR>
+" if has('win32')
+"   au BufEnter *.md nnoremap <buffer> <S-F8> :!%.rtf<CR>
+" elseif has('unix')
+"   au BufEnter *.md nnoremap <buffer> <S-F8> :!xdg-open %.rtf<CR>
+" endif
