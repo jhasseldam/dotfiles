@@ -16,19 +16,3 @@
 
 " Auto-detect encoding {{{1
 :nnoremap <leader>x :FencAutoDetect<CR>
-
-" NERDTree {{{1
-function! NTToggle()
-  if exists("t:NERDTreeBufName")
-    let s:ntree = bufwinnr(t:NERDTreeBufName)
-  else
-    let s:ntree = -1
-  endif
-  if (s:ntree != -1)
-    :NERDTreeClose
-  else
-    ":NERDTreeFind
-    :NERDTree %:p:h
-  endif
-endfunction
-:nmap <silent> <C-D> :call NTToggle()<CR>
