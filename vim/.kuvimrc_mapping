@@ -16,3 +16,6 @@
 
 " Auto-detect encoding {{{1
 :nnoremap <leader>x :FencAutoDetect<CR>
+
+" NERDTree {{{1
+:nnoremap <leader>e :NERDTree<CR>
