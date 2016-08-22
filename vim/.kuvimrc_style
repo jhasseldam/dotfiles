@@ -20,11 +20,7 @@ if has( "gui_running" )
   " let g:molokai_original=1
   " colorscheme molokai
 
-  if has('win32')
-    colorscheme base16-default
-  elseif has('unix')
-    colorscheme base16-default-dark
-  endif
+  colorscheme base16-default-dark
   " let base16colorspace=256
 endif
 
