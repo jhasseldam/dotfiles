@@ -53,7 +53,7 @@ NeoBundle 'fsharp/vim-fsharp', {
 " [ PowerShell ]
 NeoBundle 'PProvost/vim-ps1'
 " " [ Haskell ]
-" NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 " NeoBundle 'eagletmt/ghcmod-vim'
 " NeoBundle 'eagletmt/neco-ghc'
 " NeoBundle 'ervandew/supertab'
@@ -99,6 +99,8 @@ set colorcolumn=0
 " " open new buffers to the right and below current buffer
 " set splitright
 " set splitbelow
+" allow buffers to go to the background even if they are unsaved
+set hidden
 
 " UI {{{1
 " gui specific settings
