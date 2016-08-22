@@ -1,6 +1,6 @@
 " GUI font {{{1
 if has('win32')
-  set guifont=Ubuntu_Mono_derivative_Powerlin:h12:cRUSSIAN
+  set guifont=Droid_Sans_Mono_Dotted_for_Powe:h10:cRUSSIAN
 elseif has('unix')
   set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 10
 endif
@@ -21,7 +21,7 @@ if has( "gui_running" )
   " colorscheme molokai
 
   colorscheme base16-default-dark
-  " let base16colorspace=256
+  let base15colorspace=256
 endif
 
 if has( "gui_running" )
