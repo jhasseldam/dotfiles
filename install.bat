@@ -6,4 +6,6 @@ copy /Y .\haskell\windows\.ghci "%USERPROFILE%"
 copy /Y .\vim\.kuvim* "%USERPROFILE%"
 copy /Y .\vim\_* "%USERPROFILE%"
 copy /Y .\tmux\.tmux* "%USERPROFILE%"
+mkdir "%USERPROFILE%\AppData\Roaming\doublecmd"
+copy /Y .\doublecmd\* "%USERPROFILE%\AppData\Roaming\doublecmd"
 @echo on
