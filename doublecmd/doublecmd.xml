@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doublecmd DCVersion="0.7.3 beta" ConfigVersion="9">
+<doublecmd DCVersion="0.7.4 beta" ConfigVersion="9">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -329,7 +329,9 @@
       <CopyTime>True</CopyTime>
       <CopyOwnership>False</CopyOwnership>
       <CopyPermissions>False</CopyPermissions>
+      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
     </Options>
+    <AutoExtractOpenMask/>
   </FileOperations>
   <Tabs>
     <Options>49937</Options>
@@ -345,8 +347,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="build">C:\Projects\DataSyncService\</Path>
-                  <Path Filename="test">C:\Projects\DataSyncService\build\</Path>
                   <Path Filename="Redis.Sniffer.exe">C:\Projects\DataSyncService\build\test\</Path>
                   <Path Filename="test">C:\Projects\DataSyncService\build\</Path>
                   <Path Filename="build">C:\Projects\DataSyncService\</Path>
@@ -395,6 +395,8 @@
                   <Path Filename="Projects">C:\</Path>
                   <Path Filename="Phoenix">C:\Projects\</Path>
                   <Path Filename="docker-compose.yml">C:\Projects\Phoenix\</Path>
+                  <Path Filename="Phoenix">C:\Projects\</Path>
+                  <Path Filename="_SMSTaskSequence">C:\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -412,7 +414,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Credentials">C:\Projects\Sensitive\</Path>
                   <Path Filename="_kuznero">C:\Projects\</Path>
                   <Path Filename="kuznero.github.io">C:\Projects\_kuznero\</Path>
                   <Path Filename="..">C:\Projects\_kuznero\kuznero.github.io\</Path>
@@ -462,6 +463,7 @@
                   <Path Filename="inbox">C:\temp\</Path>
                   <Path Filename="temp">C:\</Path>
                   <Path Filename="java-latest.docker">i:\Dat\34NOALL\roku\docker-images\</Path>
+                  <Path Filename="_SMSTaskSequence">C:\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -910,8 +912,8 @@
   </Plugins>
   <MainWindow>
     <Position>
-      <Left>1967</Left>
-      <Top>33</Top>
+      <Left>106</Left>
+      <Top>13</Top>
       <Width>1419</Width>
       <Height>805</Height>
       <Maximized>False</Maximized>
