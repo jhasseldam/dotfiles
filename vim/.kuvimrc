@@ -94,7 +94,7 @@ set noswapfile
 " disable undo files
 set noundofile
 " text width
-set textwidth=99
+set textwidth=0
 set colorcolumn=0
 " " open new buffers to the right and below current buffer
 " set splitright
