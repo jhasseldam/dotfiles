@@ -57,6 +57,8 @@ NeoBundle 'scrooloose/syntastic'
 " NeoBundle 'eagletmt/ghcmod-vim'
 " NeoBundle 'eagletmt/neco-ghc'
 " NeoBundle 'ervandew/supertab'
+" [ Elm ]
+NeoBundle 'lambdatoast/elm.vim'
 call neobundle#end()
 filetype plugin indent on
 " If there are uninstalled bundles found on startup,
