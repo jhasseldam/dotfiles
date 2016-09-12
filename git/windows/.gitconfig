@@ -23,12 +23,12 @@
 [difftool]
   prompt = false
 [difftool "bc3"]
-  path = c:/program files (x86)/beyond compare 4/bcomp.exe
+  path = c:/program files/beyond compare 4/bcomp.exe
 [merge]
   tool = bc3
 [mergetool]
   prompt = false
 [mergetool "bc3"]
-  path = c:/program files (x86)/beyond compare 4/bcomp.exe
+  path = c:/program files/beyond compare 4/bcomp.exe
 [push]
   default = simple
