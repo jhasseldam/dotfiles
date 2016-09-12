@@ -110,8 +110,8 @@ if has("gui_running")
   " enable current line highlight
   set cursorline
   " set window size explicitly
-  set columns=140
-  set lines=35
+  set columns=130
+  set lines=30
   " " remove menu bar
   " set guioptions-=m
   " remove toolbar
