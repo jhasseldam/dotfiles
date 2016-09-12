@@ -42,6 +42,7 @@ echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m ZSH \e[0m"
 echo ""
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cat zsh/.zshrc >> $HOME/.zshrc
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH EXTENSIONS \e[0m"
