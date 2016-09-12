@@ -1,6 +1,6 @@
 " GUI font {{{1
 if has('win32')
-  set guifont=Droid_Sans_Mono_Dotted_for_Powe:h10:cRUSSIAN
+  set guifont=Fira_Code:h11:cRUSSIAN
 elseif has('unix')
   set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 10
 endif
