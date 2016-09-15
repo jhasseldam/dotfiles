@@ -58,12 +58,23 @@ NeoBundle 'scrooloose/syntastic'
 " NeoBundle 'eagletmt/neco-ghc'
 " NeoBundle 'ervandew/supertab'
 " [ Elm ]
-NeoBundle 'lambdatoast/elm.vim'
+NeoBundle 'ElmCast/elm-vim'
 call neobundle#end()
 filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+
+" elm-vim {{{1
+" let g:elm_jump_to_error = 0
+" let g:elm_make_output_file = "elm.js"
+" let g:elm_make_show_warnings = 0
+" let g:elm_syntastic_show_warnings = 0
+" let g:elm_browser_command = ""
+" let g:elm_detailed_complete = 0
+let g:elm_format_autosave = 0
+let g:elm_setup_keybindings = 1
+let g:elm_classic_highlighting = 0
 
 " CtrlP {{{1
 let g:ctrlp_cmd = 'CtrlPCurWD'
