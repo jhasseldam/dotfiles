@@ -108,7 +108,7 @@ set hidden
 " gui specific settings
 if has("gui_running")
   " enable current line highlight
-  set cursorline
+  set nocursorline
   " set window size explicitly
   set columns=130
   set lines=30
