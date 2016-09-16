@@ -9,22 +9,18 @@ endif
 syntax enable
 
 if has( "gui_running" )
-  " " kuznero theme
+  " " kuznero light theme
   " colorscheme kuznero-light-regular
+  " set background=light
 
-  " " solarized theme
-  " let g:solarized_termcolors=256
-  " colorscheme solarized
+  " kuznero dark theme
+  colorscheme kuznero-black-regular
+  set background=dark
 
-  " molokai theme
-  " let g:molokai_original=1
-  " colorscheme molokai
-
-  " colorscheme base16-default-light
+  " " base16
+  " colorscheme base16-default-dark
   " let base15colorspace=256
-
-  colorscheme zellner
-  set background=light
+  " set background=dark
 endif
 
 if !has( "gui_running" )
@@ -41,8 +37,9 @@ if has( "gui_running" )
   let g:airline_powerline_fonts = 1
   " let g:airline_theme='powerlineish'
   " let g:airline_theme='base16'
-  " let g:airline_theme='molokai'
-  let g:airline_theme='light'
+  let g:airline_theme='molokai'
+  " let g:airline_theme='light'
+  " let g:airline_theme='dark'
 else
   let g:airline_theme='molokai'
 endif
