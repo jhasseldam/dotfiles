@@ -65,17 +65,6 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" elm-vim {{{1
-" let g:elm_jump_to_error = 0
-" let g:elm_make_output_file = "elm.js"
-" let g:elm_make_show_warnings = 0
-" let g:elm_syntastic_show_warnings = 0
-" let g:elm_browser_command = ""
-" let g:elm_detailed_complete = 0
-let g:elm_format_autosave = 0
-let g:elm_setup_keybindings = 1
-let g:elm_classic_highlighting = 0
-
 " CtrlP {{{1
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
@@ -180,6 +169,12 @@ set softtabstop=2
 " Diff {{{1
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
+
+" Elm Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_elm" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
 
 " Markdown Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_markdown" )
