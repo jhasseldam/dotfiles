@@ -1,8 +1,8 @@
 " GUI font {{{1
 if has('win32')
-  set guifont=Droid_Sans_Mono_Dotted_for_Powe:h12:cRUSSIAN
+  set guifont=Droid_Sans_Mono_Dotted_for_Powe:h11:cRUSSIAN
 elseif has('unix')
-  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 12
+  set guifont=Source\ Code\ Pro\ for\ Powerline\ Light\ 11
 endif
 
 " Color scheme {{{1
@@ -10,7 +10,7 @@ syntax enable
 
 if has( "gui_running" )
   " " kuznero theme
-  " colorscheme kuznero-dark-regular
+  " colorscheme kuznero-light-regular
 
   " " solarized theme
   " let g:solarized_termcolors=256
@@ -20,31 +20,29 @@ if has( "gui_running" )
   " let g:molokai_original=1
   " colorscheme molokai
 
-  colorscheme base16-ir-black
-  let base15colorspace=256
+  " colorscheme base16-default-light
+  " let base15colorspace=256
+
+  colorscheme zellner
+  set background=light
 endif
 
-if has( "gui_running" )
-  " " light mode
-  " set background=light
-  " dark mode
+if !has( "gui_running" )
   set background=dark
-else
-  set background=light
 endif
 
 " Configure airline
 let g:airline#extensions#tabline#enabled=1
-" let g:airline#extensions#tabline#left_sep = ' '
-" let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 " make sure to install patched powerline fonts from [github.com/kuznero/fonts]
 let g:airline_powerline_fonts=1
 if has( "gui_running" )
-  " let g:airline_powerline_fonts = 1
+  let g:airline_powerline_fonts = 1
   " let g:airline_theme='powerlineish'
   " let g:airline_theme='base16'
   " let g:airline_theme='molokai'
-  " let g:airline_theme='light'
+  let g:airline_theme='light'
 else
   let g:airline_theme='molokai'
 endif

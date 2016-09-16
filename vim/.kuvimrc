@@ -34,9 +34,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 " [ COLOR SCHEMES ]
-" NeoBundle 'kuznero/kuvim-themes'
-" NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle 'tomasr/molokai'
+NeoBundle 'kuznero/kuvim-themes'
 NeoBundle 'chriskempson/base16-vim'
 " [ C# ]
 NeoBundle 'csharp.vim'

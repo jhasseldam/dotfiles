@@ -8,4 +8,4 @@ let g:elm_format_autosave = 0
 let g:elm_setup_keybindings = 1
 let g:elm_classic_highlighting = 0
 
-au BufEnter *.elm nnoremap <buffer> <leader> f :ElmFormat<CR>:%s/    /  /g<CR>:nohl<CR>:w<CR>
+au BufEnter *.elm nnoremap <buffer> <leader> f :ElmFormat<CR>:%s/    /  /g<CR>:%s/\n\n\n/\r\r/g<CR>gg:nohl<CR>:w<CR>
