@@ -10,21 +10,20 @@ syntax enable
 
 if has( "gui_running" )
   " " kuznero light theme
-  " colorscheme kuznero-light-regular
   " set background=light
+  " colorscheme kuznero-light-regular
 
   " kuznero dark theme
-  colorscheme kuznero-black-regular
   set background=dark
+  colorscheme kuznero-dark-regular
 
   " " base16
-  " colorscheme base16-default-dark
-  " let base15colorspace=256
   " set background=dark
-endif
-
-if !has( "gui_running" )
+  " let base15colorspace=256
+  " colorscheme base16-default-dark
+else
   set background=dark
+  colorscheme default
 endif
 
 " Configure airline
