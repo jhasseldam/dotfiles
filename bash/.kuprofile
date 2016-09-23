@@ -77,12 +77,12 @@ GIT_DIRTY=$IRED
 
 ## ls ## {{{
 alias ls='ls -hF --color=auto'
-alias ll='ls -lh'
+alias  l='ls -lh'
 alias lr='ls -R'                    # recursive ls
-alias la='ll -A'
-alias lx='ll -BX'                   # sort by extension
-alias lz='ll -rS'                   # sort by size
-alias lt='ll -rt'                   # sort by date
+alias la='l -A'
+alias lx='l -BX'                   # sort by extension
+alias lz='l -rS'                   # sort by size
+alias lt='l -rt'                   # sort by date
 alias lm='la | more'
 # }}}
 
