@@ -46,11 +46,15 @@ echo ""
 read -p "Do you want to modify $HOME/.bash_profile and $HOME/.bashrc to include new extensions? " -n 1 -r
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo '' >> $HOME/.bash_profile
   echo 'if [ -f "$HOME/.kuprofile" ]; then' >> $HOME/.bash_profile
   echo '  . "$HOME/.kuprofile"' >> $HOME/.bash_profile
   echo 'fi' >> $HOME/.bash_profile
+  echo '' >> $HOME/.bash_profile
+  echo '' >> $HOME/.bashrc
   echo 'if [ -f "$HOME/.kuprofile" ]; then' >> $HOME/.bashrc
   echo '  . "$HOME/.kuprofile"' >> $HOME/.bashrc
   echo 'fi' >> $HOME/.bashrc
   echo "done."
+  echo '' >> $HOME/.bashrc
 fi
