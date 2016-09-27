@@ -2,7 +2,7 @@
 if has('win32')
   set guifont=Droid_Sans_Mono_Dotted_for_Powe:h12:cRUSSIAN
 elseif has('unix')
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ Light\ 11
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
 endif
 
 " Color scheme {{{1
