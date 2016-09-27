@@ -39,6 +39,12 @@ mkdir -p $HOME/.config/doublecmd
 cp -v doublecmd/*.xml $HOME/.config/doublecmd
 
 echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m SYNAPSE \e[0m"
+echo ""
+mkdir -p $HOME/.config/synapse
+cp -v synapse/*.json $HOME/.config/synapse
+
+echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH EXTENSIONS \e[0m"
 echo ""
 cp -v bash/.kuprofile $HOME
