@@ -13,9 +13,13 @@ if has( "gui_running" )
   " set background=light
   " colorscheme kuznero-light-regular
 
-  " kuznero dark theme
+  " " kuznero dark theme
+  " set background=dark
+  " colorscheme kuznero-dark-regular
+
+  " kuznero black theme
   set background=dark
-  colorscheme kuznero-dark-regular
+  colorscheme kuznero-black-regular
 
   " " base16
   " set background=dark
