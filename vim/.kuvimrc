@@ -40,7 +40,8 @@ NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'mhinz/vim-signify'
 " [ C# ]
 NeoBundle 'csharp.vim'
 " [ F# ]
@@ -113,8 +114,8 @@ if has("gui_running")
   " enable current line highlight
   set nocursorline
   " set window size explicitly
-  set columns=130
-  set lines=30
+  set columns=153
+  set lines=38
   " " remove menu bar
   set guioptions-=m
   " remove toolbar
