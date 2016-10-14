@@ -50,7 +50,6 @@ NeoBundle 'fsharp/vim-fsharp', {
            \ 'autoload': {'filetypes': 'fsharp'},
            \ 'build': {
            \   'unix':  'make fsautocomplete',
-           \   'win32':  'install.cmd',
            \ },
            \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
            \}
@@ -73,8 +72,10 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
 if has('win32')
   set wildignore+=*\\.stack-work\\*
+  set wildignore+=*\\packages\\*
 else
   set wildignore+=*/.stack-work/*
+  set wildignore+=*/packages/*
 endif
 
 " General {{{1
