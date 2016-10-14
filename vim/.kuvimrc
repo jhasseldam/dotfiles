@@ -36,6 +36,11 @@ NeoBundle 'vim-airline/vim-airline-themes'
 " [ COLOR SCHEMES ]
 NeoBundle 'kuznero/kuvim-themes'
 NeoBundle 'chriskempson/base16-vim'
+" [ CODE COMPLETION & SYNTAX MANAGEMENT ]
+NeoBundle 'ervandew/supertab'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
 " [ C# ]
 NeoBundle 'csharp.vim'
 " [ F# ]
@@ -45,16 +50,15 @@ NeoBundle 'fsharp/vim-fsharp', {
            \ 'autoload': {'filetypes': 'fsharp'},
            \ 'build': {
            \   'unix':  'make fsautocomplete',
+           \   'win32':  'install.cmd',
            \ },
            \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
            \}
 " [ PowerShell ]
 NeoBundle 'PProvost/vim-ps1'
 " " [ Haskell ]
-NeoBundle 'scrooloose/syntastic'
 " NeoBundle 'eagletmt/ghcmod-vim'
 " NeoBundle 'eagletmt/neco-ghc'
-" NeoBundle 'ervandew/supertab'
 " [ Elm ]
 NeoBundle 'ElmCast/elm-vim'
 call neobundle#end()
@@ -122,6 +126,7 @@ endif
 set showmode
 " always show status line
 set laststatus=2
+set statusline=%{fugitive#statusline()}
 " backspace for dummys
 set backspace=indent,eol,start
 " no extra spaces between rows
@@ -167,6 +172,12 @@ set softtabstop=2
 " Diff {{{1
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
+
+" F# Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_fsharp" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
 
 " Elm Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_elm" )

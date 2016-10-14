@@ -1,0 +1,12 @@
+let g:fsharp_only_check_errors_on_write = 1
+let g:fsharpbinding_debug = 0
+" let g:fsharp_xbuild_path = "/path/to/xbuild/or/msbuild"
+" let g:fsharp_test_runner = "/path/to/test/runner"
+let g:fsharp_completion_helptext = 1
+let g:fsharp_map_keys = 1
+" let g:fsharp_map_prefix = 'cp'
+" let g:fsharp_map_fsisendline = 'p'
+" let g:fsharp_map_fsisendsel = 'p'
+" let g:fsharp_map_gotodecl = 'g'
+" let g:fsharp_map_gobackfromdecl = 'b'
+" let g:fsharp_map_fsiinput = 'i'
