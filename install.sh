@@ -1,36 +1,31 @@
 #!/bin/bash
 
 echo ""
-echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m EMACS \e[0m"
-echo ""
-cp -v emacs/.emacs $HOME
-
-echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m GIT \e[0m"
 echo ""
 cp -v git/linux/.gitconfig $HOME
 
 echo ""
-echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m HASKELL \e[0m"
-echo ""
-cp -v haskell/linux/.ghci $HOME
-
-echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m VIM \e[0m"
 echo ""
-cp -v vim/.* $HOME
+cp -v vim/.ku* $HOME
+cp -v vim/.vimrc $HOME
+
+echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m EMACS \e[0m"
+echo ""
+read -p "Do you want to reset your EMACS setup? " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  rm -rf ~/.emacs.d/ ~/.emacs ~/.spacemacs
+  cp -vr emacs/.emacs.d $HOME
+  cp -v emacs/.spacemacs $HOME
+fi
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m TMUX \e[0m"
 echo ""
-cp -v tmux/.* $HOME
-
-echo ""
-echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH SCRIPTS \e[0m"
-echo ""
-mkdir -p $HOME/bin
-cp -v bash/*.sh $HOME/bin
-cp -v bash/.* $HOME
+cp -v tmux/.tmux.conf $HOME
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m DOUBLE CMD \e[0m"
@@ -43,6 +38,24 @@ echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m SYNAPSE \e[0m"
 echo ""
 mkdir -p $HOME/.config/synapse
 cp -v synapse/*.json $HOME/.config/synapse
+
+echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m ZSH SCRIPTS \e[0m"
+echo ""
+read -p "Do you want to install oh-my-zsh? " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  rm -rf ~/.oh-my-zsh/
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  cp -v zsh/.zshrc $HOME
+fi
+
+echo ""
+echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH SCRIPTS \e[0m"
+echo ""
+mkdir -p $HOME/bin
+cp -v bash/*.sh $HOME/bin
+cp -v bash/.inputrc $HOME
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH EXTENSIONS \e[0m"
