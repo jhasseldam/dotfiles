@@ -55,6 +55,7 @@ echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m BASH SCRIPTS \e[0m"
 echo ""
 mkdir -p $HOME/bin
 cp -v bash/*.sh $HOME/bin
+find bash/ -type l -exec cp -av {} $HOME/bin \;
 cp -v bash/.inputrc $HOME
 
 echo ""
