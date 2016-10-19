@@ -21,12 +21,16 @@
 [color]
   ui = true
 [diff]
-  tool = vimdiff
+  tool = bc3
 [difftool]
   prompt = false
 [merge]
-  tool = vimdiff
+  tool = bc3
 [mergetool]
   prompt = false
 [push]
   default = simple
+[difftool "bc3"]
+  trustExitCode = true
+[mergetool "bc3"]
+  trustExitCode = true
