@@ -36,6 +36,7 @@ values."
      auto-completion (haskell :variables haskell-completion-backend 'intero)
      elm
      fsharp
+     csharp
      yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
