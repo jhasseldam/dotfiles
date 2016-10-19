@@ -16,6 +16,8 @@
   m = merge
   mt = mergetool
   cl = clean -x -d -f
+  pl = pull --prune --all
+  ps = push
 [color]
   ui = true
 [diff]
