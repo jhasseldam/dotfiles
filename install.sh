@@ -14,12 +14,14 @@ cp -v vim/.vimrc $HOME
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m EMACS \e[0m"
 echo ""
-read -p "Do you want to reset your EMACS setup? " -n 1 -r
+rm $HOME/.emacs
+cp -v emacs/.spacemacs $HOME
+echo ""
+read -p "Do you want to reset your SPACEMACS setup? " -n 1 -r
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  rm -rf ~/.emacs.d/ ~/.emacs ~/.spacemacs
+  rm -rf $HOME/.emacs.d/
   cp -vr emacs/.emacs.d $HOME
-  cp -v emacs/.spacemacs $HOME
 fi
 
 echo ""
