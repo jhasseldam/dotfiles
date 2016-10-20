@@ -1,11 +1,11 @@
 @echo off
-copy /Y .\emacs\.emacs "%APPDATA%"
-copy /Y .\emacs\.emacs "%USERPROFILE%"
+copy /Y .\emacs\.spacemacs "%APPDATA%"
+mkdir "%APPDATA%\.emacs.d"
+robocopy .\emacs\.emacs.d "%APPDATA%\.emacs.d" /MIR
 copy /Y .\git\windows\.gitconfig "%USERPROFILE%"
-copy /Y .\haskell\windows\.ghci "%USERPROFILE%"
 copy /Y .\vim\.kuvim* "%USERPROFILE%"
 copy /Y .\vim\_* "%USERPROFILE%"
 copy /Y .\tmux\.tmux* "%USERPROFILE%"
-mkdir "%USERPROFILE%\AppData\Roaming\doublecmd"
-copy /Y .\doublecmd\* "%USERPROFILE%\AppData\Roaming\doublecmd"
+mkdir "%APPDATA%\doublecmd"
+copy /Y .\doublecmd\* "%APPDATA%\doublecmd"
 @echo on
