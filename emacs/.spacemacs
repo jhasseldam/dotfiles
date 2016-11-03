@@ -137,8 +137,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(alect-black
-                         badwolf
+   dotspacemacs-themes '(badwolf
                          spacemacs-dark
                          spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -334,6 +333,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (add-hook 'prog-mode-hook 'my-personal-code-style)
+  (setq markdown-command "pandoc --smart -f markdown -t html")
   )
 
 (defun dotspacemacs/user-config ()
