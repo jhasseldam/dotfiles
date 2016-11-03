@@ -1,0 +1,17 @@
+{
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-github.tmTheme",
+	"font_face": "Source Code Pro",
+	"font_size": 11,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages": [],
+	"preview_on_click": false,
+	"soda_classic_tabs": false,
+	"soda_folder_icons": true,
+	"tab_size": 2,
+	"theme": "Soda Light 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"vintage_start_in_command_mode": true,
+	"vintage_ctrl_keys": true
+}
