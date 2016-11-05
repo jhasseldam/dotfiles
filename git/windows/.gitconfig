@@ -1,9 +1,9 @@
 [user]
   name = Roman Kuznetsov
-  email = kuznero@gmail.com
+  email = roman@kuznero.com
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = emacs -nw -q
   autocrlf = input
 [alias]
   st = status
@@ -12,7 +12,8 @@
   l = log --graph --oneline --decorate --all -n 20
   br = branch
   d = diff
-  dt = difftool --diff-filter=ACMRTUXB --prompt
+  dt = difftool --diff-filter=ACMRTUXB --no-prompt
+  dtp = difftool --diff-filter=ACMRTUXB --prompt
   m = merge
   mt = mergetool
   cl = clean -x -d -f
@@ -21,16 +22,15 @@
 [color]
   ui = true
 [diff]
-  tool = bc3
-[difftool]
-  prompt = false
-[difftool "bc3"]
-  path = c:/program files/beyond compare 4/bcomp.exe
+  tool = meld
+[difftool "meld"]
+  cmd = meld $LOCAL $REMOTE
+  trustExitCode = true
 [merge]
-  tool = bc3
-[mergetool]
+  tool = meld
+[mergetool "meld"]
+  cmd = meld $BASE $LOCAL $REMOTE $MERGED
   prompt = false
-[mergetool "bc3"]
-  path = c:/program files/beyond compare 4/bcomp.exe
+  trustExitCode = true
 [push]
   default = simple
