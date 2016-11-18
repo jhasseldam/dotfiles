@@ -177,6 +177,12 @@ set softtabstop=2
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
 
+" Rust Include {{{1
+let s:rc = expand( "$HOME/.kuvimrc_rust" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+
 " F# Include {{{1
 let s:rc = expand( "$HOME/.kuvimrc_fsharp" )
 if filereadable( s:rc )
