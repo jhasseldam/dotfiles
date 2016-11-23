@@ -1,6 +1,6 @@
 " Roman Kuznetsov's profile settings
 
-" NeoBundle {{{1
+" NeoBundle {{{
 if has('win32')
   let s:rc_raw = expand("$HOME/vimfiles/bundle/neobundle.vim")
   let s:rc = substitute(s:rc_raw, "\\", "/", "g")
@@ -68,8 +68,8 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
-" CtrlP {{{1
+" }}}
+" CtrlP {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
@@ -80,8 +80,8 @@ else
   set wildignore+=*/.stack-work/*
   set wildignore+=*/packages/*
 endif
-
-" General {{{1
+" }}}
+" General {{{
 " enable filetype detection, plus loading of filetype plugins
 filetype plugin indent on
 " automatically enable mouse usage
@@ -109,8 +109,8 @@ set colorcolumn=0
 " set splitbelow
 " allow buffers to go to the background even if they are unsaved
 set hidden
-
-" UI {{{1
+" }}}
+" UI {{{
 " gui specific settings
 if has("gui_running")
   " enable current line highlight
@@ -130,7 +130,9 @@ endif
 set showmode
 " always show status line
 set laststatus=2
-set statusline=%{fugitive#statusline()}
+if exists('g:loaded_fugitive')
+  set statusline=%{fugitive#statusline()}
+endif
 " backspace for dummys
 set backspace=indent,eol,start
 " no extra spaces between rows
@@ -150,14 +152,20 @@ set smartcase
 " fold method
 set foldmethod=marker
 " auto fold enabled
-set nofoldenable
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
 " show list characters
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
 set list
 "set linebreak
 set showbreak=>>\ 
-
-" Formatting {{{1
+" visual autocomplete for command menu
+set wildmenu
+" redraw only when it needs to (for faster macros)
+set lazyredraw
+" }}}
+" Formatting {{{
 " wrap long lines
 set nowrap
 " indent at the same level of the previous line
@@ -172,49 +180,50 @@ set expandtab
 set tabstop=2
 " let backspace delete indent
 set softtabstop=2
-
-" Diff {{{1
+" }}}
+" Diff {{{
 " disregard whitespaces on file diff
 " set diffopt+=iwhite
-
-" Rust Include {{{1
+" }}}
+" Rust Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_rust" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" F# Include {{{1
+" }}}
+" F# Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_fsharp" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Elm Include {{{1
+" }}}
+" Elm Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_elm" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Markdown Include {{{1
+" }}}
+" Markdown Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_markdown" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Xml Include {{{1
+" }}}
+" Xml Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_xml" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Mapping Include {{{1
+" }}}
+" Mapping Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_mapping" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
-
-" Style Include {{{1
+" }}}
+" Style Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_style" )
 if filereadable( s:rc )
   execute ':source '.s:rc
 endif
+" }}}

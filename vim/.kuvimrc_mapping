@@ -8,6 +8,13 @@
 " set scrolloff to toggle always placing cursor in the middle
 :nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 
+" Visual block movement {{{1
+:vnoremap J :m '>+1<CR>gv=gv
+:vnoremap K :m '<-2<CR>gv=gv
+
+" Highlight last inserted code {{{1
+:nnoremap gV `[v`]
+
 " Buffer management {{{1
 :nnoremap <C-h> :bp<CR>
 :nnoremap <C-l> :bn<CR>
