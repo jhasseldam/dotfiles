@@ -16,7 +16,7 @@
       grub = {
         enable = true;
         version = 2;
-        boot.loader.grub.device = "/dev/sdb"; # or "nodev" for efi only
+        device = "/dev/sdb"; # or "nodev" for efi only
       };
     };
   };
