@@ -10,8 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  virtualisation.virtualbox.guest.enable = false;
-
   # Use the GRUB 2 boot loader.
   boot = {
     loader = {
@@ -178,6 +176,7 @@
     };
     virtualbox = {
       host.enable = true;
+      guest.enable = false;
     };
   };
 
