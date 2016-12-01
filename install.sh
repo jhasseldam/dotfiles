@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m GIT \e[0m"
