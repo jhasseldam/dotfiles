@@ -37,7 +37,7 @@
       enablePepperPDF = true;
       # enableWideVine = true;
     };
-    virtualbox.enableExtensionPack = true;
+    # virtualbox.enableExtensionPack = true;
     pulseaudio = true;
   };
 
