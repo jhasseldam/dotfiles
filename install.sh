@@ -1,5 +1,7 @@
 #!env bash
 
+git submodule update --init --recursive
+
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m GIT \e[0m"
 echo ""
@@ -29,11 +31,11 @@ echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m TMUX \e[0m"
 echo ""
 cp -v tmux/.tmux.conf $HOME
 
-echo ""
-echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m DOUBLE CMD \e[0m"
-echo ""
-mkdir -p $HOME/.config/doublecmd
-cp -v doublecmd/*.xml $HOME/.config/doublecmd
+#echo ""
+#echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m DOUBLE CMD \e[0m"
+#echo ""
+#mkdir -p $HOME/.config/doublecmd
+#cp -v doublecmd/*.xml $HOME/.config/doublecmd
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m SYNAPSE \e[0m"
@@ -41,11 +43,11 @@ echo ""
 mkdir -p $HOME/.config/synapse
 cp -v synapse/*.json $HOME/.config/synapse
 
-echo ""
-echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m SUBLIME TEXT 3 \e[0m"
-echo ""
-mkdir -p $HOME/.config/sublime-text-3/Packages/User
-cp -v sublime/.config/sublime-text-3/Packages/User/Preferences.sublime-settings $HOME/.config/sublime-text-3/Packages/User
+#echo ""
+#echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m SUBLIME TEXT 3 \e[0m"
+#echo ""
+#mkdir -p $HOME/.config/sublime-text-3/Packages/User
+#cp -v sublime/.config/sublime-text-3/Packages/User/Preferences.sublime-settings $HOME/.config/sublime-text-3/Packages/User
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m ZSH SCRIPTS \e[0m"
