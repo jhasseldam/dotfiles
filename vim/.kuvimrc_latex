@@ -1,0 +1,2 @@
+au BufEnter *.tex nnoremap <buffer> <F5> :!xelatex %<CR>
+au BufEnter *.tex nnoremap <buffer> <F7> :silent !xdg-open '%:p:r.pdf' &<CR>

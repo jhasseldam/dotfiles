@@ -203,6 +203,12 @@ if filereadable( s:rc )
   execute ':source '.s:rc
 endif
 " }}}
+" LaTeX Include {{{
+let s:rc = expand( "$HOME/.kuvimrc_latex" )
+if filereadable( s:rc )
+  execute ':source '.s:rc
+endif
+" }}}
 " Markdown Include {{{
 let s:rc = expand( "$HOME/.kuvimrc_markdown" )
 if filereadable( s:rc )
