@@ -12,6 +12,7 @@ echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m VIM \e[0m"
 echo ""
 cp -v vim/.ku* $HOME
 cp -v vim/.vimrc $HOME
+cp -v vim/.gtk* $HOME
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m EMACS \e[0m"
