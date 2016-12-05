@@ -1,3 +1,5 @@
+"au BufEnter *.tex setl tw=79 tx ts=4 sw=4 fo+=n2a
+au BufEnter *.tex setl tw=79
 au BufEnter *.tex nnoremap <buffer> <F5> :!xelatex %<CR>
 if has('unix')
   au BufEnter *.tex nnoremap <buffer> <F7> :silent !xdg-open '%:p:r.pdf' &<CR>
