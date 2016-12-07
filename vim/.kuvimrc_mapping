@@ -3,6 +3,8 @@
 " let mapleader = "`"
 " save current file
 :nnoremap <F2> :w<CR>
+" run build
+:nnoremap <F5> :make<CR>
 " clearing highlighted search
 :nnoremap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
