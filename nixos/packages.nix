@@ -7,7 +7,7 @@
     # Common
     wget curl htop tmux gparted manpages
     # Internet
-    firefox chromium hexchat irssi
+    firefox chromium hexchat irssi tdesktop
     # Programming
     stack texlive.combined.scheme-full
     # Gnome 3
