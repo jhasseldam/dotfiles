@@ -3,27 +3,27 @@
 {
   environment.systemPackages = with pkgs; [
     vimHugeX
-    # common plugins
-    vimPlugins.vimproc
-    vimPlugins.nerdtree
-    vimPlugins.vim-nerdtree-tabs
-    vimPlugins.ctrlp
-    vimPlugins.surround
-    vimPlugins.airline
-    vimPlugins.vim-airline-themes
-    vimPlugins.fugitive
-    vimPlugins.multiple-cursors
-    vimPlugins.Supertab
-    vimPlugins.gitgutter
-    vimPlugins.vim-signify
-    # color schemes
-    vimPlugins.molokai
-    vimPlugins.vim-colorschemes
-    # programming
-    vimPlugins.elm-vim
-    # vimPlugins.ghc-mod-vim
-    # vimPlugins.neco-ghc
-    vimPlugins.Syntastic
+    # # common plugins
+    # vimPlugins.vimproc
+    # vimPlugins.nerdtree
+    # vimPlugins.vim-nerdtree-tabs
+    # # vimPlugins.ctrlp
+    # vimPlugins.surround
+    # vimPlugins.airline
+    # vimPlugins.vim-airline-themes
+    # vimPlugins.fugitive
+    # vimPlugins.multiple-cursors
+    # vimPlugins.Supertab
+    # vimPlugins.gitgutter
+    # vimPlugins.vim-signify
+    # # color schemes
+    # vimPlugins.molokai
+    # vimPlugins.vim-colorschemes
+    # # programming
+    # # vimPlugins.elm-vim
+    # # vimPlugins.ghc-mod-vim
+    # # vimPlugins.neco-ghc
+    # vimPlugins.Syntastic
     (
       with import <nixpkgs> {};
       vim_configurable.customize {
@@ -181,26 +181,26 @@
         vimrcConfig.vam.knownPlugins = pkgs.vimPlugins;
         vimrcConfig.vam.pluginDictionaries = [
           { names = [
-            # Here you can place all your vim plugins
-            # They are installed managed by `vam` (a vim plugin manager)
-            "vimproc"
-            "nerdtree"
-            "vim-nerdtree-tabs"
-            "ctrlp"
-            "surround"
-            "airline"
-            "vim-airline-themes"
-            "fugitive"
-            "multiple-cursors"
-            "Supertab"
-            "gitgutter"
-            "vim-signify"
-            "molokai"
-            "vim-colorschemes"
-            "elm-vim"
-            # "ghc-mod-vim"
-            # "neco-ghc"
-            "Syntastic"
+            # # Here you can place all your vim plugins
+            # # They are installed managed by `vam` (a vim plugin manager)
+            # "vimproc"
+            # "nerdtree"
+            # "vim-nerdtree-tabs"
+            # # "ctrlp"
+            # "surround"
+            # "airline"
+            # "vim-airline-themes"
+            # "fugitive"
+            # "multiple-cursors"
+            # "Supertab"
+            # "gitgutter"
+            # "vim-signify"
+            # "molokai"
+            # "vim-colorschemes"
+            # # "elm-vim"
+            # # "ghc-mod-vim"
+            # # "neco-ghc"
+            # "Syntastic"
           ]; }
         ];
       }
