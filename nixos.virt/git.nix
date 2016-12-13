@@ -10,6 +10,8 @@
       text = ''
         cd /home/kuznero
         ln -fs /etc/nixos/dotfiles/.gitconfig .gitconfig
+        cd /root
+        ln -fs /etc/nixos/dotfiles/.gitconfig .gitconfig
       '';
       deps = ["users"];
     };

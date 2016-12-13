@@ -7,7 +7,7 @@
     # vimPlugins.vimproc
     # vimPlugins.nerdtree
     # vimPlugins.vim-nerdtree-tabs
-    # # vimPlugins.ctrlp
+    # vimPlugins.ctrlp
     # vimPlugins.surround
     # vimPlugins.airline
     # vimPlugins.vim-airline-themes
@@ -20,7 +20,7 @@
     # vimPlugins.molokai
     # vimPlugins.vim-colorschemes
     # # programming
-    # # vimPlugins.elm-vim
+    # vimPlugins.elm-vim
     # # vimPlugins.ghc-mod-vim
     # # vimPlugins.neco-ghc
     # vimPlugins.Syntastic
@@ -186,7 +186,7 @@
             # "vimproc"
             # "nerdtree"
             # "vim-nerdtree-tabs"
-            # # "ctrlp"
+            # "ctrlp"
             # "surround"
             # "airline"
             # "vim-airline-themes"
@@ -197,7 +197,7 @@
             # "vim-signify"
             # "molokai"
             # "vim-colorschemes"
-            # # "elm-vim"
+            # "elm-vim"
             # # "ghc-mod-vim"
             # # "neco-ghc"
             # "Syntastic"

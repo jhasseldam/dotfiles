@@ -5,6 +5,7 @@
   excludesfile = ~/.gitignore
   editor = vim
   autocrlf = input
+  # gitproxy = /etc/nixos/dotfiles/gitproxy.sh
 [alias]
   st = status
   ci = commit
@@ -34,3 +35,5 @@
   trustExitCode = true
 [push]
   default = simple
+# [url "https://"]
+#   insteadOf = git://

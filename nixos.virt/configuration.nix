@@ -14,6 +14,7 @@
       ./virtualization.nix
       ./fonts.nix
       ./packages.nix
+      ./programming.nix
       ./zsh.nix
       ./vim.nix
       ./git.nix
