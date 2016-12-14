@@ -12,7 +12,7 @@
       in
         with import <nixpkgs> {};
         vim_configurable.customize {
-          name = "kvim";
+          name = "vim";
           vimrcConfig.customRC = rc;
           vimrcConfig.vam.knownPlugins = pkgs.vimPlugins // plugins;
           vimrcConfig.vam.pluginDictionaries = [
