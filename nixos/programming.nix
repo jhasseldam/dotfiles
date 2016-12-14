@@ -5,5 +5,6 @@
     stack
     texlive.combined.scheme-full
     meld
+    mono46 fsharp
   ];
 }
