@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vimHugeX
     (
       let
         vimrc = builtins.readFile ./dotfiles/.vimrc;
