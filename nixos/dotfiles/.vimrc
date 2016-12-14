@@ -1,4 +1,4 @@
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 12
 syntax enable
 if has( "gui_running" )
   set background=dark
