@@ -5,7 +5,8 @@
     # Common
     wget curl htop tmux gparted manpages xclip
     # Internet
-    firefox chromium hexchat irssi socat
+    firefox chromium hexchat irssi tdesktop
+    xe-guest-utilities
     # Office
     evince
     # Gnome 3

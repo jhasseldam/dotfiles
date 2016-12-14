@@ -6,13 +6,15 @@
   networking = {
     hostName = "soul";
     domain = "danskenet.net";
+    search = [ "danskenet.net" ];
     proxy.default = "http://127.0.0.1:3128/";
+    firewall.enable = false;
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
-    nameservers = [
-      "8.8.8.8"
-      "8.8.4.4"
-    ];
+    # nameservers = [
+    #   "8.8.8.8"
+    #   "8.8.4.4"
+    # ];
   };
   services.cntlm = {
     enable = true;

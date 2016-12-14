@@ -11,4 +11,5 @@
       guest.enable = true;
     };
   };
+  nixpkgs.config.virtualbox.enableExtensionPack = true;
 }
