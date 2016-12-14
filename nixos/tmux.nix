@@ -6,7 +6,7 @@
   ];
 
   system.activationScripts = {
-    vimDotfiles = {
+    tmuxDotfiles = {
       text = ''
         cd /home/kuznero
         ln -fs /etc/nixos/dotfiles/.tmux.conf .tmux.conf
