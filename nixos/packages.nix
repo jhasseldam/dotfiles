@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Common
-    wget curl htop tmux gparted manpages xclip
+    wget curl htop gparted manpages xclip
     # Internet
     firefox chromium hexchat irssi tdesktop
     xe-guest-utilities

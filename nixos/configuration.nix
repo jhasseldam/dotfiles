@@ -16,6 +16,7 @@
       ./programming.nix
       ./zsh.nix
       ./vim.nix
+      ./tmux.nix
       ./git.nix
       ./users.nix
       ./services.nix
