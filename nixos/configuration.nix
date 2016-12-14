@@ -8,10 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./bootloader.nix
-      ./config.nix
-      ./networking.nix
-      ./virtualization.nix
+      ./private/bootloader.nix
+      ./private/networking.nix
+      ./private/virtualization.nix
       ./fonts.nix
       ./packages.nix
       ./programming.nix
@@ -21,6 +20,25 @@
       ./users.nix
       ./services.nix
     ];
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    # chromium = {
+    #   enablePepperPDF = true;
+    #   # enableWideVine = true;
+    # };
+    pulseaudio = true;
+  };
+
+  # Select internationalisation properties.
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_US.UTF-8";
+  };
+
+  # Set your time zone.
+  time.timeZone = "Europe/Copenhagen";
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
