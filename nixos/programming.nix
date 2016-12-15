@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    gnumake
     stack
     texlive.combined.scheme-full
     meld
