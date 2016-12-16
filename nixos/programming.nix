@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     gnumake
-    cabal2nix
     texlive.combined.scheme-full
     meld
     mono46 fsharp
