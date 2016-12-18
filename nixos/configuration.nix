@@ -8,9 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./private/bootloader.nix
-      ./private/networking.nix
-      ./private/virtualization.nix
+      ./bootloader.nix
+      ./networking.nix
+      ./virtualization.nix
       ./fonts.nix
       ./packages.nix
       ./programming.nix

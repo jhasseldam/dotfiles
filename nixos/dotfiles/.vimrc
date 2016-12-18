@@ -1,8 +1,8 @@
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 13
 syntax enable
 if has( "gui_running" )
   set background=dark
-  colorscheme kuznero-black-regular
+  colorscheme kuznero-dark-regular
 else
   set background=dark
   colorscheme default

@@ -6,7 +6,7 @@
     wget curl htop gparted manpages xclip
     # Internet
     firefox chromium hexchat irssi tdesktop
-    xe-guest-utilities
+    xe-guest-utilities dropbox qbittorrent
     # Office
     evince
     # Gnome 3
