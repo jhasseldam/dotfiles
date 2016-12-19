@@ -23,6 +23,6 @@
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
   '';
-  
+
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
 }

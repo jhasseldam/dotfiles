@@ -110,6 +110,16 @@ else
 endif
 " }}}
 
+" Haskell {{{
+hi ghcmodType ctermbg=yellow
+let g:ghcmod_type_highlight = 'ghcmodType'
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+let g:necoghc_enable_detailed_browse = 0
+let g:necoghc_debug = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" }}}
+
 " LaTeX {{{
 "au BufEnter *.tex setl tw=79 tx ts=4 sw=4 fo+=n2a
 au BufEnter *.tex setl tw=79
