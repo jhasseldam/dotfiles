@@ -145,6 +145,26 @@ in {
     dependencies = [];
   };
 
+  ghcmod = buildVimPlugin {
+    name = "ghcmod";
+    src = fetchgit {
+      url = "https://github.com/eagletmt/ghcmod-vim";
+      rev = "1d192d13d68ab59f9f46497a0909bf24a7b7dfff";
+      sha256 = "0bzahgzagnf0a9zv86jhdf8nc3p0yfz9izv5n3lc8gc12cp47d0a";
+    };
+    dependencies = [];
+  };
+
+  necoghc = buildVimPlugin {
+    name = "necoghc";
+    src = fetchgit {
+      url = "https://github.com/eagletmt/neco-ghc";
+      rev = "7f02a9c25fb272a87d2be092826e2cd3094c620d";
+      sha256 = "1fcfk45qb96h6y4zb3p0104iyqc85q1synn9ah56zp6hnkkyffbw";
+    };
+    dependencies = [];
+  };
+
   "kuvim-themes" = buildVimPlugin {
     name = "kuvim-themes";
     src = fetchgit {

@@ -19,6 +19,8 @@
             { names = [
                 "vimproc"
                 "syntastic"
+                "ghcmod"
+                "necoghc"
                 "nerdtree"
                 "ctrlp"
                 "surround"
