@@ -22,5 +22,8 @@
     password = "password";
     domain = "domain";
     proxy = [ "10.81.220.156:80" ];
+    extraConfig = ''
+      NoProxy *.danskenet.net
+    '';
   };
 }
