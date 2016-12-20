@@ -23,7 +23,7 @@
     domain = "domain";
     proxy = [ "10.81.220.156:80" ];
     extraConfig = ''
-      NoProxy *.danskenet.net
+      NoProxy *.danskenet.net docker-hub
     '';
   };
 }
