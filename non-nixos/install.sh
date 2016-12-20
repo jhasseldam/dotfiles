@@ -1,6 +1,6 @@
 #!env bash
 
-git submodule update --init --recursive
+git clone https://github.com/syl20bnr/spacemacs ./emacs/.emacs.d
 
 echo ""
 echo -e "\e[40;38;5;82m PROCESSING \e[30;48;5;82m GIT \e[0m"
