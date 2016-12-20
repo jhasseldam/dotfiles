@@ -10,4 +10,17 @@
     maven jdk
     inotify-tools
   ];
+
+  system.activationScripts = {
+    tmuxDotfiles = {
+      text = ''
+        cd /home/kuznero
+        if [[ -d .m2 ]]; then rm -rf .m2; fi
+        mkdir .m2
+        ln -fs /etc/nixos/dotfiles/.m2/settings.xml .m2/settings.xml
+      '';
+      deps = ["users"];
+    };
+  };
+
 }
