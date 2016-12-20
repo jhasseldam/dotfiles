@@ -7,6 +7,7 @@
     texlive.combined.scheme-full
     meld
     mono46 fsharp
+    maven jdk
     inotify-tools
   ];
 }
