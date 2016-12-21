@@ -33,6 +33,7 @@
                 "signify"
                 "elm"
                 "kuvim-themes"
+                "papercolor-theme"
             ]; }
             # { names = [
             #   # "elm-vim"

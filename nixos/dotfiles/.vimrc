@@ -2,7 +2,9 @@ set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 13
 syntax enable
 if has( "gui_running" )
   set background=dark
-  colorscheme kuznero-dark-regular
+  colorscheme PaperColor
+  " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
+  " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
 else
   set background=dark
   colorscheme default
@@ -91,9 +93,9 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts=1
 if has( "gui_running" )
   let g:airline_powerline_fonts = 1
-  let g:airline_theme='molokai'
+  let g:airline_theme='papercolor'
 else
-  let g:airline_theme='molokai'
+  let g:airline_theme='papercolor'
 endif
 " }}}
 

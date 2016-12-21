@@ -175,5 +175,15 @@ in {
     dependencies = [];
   };
 
+  "papercolor-theme" = buildVimPlugin {
+    name = "papercolor-theme";
+    src = fetchgit {
+      url = "https://github.com/NLKNguyen/papercolor-theme";
+      rev = "2649bb8dbea94a852f78650556152304f5838b14";
+      sha256 = "0q47v8rx7p0b7rygbp3agrixqv1dipy07kap5q646c9hfc97vjvk";
+    };
+    dependencies = [];
+  };
+
   # more?
 }
