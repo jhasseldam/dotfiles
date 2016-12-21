@@ -8,9 +8,10 @@
     firefox chromium hexchat irssi tdesktop
     xe-guest-utilities dropbox qbittorrent
     # Office
-    evince
+    evince libreoffice poppler_utils
+    # Multimedia
+    gthumb vlc
     # Gnome 3
     gnome3.gnome_keyring
-    gthumb vlc
   ];
 }
