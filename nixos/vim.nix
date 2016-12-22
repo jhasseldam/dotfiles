@@ -21,6 +21,7 @@
                 "syntastic"
                 "ghcmod"
                 "necoghc"
+                "hindent"
                 "nerdtree"
                 "ctrlp"
                 "surround"

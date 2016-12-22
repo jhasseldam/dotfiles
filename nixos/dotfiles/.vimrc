@@ -113,13 +113,36 @@ endif
 " }}}
 
 " Haskell {{{
+" Some of this setup is from http://www.sillybytes.net/2016/08/vim-haskell_11.html?utm_content=46778807&utm_medium=social&utm_source=twitter
 hi ghcmodType ctermbg=yellow
 let g:ghcmod_type_highlight = 'ghcmodType'
-" Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 let g:necoghc_enable_detailed_browse = 0
 let g:necoghc_debug = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:hindent_on_save = 1
+let g:hindent_line_length = 80
+let g:hindent_indent_size = 2
+augroup Haskell
+  au!
+  au FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftround
+  au FileType haskell setlocal omnifunc=necoghc#omnifunc
+  au FileType haskell nnoremap <silent><buffer> git :GhcModTypeInsert<CR>
+  au FileType haskell nnoremap <silent><buffer> gfs :GhcModSplitFunCase<CR>
+  au FileType haskell nnoremap <silent><buffer> gtt :GhcModType<CR>
+  au FileType haskell nmap <silent><buffer> g<space> vii<ESC>:silent!'<,'> EasyAlign /->/<CR>
+  " " types abbreviations
+  " au FileType haskell inoreab <buffer> int Int
+  " au FileType haskell inoreab <buffer> integer Integer
+  " au FileType haskell inoreab <buffer> string String
+  " au FileType haskell inoreab <buffer> double Double
+  " au FileType haskell inoreab <buffer> float Float
+  " au FileType haskell inoreab <buffer> true True
+  " au FileType haskell inoreab <buffer> false False
+  " au FileType haskell inoreab <buffer> maybe Maybe
+  " au FileType haskell inoreab <buffer> just Just
+  " au FileType haskell inoreab <buffer> nothing Nothing
+  " au FileType haskell inoreab <buffer> io IO ()
+augroup END
 " }}}
 
 " LaTeX {{{

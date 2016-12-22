@@ -165,6 +165,16 @@ in {
     dependencies = [];
   };
 
+  hindent = buildVimPlugin {
+    name = "hindent";
+    src = fetchgit {
+      url = "https://github.com/alx741/vim-hindent.git";
+      rev = "d97a94eade5a363dca9d56a8d9970852512c4ec0";
+      sha256 = "0gklmyzj7mkpm4sqsxxmah1kxmjlv1s8lr2gya674yb5fz7n10nd";
+    };
+    dependencies = [];
+  };
+
   "kuvim-themes" = buildVimPlugin {
     name = "kuvim-themes";
     src = fetchgit {
