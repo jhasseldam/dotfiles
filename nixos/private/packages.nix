@@ -10,7 +10,7 @@
     # Office
     evince libreoffice poppler_utils
     # Multimedia
-    gthumb vlc
+    gthumb vlc gimp-with-plugins
     # Gnome 3
     gnome3.gnome_keyring
   ];

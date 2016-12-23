@@ -175,6 +175,16 @@ in {
     dependencies = [];
   };
 
+  vim2hs = buildVimPlugin {
+    name = "vim2hs";
+    src = fetchgit {
+      url = "https://github.com/dag/vim2hs.git";
+      rev = "f2afd55704bfe0a2d66e6b270d247e9b8a7b1664";
+      sha256 = "18lqrl3hqb6cmizc04bbnsh8j0g761w2q8wascbzzfw80dmxy36b";
+    };
+    dependencies = [];
+  };
+
   "kuvim-themes" = buildVimPlugin {
     name = "kuvim-themes";
     src = fetchgit {
