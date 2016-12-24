@@ -3,7 +3,7 @@
 {
   # Enable the X11 windowing system.
   services = {
-    # openssh.enable = true;
+    openssh.enable = true;
     printing = {
       enable = true;
       drivers = [ pkgs.gutenprint ];
