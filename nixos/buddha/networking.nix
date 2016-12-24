@@ -22,4 +22,6 @@
       allowedUDPPorts = [];
     };
   };
+  services.bind.enable = true;
+  services.bind.forwarders = [ "8.8.8.8" "8.8.4.4" ];
 }
