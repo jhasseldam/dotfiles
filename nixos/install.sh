@@ -8,11 +8,6 @@ fi
 MODE=$1
 TARGET=/etc/nixos
 
-if [[ ! -d "$TARGET/$MODE/" ]]; then
-  echo Supplied mode does not exist
-  exit 1
-fi
-
 # determine absolute path of the current script
 ROOT="`dirname \"$0\"`" # relative
 ROOT="`( cd \"$ROOT\" && pwd )`" # absolutized and normalized
@@ -20,6 +15,11 @@ if [ -z "$ROOT" ] ; then
   # error; for some reason, the path is not accessible
   # to the script (e.g. permissions re-evaled after suid)
   exit 1 # fail
+fi
+
+if [[ ! -d "$ROOT/$MODE/" ]]; then
+  echo Supplied mode does not exist
+  exit 1
 fi
 
 sudo rsync -rav --delete --exclude "hardware-configuration.nix" "$ROOT/" "$TARGET/"
