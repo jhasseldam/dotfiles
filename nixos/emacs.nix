@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    emacs
+    emacs25
   ];
 
   system.activationScripts = {
