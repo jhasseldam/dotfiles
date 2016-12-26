@@ -15,6 +15,9 @@
 ;; (require 'evil)
 ;; (evil-mode 1)
 
+;; Settings
+(global-linum-mode t)
+
 ;; Install themes
 (package-install 'ample-theme)
 
