@@ -3,11 +3,11 @@
 {
   networking = {
     hostName = "soul";
-    domain = "kuznero.net";
+    domain = "kuznero.local";
     # fix for missing hosts entry https://github.com/NixOS/nixpkgs/issues/1248
     extraHosts = ''
-      127.0.0.1 soul.kuznero.net soul
-      ::1 soul.kuznero.net soul
+      127.0.0.1 soul.kuznero.local soul
+      ::1 soul.kuznero.local soul
     '';
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;

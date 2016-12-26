@@ -3,11 +3,11 @@
 {
   networking = {
     hostName = "moon";
-    domain = "kuznero.net";
+    domain = "kuznero.local";
     # fix for missing hosts entry https://github.com/NixOS/nixpkgs/issues/1248
     extraHosts = ''
-      127.0.0.1 buddha.kuznero.net buddha
-      ::1 buddha.kuznero.net buddha
+      127.0.0.1 buddha.kuznero.local buddha
+      ::1 buddha.kuznero.local buddha
     '';
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
