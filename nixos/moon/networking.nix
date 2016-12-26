@@ -6,8 +6,8 @@
     domain = "kuznero.local";
     # fix for missing hosts entry https://github.com/NixOS/nixpkgs/issues/1248
     extraHosts = ''
-      127.0.0.1 buddha.kuznero.local buddha
-      ::1 buddha.kuznero.local buddha
+      127.0.0.1 moon.kuznero.local moon
+      ::1 moon.kuznero.local moon
     '';
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
