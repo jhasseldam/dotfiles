@@ -22,7 +22,7 @@ if [[ ! -d "$ROOT/$MODE/" ]]; then
   exit 1
 fi
 
-sudo rsync -rav --delete --exclude "hardware-configuration.nix" "$ROOT/" "$TARGET/"
+rsync -rav --delete --exclude "hardware-configuration.nix" "$ROOT/" "$TARGET/"
 exit_code=$?
 if [ $exit_code -ne 0 ]; then
   echo "ERROR: cannot synchronize configuration files"
@@ -33,6 +33,7 @@ pushd .
 cd "$TARGET/$MODE/"
 for f in *.nix; do
   echo "$MODE/$f -> $f ..."
-  sudo ln -s $MODE/$f $TARGET/$f
+  if [[ -f $TARGET/$f ]]; then rm $TARGET/$f; fi
+  ln -s $MODE/$f $TARGET/$f
 done
 popd
