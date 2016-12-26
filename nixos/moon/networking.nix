@@ -10,12 +10,12 @@
       ::1 moon.kuznero.local moon
     '';
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    useDHCP = false;
-    interfaces = {
-      enp6s0.ip4 = [
-        { address = "192.168.8.151"; prefixLength = 24; }
-      ];
-    };
+    # useDHCP = false;
+    # interfaces = {
+    #   enp6s0.ip4 = [
+    #     { address = "192.168.8.151"; prefixLength = 24; }
+    #   ];
+    # };
     networkmanager.enable = true;
     nameservers = [ "192.168.8.107" ];
     firewall = {
