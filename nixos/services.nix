@@ -3,6 +3,11 @@
 {
   # Enable the X11 windowing system.
   services = {
+    logind = {
+      extraConfig = ''
+        RuntimeDirectorySize=2G
+      '';
+    };
     openssh.enable = true;
     printing = {
       enable = true;
