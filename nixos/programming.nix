@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     gnumake
-    stack cabal2nix graphviz
+    stack cabal2nix graphviz zlibStatic
     texlive.combined.scheme-full
     meld
     mono46 fsharp
