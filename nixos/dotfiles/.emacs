@@ -20,9 +20,6 @@
 (unless (package-installed-p 'powerline)
   (package-install 'powerline))
 
-(unless (package-installed-p 'helm)
-  (package-install 'helm))
-
 (unless (package-installed-p 'ample-theme)
   (package-install 'ample-theme))
 
@@ -82,12 +79,7 @@
 (load-theme 'ample-zen t)
 (load-theme 'airline-papercolor t)
 (add-hook 'haskell-mode-hook 'intero-mode)
-(require 'helm-config)
-(helm-mode 1)
 (set-default 'truncate-lines t)
-(global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
 
 (custom-set-variables
