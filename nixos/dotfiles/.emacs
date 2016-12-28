@@ -17,6 +17,7 @@
 
 ;; Settings
 (global-linum-mode t)
+(setq inhibit-startup-screen t)
 
 ;; Install themes
 (package-install 'ample-theme)
