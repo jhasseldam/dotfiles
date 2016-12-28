@@ -17,7 +17,7 @@
     # };
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
-    nameservers = [ "192.168.8.107" ];
+    nameservers = [];
     firewall = {
       enable = true;
       allowPing = true;
