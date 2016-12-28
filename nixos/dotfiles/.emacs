@@ -1,37 +1,56 @@
-;; If you don't have MELPA in your package archives:
 (require 'package)
 (add-to-list
   'package-archives
   '("melpa" . "http://melpa.org/packages/") t)
+
+(or (file-exists-p package-user-dir)
+    (package-refresh-contents))
+
 (package-initialize)
-;;(package-refresh-contents)
 
-;; Install Intero
-(package-install 'intero)
-(add-hook 'haskell-mode-hook 'intero-mode)
+(unless (package-installed-p 'linum-relative)
+  (package-install 'linum-relative))
 
-;; ;; Install evil
-;; (package-install 'evil)
-;; (require 'evil)
-;; (evil-mode 1)
+(unless (package-installed-p 'nix-mode)
+  (package-install 'nix-mode))
+
+(unless (package-installed-p 'multiple-cursors)
+  (package-install 'multiple-cursors))
+
+(unless (package-installed-p 'powerline)
+  (package-install 'powerline))
+
+(unless (package-installed-p 'ample-theme)
+  (package-install 'ample-theme))
+
+(unless (package-installed-p 'airline-themes)
+  (package-install 'airline-themes))
+
+(unless (package-installed-p 'intero)
+  (package-install 'intero))
 
 ;; Settings
+(require 'linum-relative)
 (global-linum-mode t)
 (setq inhibit-startup-screen t)
-
-;; Install themes
-(package-install 'ample-theme)
+(setq initial-scratch-message nil)
+(setq ring-bell-function 'ignore)
+(require 'nix-mode)
+;; Start in fullscreen mode
+(run-at-time 1 nil (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
+(require 'multiple-cursors)
+(require 'powerline)
+(powerline-default-theme)
+(require 'airline-themes)
+(load-theme 'ample t)
+(load-theme 'airline-papercolor t)
+(add-hook 'haskell-mode-hook 'intero-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (ample)))
- '(custom-safe-themes
-   (quote
-    ("938d8c186c4cb9ec4a8d8bc159285e0d0f07bad46edf20aa469a89d0d2a586ea" default)))
- '(package-selected-packages (quote (material-theme intero ample-theme afternoon-theme)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))

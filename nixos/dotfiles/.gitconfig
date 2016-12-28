@@ -3,7 +3,7 @@
   email = roman@kuznero.com
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = emacs -nw -q
   autocrlf = input
 [alias]
   st = status
