@@ -16,7 +16,7 @@
   dtp = difftool --diff-filter=ACMRTUXB --prompt
   m = merge
   mt = mergetool
-  cl = clean -x -d -f
+  cl = clean -x -d -f --dry-run
   pl = pull --prune --all
   ps = push
 [color]
