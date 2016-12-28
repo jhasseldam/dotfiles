@@ -82,14 +82,14 @@
 (set-default 'truncate-lines t)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
 
-(add-hook
-  'emacs-startup-hook
-  (lambda ()
-    (split-window-below)
-    (other-window 1)
-    (ansi-term "zsh")
-    (other-window 1)
-    (enlarge-window 10)))
+;; (add-hook
+;;   'emacs-startup-hook
+;;   (lambda ()
+;;     (split-window-below)
+;;     (other-window 1)
+;;     (ansi-term "zsh")
+;;     (other-window 1)
+;;     (enlarge-window 10)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
