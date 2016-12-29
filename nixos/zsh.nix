@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    oh-my-zsh
+    oh-my-zsh acpi
     zsh
   ];
 
@@ -14,13 +14,13 @@
     export PATH="$PATH:$HOME/.local/bin"
     export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
     # Customize your oh-my-zsh options here
-    ZSH_THEME="dst"
+    ZSH_THEME="candy-kingdom"
     export EDITOR='vim'
     export VISUAL='vim'
     HISTFILE=~/.zhistory
     # setopt sharehistory
     setopt extendedhistory
-    plugins=(git)
+    plugins=(git battery)
     source $ZSH/oh-my-zsh.sh
   '';
 
