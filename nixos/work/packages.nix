@@ -8,7 +8,7 @@
     firefox chromium
     xe-guest-utilities
     # Office
-    evince
+    evince poppler_utils
     # Gnome 3
     gnome3.gnome_keyring
   ];

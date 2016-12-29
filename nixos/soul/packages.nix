@@ -7,7 +7,7 @@
     # Internet
     firefox irssi dropbox elinks
     # Office
-    evince
+    evince poppler_utils
     # Gnome 3
     gnome3.gnome_keyring
   ];
