@@ -22,6 +22,7 @@
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
+    unset RPROMPT
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh

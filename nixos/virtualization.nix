@@ -2,10 +2,10 @@
 
 {
   virtualisation = {
-    docker = {
-      enable = true;
-      socketActivation = true;
-    };
+    # docker = {
+    #   enable = true;
+    #   socketActivation = true;
+    # };
     virtualbox = {
       host.enable = true;
       guest.enable = false;
