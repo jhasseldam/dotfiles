@@ -29,6 +29,12 @@
 (unless (package-installed-p 'intero)
   (package-install 'intero))
 
+(unless (package-installed-p 'helm)
+  (package-install 'helm))
+
+(unless (package-installed-p 'helm-projectile)
+  (package-install 'helm-projectile))
+
 (defun my-setup-indent (n)
   ;; java/c/c++
   (setq-local c-basic-offset n)
@@ -79,6 +85,9 @@
 (set-default 'truncate-lines t)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
 (set-face-bold-p 'bold nil)
+(require 'helm-config)
+(global-set-key (kbd "C-x C-f") 'helm-projectile)
+(global-set-key (kbd "M-p") 'helm-projectile-switch-project)
 
 ;; (add-hook
 ;;   'emacs-startup-hook
