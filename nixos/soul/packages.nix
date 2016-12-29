@@ -5,7 +5,7 @@
     # Common
     wget curl bind htop
     # Internet
-    firefox irssi dropbox
+    firefox irssi dropbox elinks
     # Office
     evince
     # Gnome 3
