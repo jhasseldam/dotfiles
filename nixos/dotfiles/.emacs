@@ -20,11 +20,8 @@
 (unless (package-installed-p 'powerline)
   (package-install 'powerline))
 
-(unless (package-installed-p 'ample-theme)
-  (package-install 'ample-theme))
-
-(unless (package-installed-p 'ample-zen-theme)
-  (package-install 'ample-zen-theme))
+(unless (package-installed-p 'clues-theme)
+  (package-install 'clues-theme))
 
 (unless (package-installed-p 'airline-themes)
   (package-install 'airline-themes))
@@ -76,7 +73,7 @@
 (require 'powerline)
 (powerline-default-theme)
 (require 'airline-themes)
-(load-theme 'ample-zen t)
+(load-theme 'clues t)
 (load-theme 'airline-papercolor t)
 (add-hook 'haskell-mode-hook 'intero-mode)
 (set-default 'truncate-lines t)
