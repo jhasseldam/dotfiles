@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    oh-my-zsh acpi
+    oh-my-zsh
     zsh
   ];
 
