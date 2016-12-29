@@ -14,7 +14,7 @@
     export PATH="$PATH:$HOME/.local/bin"
     export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
     # Customize your oh-my-zsh options here
-    ZSH_THEME="agnoster"
+    ZSH_THEME="dst"
     export EDITOR='vim'
     export VISUAL='vim'
     HISTFILE=~/.zhistory
