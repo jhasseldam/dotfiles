@@ -78,6 +78,7 @@
 (add-hook 'haskell-mode-hook 'intero-mode)
 (set-default 'truncate-lines t)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
+(set-face-bold-p 'bold nil)
 
 ;; (add-hook
 ;;   'emacs-startup-hook
