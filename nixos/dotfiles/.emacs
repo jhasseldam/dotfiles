@@ -8,9 +8,6 @@
 
 (package-initialize)
 
-(unless (package-installed-p 'linum-relative)
-  (package-install 'linum-relative))
-
 (unless (package-installed-p 'nix-mode)
   (package-install 'nix-mode))
 
@@ -65,10 +62,13 @@
   ;; indent 2 spaces width
   (my-setup-indent 2))
 
+(defmacro when-gui (&rest body)
+  "Works just like `progn' but will only evaluate expressions in VAR when Emacs is running in a terminal else just nil."
+  `(when (display-graphic-p) ,@body))
+
 ;; Settings
-(require 'linum-relative)
-(linum-relative-on)
-(global-linum-mode t)
+(when-gui
+  (global-linum-mode t))
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
 (setq ring-bell-function 'ignore)
@@ -78,15 +78,16 @@
 (require 'multiple-cursors)
 (require 'powerline)
 (powerline-default-theme)
-(load-theme 'clues t)
-(require 'airline-themes)
-(load-theme 'airline-papercolor t)
+(when-gui
+  (load-theme 'clues t)
+  (require 'airline-themes)
+  (load-theme 'airline-papercolor t))
 (add-hook 'haskell-mode-hook 'intero-mode)
 (set-default 'truncate-lines t)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
 (set-face-bold-p 'bold nil)
 (require 'helm-config)
-(global-set-key (kbd "C-x C-f") 'helm-projectile)
+(global-set-key (kbd "C-c C-f") 'helm-projectile)
 (global-set-key (kbd "M-p") 'helm-projectile-switch-project)
 
 ;; (add-hook
