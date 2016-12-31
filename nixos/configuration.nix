@@ -25,6 +25,7 @@
 
   nixpkgs.config = {
     allowUnfree = true;
+    firefox.enableAdobeFlash = true;
     # chromium = {
     #   enablePepperPDF = true;
     #   # enableWideVine = true;
