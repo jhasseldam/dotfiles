@@ -19,18 +19,21 @@
       drivers = [ pkgs.gutenprint ];
     };
     xserver = {
-      enable = false;
+      enable = true;
       layout = "us";
       # xkbOptions = "eurosign:e";
-      displayManager.gdm.enable = true;
-      desktopManager.gnome3 = {
+      displayManager.lightdm.enable = true;
+      desktopManager.xfce = {
         enable = true;
-        extraGSettingsOverrides = ''
-          [org.gnome.desktop.peripherals.touchpad]
-          tap-to-click=true
-        '';
+        thunarPlugins = with pkgs.xfce; [
+          thunar-archive-plugin thunar-dropbox-plugin thunar_volman
+        ];
+      };
+      synaptics = {
+        enable = true;
+        twoFingerScroll = true;
       };
     };
-    gnome3.gnome-keyring.enable = true;
+    udisks2.enable = true;
   };
 }
