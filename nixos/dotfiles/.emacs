@@ -74,7 +74,7 @@
 (setq ring-bell-function 'ignore)
 (require 'nix-mode)
 ;; Start in fullscreen mode
-(run-at-time 1 nil (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
+;; (run-at-time 1 nil (lambda () (set-frame-parameter nil 'fullscreen 'fullboth)))
 (require 'multiple-cursors)
 (require 'powerline)
 (powerline-default-theme)
@@ -82,6 +82,17 @@
   (load-theme 'clues t)
   (require 'airline-themes)
   (load-theme 'airline-papercolor t))
+  (set-face-attribute 'mode-line nil
+                      :foreground (face-attribute 'default :foreground)
+                      :family "Droid Sans Mono Dotted for Powerline"
+                      :weight 'normal
+                      :background (face-attribute 'fringe :background))
+  (set-face-attribute 'mode-line-inactive nil
+                      :foreground (face-attribute 'font-lock-comment-face :foreground)
+                      :background (face-attribute 'fringe :background)
+                      :family "Droid Sans Mono Dotted for Powerline"
+                      :weight 'normal
+                      :box `(:line-width -2 :color ,(face-attribute 'fringe :background)))
 (add-hook 'haskell-mode-hook 'intero-mode)
 (set-default 'truncate-lines t)
 (add-hook 'prog-mode-hook 'my-personal-code-style)
