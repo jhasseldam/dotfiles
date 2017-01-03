@@ -1,6 +1,65 @@
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
-syntax enable
+" Basic {{{
+syntax on
+filetype plugin indent on
+set nocompatible
+set number
+set relativenumber
+set nowrap
+set showmode
+set textwidth=0
+set colorcolumn=0
+set smartcase
+set smarttab
+set smartindent
+set autoindent
+set shiftwidth=2
+set expandtab
+set tabstop=2
+set softtabstop=2
+set incsearch
+set hlsearch
+set ignorecase
+set mouse=a
+set history=1000
+set clipboard=unnamedplus,autoselect
+set completeopt=menuone,menu,longest
+set t_Co=256
+set cmdheight=1
+set encoding=utf-8
+set fileencodings=utf-8
+" set nospell
+" set nobackup
+" set noswapfile
+" set noundofile
+set hidden
+set nocursorline
+set laststatus=2
+set backspace=indent,eol,start
+set linespace=1
+set showmatch
+set foldmethod=marker
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
+set list
+set showbreak=>>\ 
+set lazyredraw
+" set diffopt+=iwhite
+if exists('g:loaded_fugitive')
+  set statusline=%{fugitive#statusline()}
+endif
+" }}}
+
+" GUI {{{
 if has( "gui_running" )
+  set columns=153
+  set lines=38
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
   set background=dark
   colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
@@ -9,60 +68,72 @@ else
   set background=dark
   colorscheme default
 endif
-set number
-set relativenumber
-filetype plugin indent on
-set mouse=a
-set encoding=utf-8
-set fileencodings=utf-8
-set history=1000
-set nospell
-set nobackup
-set noswapfile
-set noundofile
-set textwidth=0
-set colorcolumn=0
-set hidden
-if has("gui_running")
-  set nocursorline
-  set columns=153
-  set lines=38
-  set guioptions-=m
-  set guioptions-=T
-  set guioptions-=r
-  set guioptions-=L
+" }}}
+
+" CtrlP {{{
+let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_path_nolim = 1
+map <silent> <Leader>t :CtrlP()<CR>
+noremap <leader>b<space> :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = '\v[\/]dist$'
+if has('win32')
+  set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
+else
+  set wildignore+=*/.stack-work/*,*/packages/*,*/tmp/*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 endif
-set showmode
-set laststatus=2
-if exists('g:loaded_fugitive')
-  set statusline=%{fugitive#statusline()}
-endif
-set backspace=indent,eol,start
-set linespace=1
-set number
-set relativenumber
-set showmatch
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-set foldmethod=marker
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-set listchars=tab:•\ ,trail:•,extends:»,precedes:« 
-set list
-set showbreak=>>\ 
+set wildmode=longest,list,full
 set wildmenu
-set lazyredraw
-set nowrap
-set autoindent
-set smartindent
-set shiftwidth=2
-set expandtab
-set tabstop=2
-set softtabstop=2
-" set diffopt+=iwhite
+" }}}
+
+" Syntastic {{{
+map <Leader>s :SyntasticToggleMode<CR>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" }}}
+
+" Haskell {{{
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+" == ghc-mod ==
+
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+
+" == supertab ==
+
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+if has("gui_running")
+  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+  endif
+endif
+
+" == neco-ghc ==
+
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" == tabular ==
+
+let g:haskell_tabular = 1
+
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+vmap a, :Tabularize /<-<CR>
+vmap al :Tabularize /[\[\\|,]<CR>
+
+" }}}
 
 " Mapping {{{
 :nnoremap <F2> :w<CR>
@@ -97,52 +168,6 @@ if has( "gui_running" )
 else
   let g:airline_theme='papercolor'
 endif
-" }}}
-
-" CtrlP {{{
-let g:ctrlp_cmd = 'CtrlPCurWD'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_path_nolim = 1
-if has('win32')
-  set wildignore+=*\\.stack-work\\*
-  set wildignore+=*\\packages\\*
-else
-  set wildignore+=*/.stack-work/*
-  set wildignore+=*/packages/*
-endif
-" }}}
-
-" Haskell {{{
-" Some of this setup is from http://www.sillybytes.net/2016/08/vim-haskell_11.html?utm_content=46778807&utm_medium=social&utm_source=twitter
-hi ghcmodType ctermbg=yellow
-let g:ghcmod_type_highlight = 'ghcmodType'
-let g:haskellmode_completion_ghc = 0
-let g:necoghc_enable_detailed_browse = 0
-let g:necoghc_debug = 0
-let g:hindent_on_save = 1
-let g:hindent_line_length = 80
-let g:hindent_indent_size = 2
-augroup Haskell
-  au!
-  au FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftround
-  au FileType haskell setlocal omnifunc=necoghc#omnifunc
-  au FileType haskell nnoremap <silent><buffer> git :GhcModTypeInsert<CR>
-  au FileType haskell nnoremap <silent><buffer> gfs :GhcModSplitFunCase<CR>
-  au FileType haskell nnoremap <silent><buffer> gtt :GhcModType<CR>
-  au FileType haskell nmap <silent><buffer> g<space> vii<ESC>:silent!'<,'> EasyAlign /->/<CR>
-  " " types abbreviations
-  " au FileType haskell inoreab <buffer> int Int
-  " au FileType haskell inoreab <buffer> integer Integer
-  " au FileType haskell inoreab <buffer> string String
-  " au FileType haskell inoreab <buffer> double Double
-  " au FileType haskell inoreab <buffer> float Float
-  " au FileType haskell inoreab <buffer> true True
-  " au FileType haskell inoreab <buffer> false False
-  " au FileType haskell inoreab <buffer> maybe Maybe
-  " au FileType haskell inoreab <buffer> just Just
-  " au FileType haskell inoreab <buffer> nothing Nothing
-  " au FileType haskell inoreab <buffer> io IO ()
-augroup END
 " }}}
 
 " LaTeX {{{

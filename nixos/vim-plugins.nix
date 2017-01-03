@@ -35,6 +35,26 @@ in {
     dependencies = [];
   };
 
+  "tabular" = buildVimPlugin {
+    name = "tabular";
+    src = fetchgit {
+      url = "https://github.com/godlygeek/tabular";
+      rev = "60f25648814f0695eeb6c1040d97adca93c4e0bb";
+      sha256 = "0jsq614k1s4adsyhjzsbb86ddl4mlv0fvxc5imf0pqikimpv9spr";
+    };
+    dependencies = [];
+  };
+
+  "tlib" = buildVimPlugin {
+    name = "tlib";
+    src = fetchgit {
+      url = "https://github.com/tomtom/tlib_vim";
+      rev = "3232708995e0e61d8e39af40e7a92598e30b84e8";
+      sha256 = "17362ihb5593dkhkscjrwlzahli0sy6f1sva5caz53g98nlz2824";
+    };
+    dependencies = [];
+  };
+
   "nerdtree" = buildVimPlugin {
     name = "nerdtree";
     src = fetchgit {
@@ -61,6 +81,16 @@ in {
       url = "https://github.com/tpope/vim-surround.git";
       rev = "e49d6c2459e0f5569ff2d533b4df995dd7f98313";
       sha256 = "1v0q2f1n8ngbja3wpjvqp2jh89pb5ij731qmm18k41nhgz6hhm46";
+    };
+    dependencies = [];
+  };
+
+  nerdcommenter = buildVimPlugin {
+    name = "nerdcommenter";
+    src = fetchgit {
+      url = "https://github.com/scrooloose/nerdcommenter";
+      rev = "1f4bfd59920c101a30a74a07b824608a6e65f3fe";
+      sha256 = "1xy7bzngz41vkpf5zvk07a5kypxqmw9g1a89ji8q5sbc4pka0y8j";
     };
     dependencies = [];
   };
@@ -161,6 +191,16 @@ in {
       url = "https://github.com/eagletmt/neco-ghc";
       rev = "7f02a9c25fb272a87d2be092826e2cd3094c620d";
       sha256 = "1fcfk45qb96h6y4zb3p0104iyqc85q1synn9ah56zp6hnkkyffbw";
+    };
+    dependencies = [];
+  };
+
+  neocomplete = buildVimPlugin {
+    name = "neocomplete";
+    src = fetchgit {
+      url = "https://github.com/Shougo/neocomplete.vim";
+      rev = "36b29b299e1c24917ff4f15b4941c66641019895";
+      sha256 = "1wylgcwld9icy0n8bmk91cdh69pm9kzz1rkxkfmyly04snsq6r22";
     };
     dependencies = [];
   };
