@@ -101,10 +101,10 @@ let g:syntastic_check_on_wq = 0
 
 " == ghc-mod ==
 
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
+" map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> ti :GhcModTypeInsert<CR>
+map <silent> tt :GhcModType<CR>
+map <silent> tc :GhcModTypeClear<CR>
 
 " == supertab ==
 
