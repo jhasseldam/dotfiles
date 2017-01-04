@@ -172,13 +172,14 @@ endif
 
 " LaTeX {{{
 "au BufEnter *.tex setl tw=79 tx ts=4 sw=4 fo+=n2a
-au BufEnter *.tex setl tw=79
+au BufEnter *.tex setl tw=80
 if has('unix')
   au BufEnter *.tex nnoremap <buffer> <F7> :silent !xdg-open '%:p:r.pdf' &<CR>
 endif
 " }}}
 
 " Markdown {{{
+au BufEnter *.md set tw=80
 au BufEnter *.md set filetype=markdown
 au BufEnter *.md set syntax=markdown
 " }}}
