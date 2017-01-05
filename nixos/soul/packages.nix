@@ -7,7 +7,7 @@
     # Internet
     chromium firefox irssi dropbox elinks qbittorrent
     # Office
-    evince poppler_utils
+    evince poppler_utils libreoffice
     # Gnome 3
     gnome3.gnome_keyring
     # Xfce 4
