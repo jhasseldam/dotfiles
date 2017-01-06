@@ -74,8 +74,11 @@ endif
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
-map <silent> <Leader>t :CtrlP()<CR>
+noremap <leader>f<space> :CtrlP<cr>
 noremap <leader>b<space> :CtrlPBuffer<cr>
+noremap <leader>d<space> :CtrlPDir<cr>
+noremap <leader>q<space> :CtrlPQuickfix<cr>
+noremap <leader>t<space> :CtrlPTag<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 if has('win32')
   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
