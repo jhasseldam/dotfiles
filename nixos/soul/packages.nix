@@ -10,6 +10,8 @@
     evince poppler_utils libreoffice
     # Gnome 3
     gnome3.gnome_keyring
+    # Multimedia
+    vlc
     # Xfce 4
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin
