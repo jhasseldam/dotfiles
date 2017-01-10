@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Common
-    wget curl bind htop gksu
+    wget curl bind htop gksu inetutils
     # Internet
     chromium firefox xe-guest-utilities
     # Office
