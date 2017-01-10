@@ -8,10 +8,8 @@
     chromium irssi dropbox elinks qbittorrent
     # Office
     evince poppler_utils
-    # Gnome 3
-    gnome3.gnome_keyring
     # Multimedia
-    vlc
+    gthumb vlc
     # Xfce 4
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin
