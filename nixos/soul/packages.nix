@@ -5,9 +5,9 @@
     # Common
     wget curl bind htop gksu
     # Internet
-    chromium firefox irssi dropbox elinks qbittorrent
+    chromium irssi dropbox elinks qbittorrent
     # Office
-    evince poppler_utils libreoffice
+    evince poppler_utils
     # Gnome 3
     gnome3.gnome_keyring
     # Multimedia
