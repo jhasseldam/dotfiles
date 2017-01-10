@@ -37,6 +37,7 @@
                 "supertab"
                 "gitgutter"
                 "signify"
+                "fsharp"
                 "elm"
                 "kuvim-themes"
                 "papercolor-theme"

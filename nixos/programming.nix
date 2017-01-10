@@ -7,6 +7,7 @@
     stack cabal2nix graphviz zlibStatic
     texlive.combined.scheme-full
     meld
+    python27Full
     mono46 fsharp dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
     maven jdk
     inotify-tools
