@@ -1,3 +1,12 @@
+" Plugins {{{
+let s:rc = expand( "$HOME/.vimrc_plugins" )
+if filereadable( s:rc )
+  " note that NixOS is handling plugins differently
+  " so, there is no .vimrc_plugins file for NixOS configuration
+  execute ':source '.s:rc
+endif
+" }}}
+
 " Basic {{{
 syntax on
 filetype plugin indent on
@@ -47,7 +56,7 @@ set showbreak=>>\
 set lazyredraw
 " set diffopt+=iwhite
 if exists('g:loaded_fugitive')
-  set statusline=%{fugitive#statusline()}
+  set statusline+=%{fugitive#statusline()}
 endif
 " }}}
 
@@ -59,7 +68,11 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+  if has('win32')
+    set guifont=Droid_Sans_Mono_Dotted_for_Powe:h11:cRUSSIAN
+  elseif has('unix')
+    set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+  endif
   set background=dark
   colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
@@ -92,7 +105,9 @@ set wildmenu
 " Syntastic {{{
 map <Leader>s :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+if exists('g:syntastic_always_populate_loc_list')
+  set statusline+=%{SyntasticStatuslineFlag()}
+endif
 set statusline+=%*
 " }}}
 
