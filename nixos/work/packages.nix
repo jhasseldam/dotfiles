@@ -8,6 +8,8 @@
     chromium firefox xe-guest-utilities
     # Office
     evince poppler_utils
+    # Programming
+    pgadmin
     # Gnome 3
     gnome3.gnome_keyring
     # Xfce 4
