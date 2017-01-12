@@ -3,9 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     # Common
-    wget curl bind htop gksu
+    wget curl bind htop gksu ntfs3g
     # Internet
     chromium irssi dropbox elinks qbittorrent
+    viber skype
     # Office
     evince poppler_utils
     # Multimedia

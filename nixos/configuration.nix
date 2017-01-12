@@ -20,6 +20,7 @@
       ./tmux.nix
       ./git.nix
       ./users.nix
+      ./security.nix
       ./services.nix
     ];
 
