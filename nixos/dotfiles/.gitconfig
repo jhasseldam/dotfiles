@@ -22,15 +22,10 @@
 [color]
   ui = true
 [diff]
-  tool = meld
-[difftool "meld"]
-  cmd = meld $LOCAL $REMOTE
-  trustExitCode = true
-[merge]
-  tool = meld
-[mergetool "meld"]
-  cmd = meld $BASE $LOCAL $REMOTE $MERGED
+  tool = diffuse
+[difftool]
   prompt = false
-  trustExitCode = true
+[merge]
+  tool = diffuse
 [push]
   default = simple
