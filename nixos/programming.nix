@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config = {
+    packageOverrides = super: let self = super.pkgs; in {
+      fsharp = super.fsharp.override {
+        mono = pkgs.mono46;
+      };
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     gnumake
     octaveFull
