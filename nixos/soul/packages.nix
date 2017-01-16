@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     # Common
     wget curl bind htop gksu ntfs3g
+    enlightenment.terminology
     # Internet
     chromium irssi dropbox elinks qbittorrent
     viber skype
