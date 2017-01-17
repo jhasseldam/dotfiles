@@ -6,7 +6,7 @@
     wget curl bind htop gksu ntfs3g
     enlightenment.terminology
     # Internet
-    chromium irssi dropbox elinks qbittorrent
+    chromium hexchat irssi dropbox elinks qbittorrent
     viber skype
     # Office
     evince poppler_utils
