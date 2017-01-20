@@ -30,7 +30,7 @@ set hlsearch
 set ignorecase
 set mouse=a
 set history=1000
-set clipboard=unnamedplus,autoselect
+" set clipboard=unnamedplus,autoselect
 set completeopt=menuone,menu,longest
 set t_Co=256
 set cmdheight=1
