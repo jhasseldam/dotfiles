@@ -5,6 +5,7 @@
     # Common
     wget curl bind htop gparted manpages xclip gksu ntfs3g
     enlightenment.terminology
+    zip unzip
     # Internet
     firefox chromium hexchat irssi tdesktop
     xe-guest-utilities dropbox qbittorrent

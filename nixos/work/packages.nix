@@ -5,6 +5,7 @@
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     enlightenment.terminology
+    zip unzip
     # Internet
     chromium firefox xe-guest-utilities
     # Office
