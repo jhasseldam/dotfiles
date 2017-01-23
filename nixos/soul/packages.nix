@@ -8,7 +8,6 @@
     zip unzip
     # Internet
     chromium hexchat dropbox qbittorrent
-    viber skype
     # Office
     evince poppler_utils
     # Multimedia
@@ -28,11 +27,11 @@
     xfce.gigolo
     xfce.xfce4taskmanager
     xfce.xfce4_cpugraph_plugin
-    xfce.xfce4_eyes_plugin
+    # xfce.xfce4_eyes_plugin
     xfce.xfce4_fsguard_plugin
     xfce.xfce4_genmon_plugin
     xfce.xfce4_pulseaudio_plugin
-    xfce.xfce4_weather_plugin
-    xfce.xfce4_whiskermenu_plugin
+    # xfce.xfce4_weather_plugin
+    # xfce.xfce4_whiskermenu_plugin
   ];
 }
