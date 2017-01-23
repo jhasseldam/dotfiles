@@ -7,7 +7,7 @@
     enlightenment.terminology
     zip unzip
     # Internet
-    chromium hexchat irssi dropbox qbittorrent
+    chromium hexchat dropbox qbittorrent
     viber skype
     # Office
     evince poppler_utils
