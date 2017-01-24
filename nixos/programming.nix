@@ -19,6 +19,7 @@
     mono46 fsharp dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
     maven jdk
     inotify-tools
+    redis-desktop-manager
   ];
 
   system.activationScripts = {
