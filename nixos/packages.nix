@@ -3,17 +3,13 @@
 {
   environment.systemPackages = with pkgs; [
     # Common
-    wget curl bind htop gparted manpages xclip gksu ntfs3g
-    enlightenment.terminology
-    zip unzip
+    wget curl bind htop gksu ntfs3g inetutils
+    enlightenment.terminology zip unzip
     # Internet
-    firefox chromium hexchat irssi tdesktop
-    xe-guest-utilities dropbox qbittorrent
+    chromium hexchat dropbox qbittorrent
     # Office
-    evince libreoffice poppler_utils
+    evince poppler_utils
     # Multimedia
-    gthumb vlc gimp-with-plugins
-    # Gnome 3
-    gnome3.gnome_keyring
+    vlc
   ];
 }

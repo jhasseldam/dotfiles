@@ -20,6 +20,7 @@
     maven jdk
     inotify-tools
     redis-desktop-manager
+    pgadmin
   ];
 
   system.activationScripts = {

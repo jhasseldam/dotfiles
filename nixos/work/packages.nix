@@ -4,16 +4,11 @@
   environment.systemPackages = with pkgs; [
     # Common
     wget curl bind htop gksu ntfs3g inetutils
-    enlightenment.terminology
-    zip unzip
+    enlightenment.terminology zip unzip
     # Internet
-    chromium firefox xe-guest-utilities
+    chromium xe-guest-utilities
     # Office
     evince poppler_utils
-    # Programming
-    pgadmin
-    # Gnome 3
-    gnome3.gnome_keyring
     # Xfce 4
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin
@@ -28,5 +23,12 @@
     xfce.xfce4_netload_plugin
     xfce.gigolo
     xfce.xfce4taskmanager
+    xfce.xfce4_cpugraph_plugin
+    # xfce.xfce4_eyes_plugin
+    xfce.xfce4_fsguard_plugin
+    xfce.xfce4_genmon_plugin
+    xfce.xfce4_pulseaudio_plugin
+    # xfce.xfce4_weather_plugin
+    # xfce.xfce4_whiskermenu_plugin
   ];
 }
