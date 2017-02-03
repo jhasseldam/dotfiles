@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     # Common
-    gnome3.gnome_terminal
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip
     # Internet

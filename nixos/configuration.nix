@@ -22,6 +22,7 @@
       ./users.nix
       ./security.nix
       ./services.nix
+      ./terminal.nix
     ];
 
   nixpkgs.config = {
