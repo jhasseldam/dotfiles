@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     gnome3.gnome_terminal
+    gnome3.dconf
+    gnome3.dconf-editor
   ];
   services.dbus.packages = with pkgs; [
     gnome3.gnome_terminal
