@@ -69,9 +69,9 @@ if has( "gui_running" )
   set guioptions-=r
   set guioptions-=L
   if has('win32')
-    set guifont=Droid_Sans_Mono_Dotted_for_Powe:h11:cRUSSIAN
+    set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cRUSSIAN
   elseif has('unix')
-    set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
   endif
   set background=dark
   colorscheme PaperColor
