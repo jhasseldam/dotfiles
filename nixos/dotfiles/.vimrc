@@ -154,7 +154,6 @@ vmap al :Tabularize /[\[\\|,]<CR>
 " }}}
 
 " Mapping {{{
-:nnoremap <F2> :w<CR>
 :nnoremap <F5> :make<CR>
 :nnoremap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
@@ -171,8 +170,6 @@ vmap al :Tabularize /[\[\\|,]<CR>
 :nnoremap <C-k> :tabnew<CR>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
-" NERDTree
-:nnoremap <leader>e :NERDTree<CR>
 " }}}
 
 " Configure airline {{{
