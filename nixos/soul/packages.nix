@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # Security
+    truecrypt
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip
@@ -10,7 +12,7 @@
     # Office
     evince poppler_utils
     # Multimedia
-    vlc exif ffmpeg
+    vlc exif ffmpeg gphoto2 openshot-qt
     # Xfce 4
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin

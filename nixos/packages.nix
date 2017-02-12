@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # Security
+    truecrypt
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip
@@ -10,6 +12,6 @@
     # Office
     evince poppler_utils
     # Multimedia
-    vlc exif ffmpeg
+    vlc exif ffmpeg gphoto2
   ];
 }
