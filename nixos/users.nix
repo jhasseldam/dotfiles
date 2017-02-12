@@ -6,7 +6,7 @@
     isNormalUser = true;
     home = "/home/kuznero";
     description = "Roman Kuznetsov";
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" "vboxusers" ];
     initialPassword = "kuznero";
     # shell = "/run/current-system/sw/bin/zsh";
   };
