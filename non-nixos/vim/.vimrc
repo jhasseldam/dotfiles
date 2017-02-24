@@ -30,7 +30,7 @@ set hlsearch
 set ignorecase
 set mouse=a
 set history=1000
-set clipboard=unnamedplus,autoselect
+" set clipboard=unnamedplus,autoselect
 set completeopt=menuone,menu,longest
 set t_Co=256
 set cmdheight=1
@@ -167,7 +167,8 @@ vmap al :Tabularize /[\[\\|,]<CR>
 :nnoremap <C-h> :bp<CR>
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-j> :bd<CR>
-:nnoremap <C-k> :tabnew<CR>
+":nnoremap <C-k> :tabnew<CR>
+:nnoremap <C-n> :NERDTreeToggle<CR>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
 " }}}

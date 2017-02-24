@@ -167,7 +167,8 @@ vmap al :Tabularize /[\[\\|,]<CR>
 :nnoremap <C-h> :bp<CR>
 :nnoremap <C-l> :bn<CR>
 :nnoremap <C-j> :bd<CR>
-:nnoremap <C-k> :tabnew<CR>
+":nnoremap <C-k> :tabnew<CR>
+:nnoremap <C-n> :NERDTreeToggle<CR>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
 " }}}
