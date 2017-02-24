@@ -154,21 +154,20 @@ vmap al :Tabularize /[\[\\|,]<CR>
 " }}}
 
 " Mapping {{{
-:nnoremap <F5> :make<CR>
-:nnoremap <leader><leader> :nohlsearch<CR>
+nnoremap <F5> :make<CR>
+nnoremap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
-:nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 " visual block movement
-:vnoremap J :m '>+1<CR>gv=gv
-:vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 " highlight last inserted code
-:nnoremap gV `[v`]
+nnoremap gV `[v`]
 " buffer management
-:nnoremap <C-h> :bp<CR>
-:nnoremap <C-l> :bn<CR>
-:nnoremap <C-j> :bd<CR>
-":nnoremap <C-k> :tabnew<CR>
-:nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-j> :bd<CR>
+noremap <leader>n<space> :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
 " }}}
