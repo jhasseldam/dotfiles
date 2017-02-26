@@ -69,9 +69,9 @@ if has( "gui_running" )
   set guioptions-=r
   set guioptions-=L
   if has('win32')
-    set guifont=DejaVu_Sans_Mono_for_Powerline:h11:cRUSSIAN
+    set guifont=Ubuntu_Mono_derivative_Powerline:h13:cRUSSIAN
   elseif has('unix')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
   endif
   set background=dark
   colorscheme PaperColor
