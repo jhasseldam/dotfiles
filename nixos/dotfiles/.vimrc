@@ -74,7 +74,14 @@ if has( "gui_running" )
     set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
   endif
   set background=dark
-  colorscheme PaperColor
+  if has("termguicolors")
+    set termguicolors
+  endif
+  " colorscheme quantum
+  " let g:quantum_black = 1
+  " let g:quantum_italics = 1
+  colorscheme spacemacs-theme
+  " colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
 else
@@ -83,15 +90,24 @@ else
 endif
 " }}}
 
+" Configure airline {{{
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts=1
+" let g:airline_theme='papercolor'
+let g:airline_theme='quantum'
+" }}}
+
 " CtrlP {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
-noremap <leader>f<space> :CtrlP<cr>
-noremap <leader>b<space> :CtrlPBuffer<cr>
-noremap <leader>d<space> :CtrlPDir<cr>
-noremap <leader>q<space> :CtrlPQuickfix<cr>
-noremap <leader>t<space> :CtrlPTag<cr>
+noremap <leader>f :CtrlP<cr>
+noremap <leader>b :CtrlPBuffer<cr>
+noremap <leader>d :CtrlPDir<cr>
+noremap <leader>q :CtrlPQuickfix<cr>
+noremap <leader>t :CtrlPTag<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 if has('win32')
   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
@@ -170,19 +186,6 @@ nnoremap <C-j> :bd<CR>
 noremap <leader>n<space> :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
-" }}}
-
-" Configure airline {{{
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts=1
-if has( "gui_running" )
-  let g:airline_powerline_fonts = 1
-  let g:airline_theme='papercolor'
-else
-  let g:airline_theme='papercolor'
-endif
 " }}}
 
 " LaTeX {{{

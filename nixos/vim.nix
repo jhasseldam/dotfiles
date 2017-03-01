@@ -41,6 +41,8 @@
                 "elm"
                 "kuvim-themes"
                 "papercolor-theme"
+                "spacemacs-theme"
+                "quantum-theme"
             ]; }
             # { names = [
             #   # "elm-vim"
