@@ -183,7 +183,7 @@ nnoremap gV `[v`]
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <C-j> :bd<CR>
-noremap <leader>n<space> :NERDTreeToggle<cr>
+noremap <leader>n :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
 " }}}
