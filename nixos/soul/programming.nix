@@ -16,6 +16,7 @@
     # texlive.combined.scheme-full
     diffuse
     python27Full
+    nodejs-6_x
     mono46 fsharp dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
     maven jdk
     inotify-tools
