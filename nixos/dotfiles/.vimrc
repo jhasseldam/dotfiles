@@ -103,6 +103,7 @@ let g:airline_theme = 'quantum'
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
+let g:ctrlp_working_path_mode = ''
 noremap <leader>f :CtrlP<cr>
 noremap <leader>b :CtrlPBuffer<cr>
 noremap <leader>d :CtrlPDir<cr>
