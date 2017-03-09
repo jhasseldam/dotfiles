@@ -8,7 +8,7 @@
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
     # Internet
-    chromium xe-guest-utilities
+    chromium xe-guest-utilities corkscrew
     # Office
     evince poppler_utils
     # Xfce 4
