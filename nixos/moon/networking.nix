@@ -12,8 +12,8 @@
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # useDHCP = false;
     # interfaces = {
-    #   enp6s0.ip4 = [
-    #     { address = "192.168.8.151"; prefixLength = 24; }
+    #   wlp2s0.ip4 = [
+    #     { address = "192.168.8.152"; prefixLength = 24; }
     #   ];
     # };
     networkmanager.enable = true;
