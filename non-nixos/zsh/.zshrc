@@ -3,7 +3,7 @@
 export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/kuznero/.oh-my-zsh
+export ZSH=/home/kuznero/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -14,7 +14,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 # ZSH_THEME="flazz"
 # ZSH_THEME="jnrowe"
 # ZSH_THEME="jreese"
-ZSH_THEME="strug"
+ZSH_THEME="clean"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
