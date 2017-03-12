@@ -14,7 +14,7 @@ export ZSH=/home/kuznero/.oh-my-zsh
 # ZSH_THEME="flazz"
 # ZSH_THEME="jnrowe"
 # ZSH_THEME="jreese"
-ZSH_THEME="clean"
+ZSH_THEME="cypher"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
