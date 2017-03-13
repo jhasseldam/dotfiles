@@ -37,6 +37,7 @@
                 "supertab"
                 "gitgutter"
                 "signify"
+                "toml"
                 "fsharp"
                 "elm"
                 "kuvim-themes"

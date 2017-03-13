@@ -164,6 +164,16 @@ in {
     dependencies = [];
   };
 
+  "toml" = buildVimPlugin {
+    name = "toml";
+    src = fetchgit {
+      url = "https://github.com/cespare/vim-toml";
+      rev = "00ecc580aef1f7f80779af577b6e2b7a056f260f";
+      sha256 = "16jmk58619qg88s839d5rnhpjxcpdmfq1199d5z2l089x05cw1ad";
+    };
+    dependencies = [];
+  };
+
   "fsharp" = buildVimPlugin {
     name = "fsharp";
     src = fetchgit {
