@@ -31,7 +31,7 @@ function update_repo() {
 }
 
 while read p; do
-  url="$PREFIX/$p.git"
+  url="$PREFIX/$p"
   if [ -d $p ]; then
     echo "... Updating $url ..."
     update_repo $p
