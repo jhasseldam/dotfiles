@@ -9,7 +9,7 @@
   st = status
   ci = commit
   co = checkout
-  l = log --graph --oneline --decorate --all -n 20
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --branches
   br = branch
   d = diff
   dt = difftool --diff-filter=ACMRTUXB --no-prompt
