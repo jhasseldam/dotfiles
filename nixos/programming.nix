@@ -12,7 +12,7 @@
   environment.systemPackages = with pkgs; [
     gnumake
     octaveFull
-    stack cabal2nix graphviz zlibStatic
+    graphviz
     texlive.combined.scheme-full
     diffuse
     python27Full
