@@ -77,10 +77,10 @@ if has( "gui_running" )
   if has("termguicolors")
     set termguicolors
   endif
-  " colorscheme quantum
+  colorscheme quantum
   " let g:quantum_black = 1
   " let g:quantum_italics = 1
-  colorscheme spacemacs-theme
+  " colorscheme spacemacs-theme
   " colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
