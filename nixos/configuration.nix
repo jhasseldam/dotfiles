@@ -16,7 +16,6 @@
       ./programming.nix
       ./zsh.nix
       ./vim.nix
-      # ./emacs.nix
       ./tmux.nix
       ./git.nix
       ./users.nix
@@ -28,10 +27,6 @@
   nixpkgs.config = {
     allowUnfree = true;
     firefox.enableAdobeFlash = true;
-    # chromium = {
-    #   enablePepperPDF = true;
-    #   # enableWideVine = true;
-    # };
     pulseaudio = true;
   };
 
@@ -47,5 +42,4 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
-
 }

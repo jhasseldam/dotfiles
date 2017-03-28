@@ -20,7 +20,7 @@
     HISTFILE=~/.zhistory
     # setopt sharehistory
     setopt extendedhistory
-    plugins=(git battery)
+    plugins=(git)
     source $ZSH/oh-my-zsh.sh
     source $HOME/.scripts/ssh-start.sh
     export PATH="$PATH:$HOME/.scripts"
