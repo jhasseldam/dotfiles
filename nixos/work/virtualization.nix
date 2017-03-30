@@ -8,7 +8,6 @@
   virtualisation = {
     docker = {
       enable = true;
-      socketActivation = true;
       extraOptions = ''
 --insecure-registry docker-hub:5000 --insecure-registry docker-hub:5043
       '';
