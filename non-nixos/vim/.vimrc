@@ -120,6 +120,10 @@ set wildmenu
 " }}}
 
 " Syntastic {{{
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
 map <Leader>s :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
 if exists('g:syntastic_always_populate_loc_list')
@@ -129,12 +133,6 @@ set statusline+=%*
 " }}}
 
 " Haskell {{{
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-" == ghc-mod ==
 
 " map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> ti :GhcModTypeInsert<CR>
