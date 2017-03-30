@@ -28,8 +28,8 @@ in {
     name = "syntastic";
     src = fetchgit {
       url = "https://github.com/vim-syntastic/syntastic.git";
-      rev = "734fde7f0b84ff3f670ab5772ed1b8b0c8c16770";
-      sha256 = "18nw0zw8h537d189n0z244fllbyyb9fw47brnmsw82w90b771723";
+      rev = "d7338f8a635514270b441e381164ec477a2e0cfd";
+      sha256 = "0y62s8qjps83gsrp10gglg2z941pjkqzq7l1jjjl4s3z42v8kax8";
     };
     dependencies = [];
   };
@@ -134,16 +134,6 @@ in {
     dependencies = [];
   };
 
-  "supertab" = buildVimPlugin {
-    name = "supertab";
-    src = fetchgit {
-      url = "https://github.com/ervandew/supertab.git";
-      rev = "66511772a430a5eaad7f7d03dbb02e8f33c4a641";
-      sha256 = "1kxxgplsc40wyl7yj3dpcjjgysd41cd32ppcpnj5knphpjw7abp4";
-    };
-    dependencies = [];
-  };
-
   "gitgutter" = buildVimPlugin {
     name = "gitgutter";
     src = fetchgit {
@@ -178,8 +168,8 @@ in {
     name = "fsharp";
     src = fetchgit {
       url = "https://github.com/fsharp/vim-fsharp.git";
-      rev = "3e6729442e253ecbf6d825246e41d12e603eb96f";
-      sha256 = "0w6yw5fwgwikf0lx15kj266z8w6br038lgxhs062w51nmh4kyh4a";
+      rev = "e1265482f2da49edab04cd3c34a273618aaf9e20";
+      sha256 = "02wy0wic8xj9jzm0vln24kwx8rbrwlj54wcjkvj8rcsfnv9lqf8c";
     };
     dependencies = [];
     buildInputs = [ curl unzip ];
@@ -217,16 +207,6 @@ in {
       url = "https://github.com/eagletmt/neco-ghc";
       rev = "7f02a9c25fb272a87d2be092826e2cd3094c620d";
       sha256 = "1fcfk45qb96h6y4zb3p0104iyqc85q1synn9ah56zp6hnkkyffbw";
-    };
-    dependencies = [];
-  };
-
-  neocomplete = buildVimPlugin {
-    name = "neocomplete";
-    src = fetchgit {
-      url = "https://github.com/Shougo/neocomplete.vim";
-      rev = "36b29b299e1c24917ff4f15b4941c66641019895";
-      sha256 = "1wylgcwld9icy0n8bmk91cdh69pm9kzz1rkxkfmyly04snsq6r22";
     };
     dependencies = [];
   };

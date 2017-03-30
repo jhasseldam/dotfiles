@@ -31,7 +31,7 @@ set ignorecase
 set mouse=a
 set history=1000
 " set clipboard=unnamedplus,autoselect
-set completeopt=menuone,menu,longest
+" set completeopt=menuone,menu,longest
 set t_Co=256
 set cmdheight=1
 set encoding=utf-8
@@ -185,6 +185,10 @@ nnoremap <C-j> :bd<CR>
 noremap <leader>n :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 " }}}
 
 " LaTeX {{{

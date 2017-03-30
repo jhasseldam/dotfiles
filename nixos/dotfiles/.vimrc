@@ -31,7 +31,7 @@ set ignorecase
 set mouse=a
 set history=1000
 " set clipboard=unnamedplus,autoselect
-set completeopt=menuone,menu,longest
+" set completeopt=menuone,menu,longest
 set t_Co=256
 set cmdheight=1
 set encoding=utf-8
@@ -122,34 +122,18 @@ set wildmenu
 " Syntastic {{{
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
 map <Leader>s :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
-if exists('g:syntastic_always_populate_loc_list')
-  set statusline+=%{SyntasticStatuslineFlag()}
-endif
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 " }}}
 
 " Haskell {{{
-
 " map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> ti :GhcModTypeInsert<CR>
 map <silent> tt :GhcModType<CR>
 map <silent> tc :GhcModTypeClear<CR>
-
-" == supertab ==
-
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
-
-if has("gui_running")
-  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-else " no gui
-  if has("unix")
-    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-  endif
-endif
 
 " == neco-ghc ==
 
@@ -185,6 +169,10 @@ nnoremap <C-j> :bd<CR>
 noremap <leader>n :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nnoremap <leader>x :FencAutoDetect<CR>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 " }}}
 
 " LaTeX {{{
