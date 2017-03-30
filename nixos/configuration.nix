@@ -41,5 +41,5 @@
   time.timeZone = "Europe/Copenhagen";
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "16.09";
+  system.stateVersion = "17.03";
 }
