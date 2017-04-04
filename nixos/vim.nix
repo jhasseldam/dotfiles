@@ -42,6 +42,7 @@
                 "papercolor-theme"
                 "spacemacs-theme"
                 "quantum-theme"
+                "colorschemes"
             ]; }
             # { names = [
             #   # "elm-vim"
