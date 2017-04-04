@@ -77,7 +77,8 @@ if has( "gui_running" )
   if has("termguicolors")
     set termguicolors
   endif
-  colorscheme quantum
+  colorscheme Tomorrow-Night-Bright
+  " colorscheme quantum
   " let g:quantum_black = 1
   " let g:quantum_italics = 1
   " colorscheme spacemacs-theme
