@@ -279,5 +279,15 @@ in {
     dependencies = [];
   };
 
+  "colorstepper" = buildVimPlugin {
+    name = "colorstepper";
+    src = fetchgit {
+      url = "https://github.com/qualiabyte/vim-colorstepper";
+      rev = "a39875454b866fe751482b3ceb17f47ffb3c5da7";
+      sha256 = "032npdzdvb4f2hax1mkazhnp8cz8zb1wbnynh8llhkilnngi5f63";
+    };
+    dependencies = [];
+  };
+
   # more?
 }

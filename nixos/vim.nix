@@ -43,6 +43,7 @@
                 "spacemacs-theme"
                 "quantum-theme"
                 "colorschemes"
+                "colorstepper"
             ]; }
             # { names = [
             #   # "elm-vim"
