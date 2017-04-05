@@ -1,3 +1,0 @@
-:def! search return . (":! hoogle --count=20 " ++)
-:def! doc return . (":! hoogle --info " ++)
-:def! c return . (":! cls " ++)
