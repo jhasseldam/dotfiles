@@ -1,5 +1,6 @@
 blog
 clustered-rabbitmq
+docker
 dotfiles
 fonts
 hs-lambda
