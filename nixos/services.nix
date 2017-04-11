@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     gnome3.pomodoro
+    gnome3.gconf
   ];
 
   # Enable the X11 windowing system.
