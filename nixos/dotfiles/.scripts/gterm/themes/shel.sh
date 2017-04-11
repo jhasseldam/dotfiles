@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+PROFILE_NAME="shel"
+PROFILE_SLUG="8072f016-e93a-4c2e-97b9-c91b3d133d3b"
+
+COLOR_01="#2c2423" # HOST
+COLOR_02="#ab2463" # SYNTAX_STRING
+COLOR_03="#6ca323" # COMMAND
+COLOR_04="#ab6423" # COMMAND_COLOR2
+COLOR_05="#2c64a2" # PATH
+COLOR_06="#6c24a2" # SYNTAX_VAR
+COLOR_07="#2ca363" # PROMP
+COLOR_08="#918988" #
+
+COLOR_09="#918988" #
+COLOR_10="#f588b9" # COMMAND_ERROR
+COLOR_11="#c2ee86" # EXEC
+COLOR_12="#f5ba86" #
+COLOR_13="#8fbaec" # FOLDER
+COLOR_14="#c288ec" #
+COLOR_15="#8feeb9" #
+COLOR_16="#f5eeec" #
+
+BACKGROUND_COLOR="#2a201f"
+FOREGROUND_COLOR="#4882cd"
+
+CURSOR_COLOR="$FOREGROUND_COLOR"
+
+source "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../gterm-theme-apply.sh"
