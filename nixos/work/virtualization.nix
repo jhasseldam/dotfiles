@@ -8,8 +8,9 @@
   virtualisation = {
     docker = {
       enable = true;
+      liveRestore = false;
       extraOptions = ''
---insecure-registry docker-hub:5000 --insecure-registry docker-hub:5043
+-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375 --insecure-registry docker-hub:5000 --insecure-registry docker-hub:5043
       '';
     };
     virtualbox = {
