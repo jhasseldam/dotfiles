@@ -2,8 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnome3.pomodoro
-    gnome3.gconf
+    konversation
+    ksshaskpass
+    kdeApplications.ark
+    kdeApplications.gwenview
+    kdeApplications.okular
+    kdeApplications.spectacle
   ];
 
   services = {
@@ -15,17 +19,12 @@
     xserver = {
       enable = true;
       layout = "us";
-      displayManager.gdm.enable = true;
-      desktopManager.gnome3 = {
+      displayManager.sddm = {
         enable = true;
-        extraGSettingsOverrides = ''
-          [org.gnome.desktop.peripherals.touchpad]
-          tap-to-click=true
-        '';
-        sessionPath = with pkgs.gnome3; [ pomodoro ];
+        autoNumlock = true;
       };
+      desktopManager.plasma5.enable = true;
     };
-    gnome3.gnome-keyring.enable = true;
     udisks2.enable = true;
   };
 }
