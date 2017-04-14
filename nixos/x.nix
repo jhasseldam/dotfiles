@@ -7,7 +7,7 @@
 {
   imports =
     [ # current desktop/display manager
-      # ./x-gnome.nix
-      ./x-plasma.nix
+      ./x-gnome.nix
+      # ./x-plasma.nix
     ];
 }
