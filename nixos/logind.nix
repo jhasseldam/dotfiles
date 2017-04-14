@@ -10,7 +10,7 @@
       # in logind.conf [1]. The NixOS interface is services.logind.extraConfig.
       # [1]: http://www.freedesktop.org/software/systemd/man/logind.conf.html
       extraConfig = ''
-        RuntimeDirectorySize=2G
+        RuntimeDirectorySize=4G
       '';
     };
   };

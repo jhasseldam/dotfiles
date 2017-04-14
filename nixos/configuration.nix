@@ -12,6 +12,7 @@
       ./networking.nix
       ./virtualization.nix
       ./fonts.nix
+      ./logind.nix
       ./packages.nix
       ./programming.nix
       ./zsh.nix
@@ -20,7 +21,7 @@
       ./git.nix
       ./users.nix
       ./security.nix
-      ./services.nix
+      ./x.nix
     ];
 
   nixpkgs.config = {
