@@ -69,9 +69,9 @@ if has( "gui_running" )
   set guioptions-=r
   set guioptions-=L
   if has('win32')
-    set guifont=Roboto_Mono_for_Powerline:h12:cANSI
+    set guifont=Roboto_Mono_for_Powerline:h14:cANSI
   elseif has('unix')
-    set guifont=Roboto\ Mono\ for\ Powerline\ 12
+    set guifont=Roboto\ Mono\ for\ Powerline\ 14
   endif
   set background=dark
   if has("termguicolors")

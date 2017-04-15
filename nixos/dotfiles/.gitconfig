@@ -18,7 +18,7 @@
   mt = mergetool
   cl = clean -x -d -f --dry-run
   cls = clean -x -d -f
-  pl = pull --prune --all
+  pl = pull --all
   ps = push
 [color]
   ui = true

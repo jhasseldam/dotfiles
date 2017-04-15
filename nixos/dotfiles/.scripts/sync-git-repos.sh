@@ -26,7 +26,7 @@ function update_repo() {
   name=$1
   pushd ./ > /dev/null
   cd $name
-  git pull
+  git pull --all
   popd > /dev/null
 }
 
