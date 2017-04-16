@@ -9,7 +9,6 @@
     zip unzip gparted
     # Internet
     chromium hexchat dropbox qbittorrent
-    tdesktop
     # Office
     evince poppler_utils
     # Multimedia
