@@ -7,7 +7,6 @@
     fonts = with pkgs; [
       anonymousPro
       cantarell_fonts
-      corefonts
       dejavu_fonts
       fira-mono
       font-droid
