@@ -15,7 +15,6 @@
     python27Full
     nodejs-6_x
     mono46 fsharp dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
-    inotify-tools
     redis-desktop-manager
     pgadmin
   ];
