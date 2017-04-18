@@ -39,7 +39,8 @@ set fileencodings=utf-8
 " set nospell
 " set nobackup
 " set noswapfile
-" set noundofile
+set undofile
+set undodir=~/.vim/undo
 set hidden
 set nocursorline
 set laststatus=2
