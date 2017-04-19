@@ -19,6 +19,8 @@
       desktopManager.gnome3 = {
         enable = true;
         extraGSettingsOverrides = ''
+          [org.gnome.desktop.interface]
+          enable-animations=false
           [org.gnome.desktop.peripherals.touchpad]
           tap-to-click=true
         '';
