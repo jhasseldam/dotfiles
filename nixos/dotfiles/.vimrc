@@ -72,7 +72,7 @@ if has( "gui_running" )
   "if has('win32')
   "  set guifont=DejaVu_Sans_Mono_for_Powerline:h12:cANSI
   "elseif has('unix')
-  set guifont=Cousine\ for\ Powerline\ 12
+  set guifont=Cousine\ for\ Powerline\ 11
   "endif
   set background=dark
   if has("termguicolors")
@@ -83,9 +83,10 @@ if has( "gui_running" )
   " let g:quantum_black = 1
   " let g:quantum_italics = 1
   " colorscheme spacemacs-theme
-  colorscheme PaperColor
-  let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
+  " colorscheme PaperColor
+  " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
+  colorscheme abra
 else
   set background=dark
   colorscheme default
