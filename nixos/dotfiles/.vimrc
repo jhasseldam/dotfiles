@@ -72,7 +72,7 @@ if has( "gui_running" )
   "if has('win32')
   "  set guifont=DejaVu_Sans_Mono_for_Powerline:h12:cANSI
   "elseif has('unix')
-  set guifont=Cousine\ for\ Powerline\ 11
+  set guifont=Cousine\ for\ Powerline\ 12
   "endif
   set background=dark
   if has("termguicolors")
