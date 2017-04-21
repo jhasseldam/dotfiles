@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     gnome3.pomodoro
     gnome3.gconf
+    gnome3.gnome-tweak-tool
   ];
 
   services = {
