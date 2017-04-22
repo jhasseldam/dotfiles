@@ -111,9 +111,9 @@
           tap-to-click=true
 
           [org.gnome.desktop.wm.keybindings]
-          close=["<Super><Shift>c", '<Alt>F4']
-          switch-applications=["<Control>Tab", "<Super>Tab", '<Alt>Tab']
-          switch-group=["<Control>Above_Tab", "<Super>Above_Tab", '<Alt>Above_Tab']
+          close=["<Control><Shift>F4", "<Super><Shift>c", '<Alt>F4']
+          switch-applications=["<Control><Shift>Tab", "<Super>Tab", '<Alt>Tab']
+          switch-group=["<Control><Shift>Above_Tab", "<Super>Above_Tab", '<Alt>Above_Tab']
         '';
         sessionPath = with pkgs.gnome3; [ pomodoro ];
       };
