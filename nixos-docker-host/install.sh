@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+command -v find >/dev/null 2>&1 || { echo >&2 "[find] is required, but not installed.  Aborting."; exit 1; }
+command -v rsync >/dev/null 2>&1 || { echo >&2 "[rsync] is required, but not installed.  Aborting."; exit 1; }
+
 if [[ "$#" -ne 1 ]]; then
   echo Expected argument is missing: MODE
   exit 1
@@ -46,20 +49,10 @@ echo -e "${RED}## ${GREEN}Switching in ${RED}$MODE${GREEN} profile${NC}"
 echo ""
 pushd .
 cd "$TARGET/profiles/$MODE/"
-dir="./"
-for f in *.nix; do
+for dir in $(find . -iname "*.nix" -print); do
   echo -e "${RED} * ${NC}$MODE${dir:1}$f ${RED}->${NC} ${dir:2}$f ..."
   if [[ -f $TARGET/${dir:1}$f ]]; then rm $TARGET/${dir:1}$f; fi
   ln -s $TARGET/profiles/$MODE${dir:1}$f $TARGET/${dir:1}$f
-done
-for dir in ./**/; do
-  pushd $dir
-  for f in *.nix; do
-    echo -e "${RED} * ${NC}$MODE${dir:1}$f ${RED}->${NC} ${dir:2}$f ..."
-    if [[ -f $TARGET/${dir:1}$f ]]; then rm $TARGET/${dir:1}$f; fi
-    ln -s $TARGET/profiles/$MODE${dir:1}$f $TARGET/${dir:1}$f
-  done
-  popd
 done
 if [[ -f "$TARGET/profiles/$MODE/post-install.sh" ]]; then
   $TARGET/profiles/$MODE/post-install.sh
