@@ -8,7 +8,7 @@
         rc = ''
           ${vimrc}
         '';
-        plugins = pkgs.callPackage ./vim-plugins.nix {};
+        plugins = pkgs.callPackage ./vim/plugins.nix {};
       in
         with import <nixpkgs> {};
         vim_configurable.customize {

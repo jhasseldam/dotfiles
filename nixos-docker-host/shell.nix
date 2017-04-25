@@ -2,7 +2,6 @@
 
 {
   imports =
-    [ ./x/gnome.nix
-      # ./x/plasma.nix
+    [ ./shell/zsh.nix
     ];
 }

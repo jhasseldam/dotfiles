@@ -7,17 +7,17 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       ./bootloader.nix
+      ./hardware-configuration.nix
       ./kernel.nix
-      ./networking.nix
-      ./virtualization.nix
       ./logind.nix
+      ./networking.nix
       ./packages.nix
-      ./zsh.nix
-      ./vim.nix
-      ./users.nix
       ./services.nix
+      ./shell.nix
+      ./users.nix
+      ./vim.nix
+      ./virtualization.nix
     ];
 
   nixpkgs.config = {

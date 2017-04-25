@@ -7,21 +7,22 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       ./bootloader.nix
-      ./kernel.nix
-      ./networking.nix
-      ./virtualization.nix
+      ./devel.nix
       ./fonts.nix
-      ./logind.nix
-      ./packages.nix
-      ./programming.nix
-      ./zsh.nix
-      ./vim.nix
-      ./tmux.nix
       ./git.nix
-      ./users.nix
+      ./hardware-configuration.nix
+      ./kernel.nix
+      ./logind.nix
+      ./networking.nix
+      ./packages.nix
+      ./scripts.nix
       ./security.nix
+      ./shell.nix
+      ./tmux.nix
+      ./users.nix
+      ./vim.nix
+      ./virtualization.nix
       ./x.nix
     ];
 

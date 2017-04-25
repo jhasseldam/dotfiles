@@ -17,7 +17,7 @@ if [ -z "$ROOT" ] ; then
   exit 1 # fail
 fi
 
-if [[ ! -d "$ROOT/$MODE/" ]]; then
+if [[ ! -d "$ROOT/profiles/$MODE/" ]]; then
   echo Supplied mode does not exist
   exit 1
 fi
@@ -30,13 +30,13 @@ if [ $exit_code -ne 0 ]; then
 fi
 
 pushd .
-cd "$TARGET/$MODE/"
+cd "$TARGET/profiles/$MODE/"
 for f in *.nix; do
   echo "$MODE/$f -> $f ..."
   if [[ -f $TARGET/$f ]]; then rm $TARGET/$f; fi
-  ln -s $MODE/$f $TARGET/$f
+  ln -s profiles/$MODE/$f $TARGET/$f
 done
-if [[ -f "$TARGET/$MODE/post-install.sh" ]]; then
-  $TARGET/$MODE/post-install.sh
+if [[ -f "$TARGET/profiles/$MODE/post-install.sh" ]]; then
+  $TARGET/profiles/$MODE/post-install.sh
 fi
 popd
