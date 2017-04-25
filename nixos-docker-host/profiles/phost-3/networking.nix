@@ -8,7 +8,6 @@
     domain = "danskenet.net";
     search = [ "danskenet.net" ];
     proxy.default = "http://127.0.0.1:3128/";
-    firewall.enable = false;
     useDHCP = false;
     interfaces = {
       enp0s3.ip4 = [
