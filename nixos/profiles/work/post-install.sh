@@ -9,13 +9,18 @@ if [ -z "$ROOT" ] ; then
   exit 1 # fail
 fi
 
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+NC='\033[0m'
+
 echo ""
-echo "## Proxy configuration"
-echo -n "Domain: "
+echo -e "${RED}## ${GREEN}Proxy configuration${NC}"
+echo ""
+echo -n -e "${GREEN}Domain:${NC}   "
 read domain
-echo -n "Username: "
+echo -n -e "${GREEN}Username:${NC} "
 read user
-echo -n "Password: "
+echo -n -e "${GREEN}Password:${NC} "
 read -s password
 echo ""
 

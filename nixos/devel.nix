@@ -5,5 +5,6 @@
     [ ./devel/haskell.nix
       ./devel/dotnet.nix
       ./devel/java.nix
+      ./devel/python.nix
     ];
 }
