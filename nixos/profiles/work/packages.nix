@@ -8,10 +8,8 @@
     # Internet
     chromium
     # Office
-    octaveFull graphviz texlive.combined.scheme-full
+    octaveFull graphviz
     evince poppler_utils
-    # Multimedia
-    vlc exif ffmpeg gphoto2
     # Common devel
     gnumake diffuse
     redis-desktop-manager

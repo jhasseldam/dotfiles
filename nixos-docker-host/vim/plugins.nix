@@ -175,7 +175,7 @@ in {
     buildInputs = [ curl unzip ];
     buildPhase = ''
       sed -i -E "s/(.+)curl(.+)/\1curl -k\2/" Makefile
-      make fsautocomplete
+      # make fsautocomplete
     '';
   };
 
