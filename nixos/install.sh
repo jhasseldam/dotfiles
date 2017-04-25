@@ -36,4 +36,7 @@ for f in *.nix; do
   if [[ -f $TARGET/$f ]]; then rm $TARGET/$f; fi
   ln -s $MODE/$f $TARGET/$f
 done
+if [[ -f "$TARGET/$MODE/post-install.sh" ]]; then
+  $TARGET/$MODE/post-install.sh
+fi
 popd
