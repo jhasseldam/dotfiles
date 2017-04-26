@@ -14,7 +14,7 @@
     export PATH="$PATH:$HOME/.local/bin"
     export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
     # Customize your oh-my-zsh options here
-    ZSH_THEME="cypher"
+    ZSH_THEME="amuse"
     export EDITOR='vim'
     export VISUAL='vim'
     HISTFILE=~/.zhistory
@@ -22,8 +22,6 @@
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
-    source $HOME/.scripts/ssh-start.sh
-    export PATH="$PATH:$HOME/.scripts"
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
