@@ -6,7 +6,7 @@
   ];
 
   system.activationScripts = {
-    programmingDotfiles = {
+    mavenSetup = {
       text = ''
         cd /home/kuznero
         if [[ -d .m2 ]]; then rm -rf .m2; fi

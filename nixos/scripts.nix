@@ -2,7 +2,7 @@
 
 {
   system.activationScripts = {
-    programmingDotfiles = {
+    scriptsSetup = {
       text = ''
         cd /home/kuznero
         if [[ -d .scripts ]]; then rm -rf .scripts; fi

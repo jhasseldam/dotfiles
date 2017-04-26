@@ -9,4 +9,18 @@ in
   environment.systemPackages = with pkgs; [
     unstable.stack
   ];
+
+  system.activationScripts = {
+    stackSetup = {
+      text = ''
+        cd /home/kuznero
+        if [[ ! -d .stack ]]; then mkdir .stack; fi
+        if [[ -f .stack/config.yaml ]]; then rm .stack/config.yaml; fi
+        ln -fs /etc/nixos/dotfiles/.stack/config.yaml .stack/config.yaml
+        chown -R kuznero:users .stack
+      '';
+      deps = ["users"];
+    };
+  };
+
 }
