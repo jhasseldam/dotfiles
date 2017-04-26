@@ -22,6 +22,10 @@
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
+    if [[ -d $HOME/.scripts ]]; do
+      source $HOME/.scripts/ssh-start.sh
+    fi
+    export PATH="$PATH:$HOME/.scripts"
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
