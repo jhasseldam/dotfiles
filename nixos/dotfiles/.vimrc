@@ -222,3 +222,12 @@ let g:elm_setup_keybindings = 1
 let g:elm_classic_highlighting = 0
 " au BufEnter *.elm nnoremap <buffer> <leader> f :ElmFormat<CR>
 " }}}
+
+" F# {{{
+let g:syntastic_fsharp_checkers=['syntax']
+let g:fsharp_completion_helptext = 1
+let g:fsharp_map_keys = 1
+" let g:fsharp_map_prefix = 'cp'
+let g:fsharp_map_gotodecl = 'g'
+let g:fsharp_map_gobackfromdecl = 'b'
+" }}}
