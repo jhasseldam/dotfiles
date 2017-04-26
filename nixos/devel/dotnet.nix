@@ -8,5 +8,6 @@ in
 {
   environment.systemPackages = with pkgs; [
     mono46 unstable.fsharp41
+    dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
   ];
 }
