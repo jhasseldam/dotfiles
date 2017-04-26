@@ -16,7 +16,7 @@
     # Multimedia
     vlc exif ffmpeg gphoto2
     # Common devel
-    gnumake diffuse
+    gnumake diffuse meld
     redis-desktop-manager
     pgadmin
   ];
