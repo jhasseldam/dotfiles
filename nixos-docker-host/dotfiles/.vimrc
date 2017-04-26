@@ -72,7 +72,7 @@ if has( "gui_running" )
   "if has('win32')
   "  set guifont=DejaVu_Sans_Mono_for_Powerline:h12:cANSI
   "elseif has('unix')
-  set guifont=Cousine\ for\ Powerline\ 12
+  set guifont=Fira\ Mono\ for\ Powerline\ 13
   "endif
   set background=dark
   if has("termguicolors")
@@ -87,6 +87,7 @@ if has( "gui_running" )
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
   colorscheme abra
+  " colorscheme bclear
 else
   set background=dark
   colorscheme default
@@ -220,4 +221,13 @@ let g:elm_format_autosave = 1
 let g:elm_setup_keybindings = 1
 let g:elm_classic_highlighting = 0
 " au BufEnter *.elm nnoremap <buffer> <leader> f :ElmFormat<CR>
+" }}}
+
+" F# {{{
+let g:syntastic_fsharp_checkers=['syntax']
+let g:fsharp_completion_helptext = 1
+let g:fsharp_map_keys = 1
+" let g:fsharp_map_prefix = 'cp'
+let g:fsharp_map_gotodecl = 'g'
+let g:fsharp_map_gobackfromdecl = 'b'
 " }}}
