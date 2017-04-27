@@ -7,7 +7,7 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    mono46 unstable.fsharp41
+    mono46 unstable.fsharp41 unstable.vscode
     dotnetPackages.FSharpAutoComplete dotnetPackages.FSharpCompilerCodeDom dotnetPackages.FSharpCompilerService dotnetPackages.FSharpData dotnetPackages.FSharpFormatting
   ];
 }
