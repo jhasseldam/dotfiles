@@ -127,7 +127,7 @@ set wildmenu
 
 " Syntastic {{{
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 map <Leader>s :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
@@ -228,7 +228,7 @@ let g:elm_classic_highlighting = 0
 " F# {{{
 let g:syntastic_fsharp_checkers=['syntax']
 let g:fsharp_only_check_errors_on_write = 0
-let g:fsharp_completion_helptext = 1
+let g:fsharp_completion_helptext = 0
 let g:fsharp_map_keys = 1
 " let g:fsharp_map_prefix = 'cp'
 let g:fsharp_map_gotodecl = 'g'

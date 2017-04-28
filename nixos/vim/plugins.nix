@@ -168,8 +168,8 @@ in {
     name = "fsharp";
     src = fetchgit {
       url = "https://github.com/fsharp/vim-fsharp.git";
-      rev = "1b4690c1fcdf511e842389fc07df48b33cc144a5";
-      sha256 = "10xsln8d4clgalhdi7w4cxslahk7jakqq8h2aavrkp5b4vpgjnxm";
+      rev = "e1265482f2da49edab04cd3c34a273618aaf9e20";
+      sha256 = "02wy0wic8xj9jzm0vln24kwx8rbrwlj54wcjkvj8rcsfnv9lqf8c";
     };
     dependencies = [];
     buildInputs = [ curl unzip ];
