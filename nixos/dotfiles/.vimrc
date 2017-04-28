@@ -227,8 +227,8 @@ let g:elm_classic_highlighting = 0
 
 " F# {{{
 let g:syntastic_fsharp_checkers=['syntax']
-let g:fsharp_only_check_errors_on_write = 1
-let g:fsharp_completion_helptext = 0
+let g:fsharp_only_check_errors_on_write = 0
+let g:fsharp_completion_helptext = 1
 let g:fsharp_map_keys = 1
 " let g:fsharp_map_prefix = 'cp'
 let g:fsharp_map_gotodecl = 'g'

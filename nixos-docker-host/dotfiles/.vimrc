@@ -100,7 +100,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ' '
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = ' '
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 " let g:airline_theme='papercolor'
 let g:airline_theme = 'quantum'
 " }}}
@@ -227,7 +227,8 @@ let g:elm_classic_highlighting = 0
 
 " F# {{{
 let g:syntastic_fsharp_checkers=['syntax']
-let g:fsharp_completion_helptext = 0
+let g:fsharp_only_check_errors_on_write = 0
+let g:fsharp_completion_helptext = 1
 let g:fsharp_map_keys = 1
 " let g:fsharp_map_prefix = 'cp'
 let g:fsharp_map_gotodecl = 'g'
