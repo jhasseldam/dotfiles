@@ -18,6 +18,7 @@
       ./tmux.nix
       ./users.nix
       ./vim.nix
+      ./nvim.nix
       ./virtualization.nix
       ./x.nix
     ];
