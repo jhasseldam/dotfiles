@@ -11,6 +11,7 @@
       ./kernel.nix
       ./logind.nix
       ./networking.nix
+      # ./nvim.nix
       ./packages.nix
       ./scripts.nix
       ./security.nix
@@ -18,7 +19,6 @@
       ./tmux.nix
       ./users.nix
       ./vim.nix
-      ./nvim.nix
       ./virtualization.nix
       ./x.nix
     ];
