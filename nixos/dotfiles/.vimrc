@@ -69,14 +69,9 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  "if has('win32')
-  "  set guifont=DejaVu_Sans_Mono_for_Powerline:h12:cANSI
-  "elseif has('unix')
-  set guifont=Fira\ Mono\ for\ Powerline\ 12
-  "endif
-  set background=dark
-  if has("termguicolors")
-    set termguicolors
+  set guifont=Fira\ Mono\ 12
+  if has('nvim')
+    GuiFont Fira\ Mono:h12
   endif
   " colorscheme Tomorrow-Night-Bright
   " colorscheme quantum
@@ -86,6 +81,7 @@ if has( "gui_running" )
   " colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
+  set background=dark
   colorscheme abra
   " colorscheme bclear
 else
