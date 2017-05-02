@@ -4,11 +4,9 @@ let
   plugins = pkgs.callPackage ./vim/plugins.nix {};
 in
 {
-  environment.systemPackages = with pkgs; [
-    neovim-qt
-    neovim-pygui
-    (neovim.override {
-      vimAlias = true;
+  nixpkgs.config.packageOverrides = pkgs : with pkgs; rec {
+    nvim = pkgs.neovim.override {
+      vimAlias = false;
       configure = {
         customRC = builtins.readFile ./dotfiles/.vimrc;
         vam.knownPlugins = vimPlugins // plugins;
@@ -52,6 +50,14 @@ in
           # ]; }
         ];
       };
-    })
+    };
+    nvim-qt = pkgs.neovim-qt.override {
+      neovim = nvim;
+    };
+  };
+
+  environment.systemPackages = with pkgs; [
+    nvim
+    nvim-qt
   ];
 }
