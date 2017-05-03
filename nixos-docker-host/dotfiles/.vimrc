@@ -87,6 +87,40 @@ else
 endif
 " }}}
 
+" Mapping {{{
+let mapleader = ","
+nnoremap <F5> :make<CR>
+nnoremap <leader><leader> :nohlsearch<CR>
+" set scrolloff to toggle always placing cursor in the middle
+nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
+" visual block movement
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+" highlight last inserted code
+nnoremap gV `[v`]
+" buffer management
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-j> :bd<CR>
+noremap <leader>n :NERDTreeToggle<cr>
+" " Auto-detect encoding
+" :nnoremap <leader>x :FencAutoDetect<CR>
+" Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+" ColorStepper Keys
+nmap <F6> <Plug>ColorstepPrev
+nmap <F7> <Plug>ColorstepNext
+nmap <S-F7> <Plug>ColorstepReload
+" }}}
+
 " Configure airline {{{
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -149,40 +183,6 @@ vmap a- :Tabularize /-><CR>
 vmap a, :Tabularize /<-<CR>
 vmap al :Tabularize /[\[\\|,]<CR>
 
-" }}}
-
-" Mapping {{{
-let mapleader = ","
-nnoremap <F5> :make<CR>
-nnoremap <leader><leader> :nohlsearch<CR>
-" set scrolloff to toggle always placing cursor in the middle
-nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
-" visual block movement
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-" highlight last inserted code
-nnoremap gV `[v`]
-" buffer management
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
-nnoremap <C-j> :bd<CR>
-noremap <leader>n :NERDTreeToggle<cr>
-" " Auto-detect encoding
-" :nnoremap <leader>x :FencAutoDetect<CR>
-" Disable Arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-" Disable Arrow keys in Insert mode
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-" ColorStepper Keys
-nmap <F6> <Plug>ColorstepPrev
-nmap <F7> <Plug>ColorstepNext
-nmap <S-F7> <Plug>ColorstepReload
 " }}}
 
 " LaTeX {{{
