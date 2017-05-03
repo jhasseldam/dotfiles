@@ -88,23 +88,23 @@ endif
 " }}}
 
 " Mapping {{{
-let mapleader = ","
-nnoremap <F5> :make<CR>
-nnoremap <leader><leader> :nohlsearch<CR>
+let mapleader=","
+nmap <F5> :make<CR>
+nmap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
-nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
+nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 " visual block movement
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
 " highlight last inserted code
-nnoremap gV `[v`]
+nmap gV `[v`]
 " buffer management
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
-nnoremap <C-j> :bd<CR>
-noremap <leader>n :NERDTreeToggle<cr>
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+nmap <C-j> :bd<CR>
+map <leader>n :NERDTreeToggle<cr>
 " " Auto-detect encoding
-" :nnoremap <leader>x :FencAutoDetect<CR>
+" :nmap <leader>x :FencAutoDetect<CR>
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
@@ -119,6 +119,24 @@ imap <right> <nop>
 nmap <F6> <Plug>ColorstepPrev
 nmap <F7> <Plug>ColorstepNext
 nmap <S-F7> <Plug>ColorstepReload
+" CtrlP
+map <leader>f :CtrlP<cr>
+map <leader>b :CtrlPBuffer<cr>
+map <leader>d :CtrlPDir<cr>
+map <leader>q :CtrlPQuickfix<cr>
+map <leader>t :CtrlPTag<cr>
+" Syntastic
+map <leader>s :SyntasticToggleMode<CR>
+" Haskell
+" map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> ti :GhcModTypeInsert<CR>
+map <silent> tt :GhcModType<CR>
+map <silent> tc :GhcModTypeClear<CR>
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+vmap a, :Tabularize /<-<CR>
+vmap al :Tabularize /[\[\\|,]<CR>
 " }}}
 
 " Configure airline {{{
@@ -137,11 +155,6 @@ let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
 let g:ctrlp_working_path_mode = ''
-noremap <leader>f :CtrlP<cr>
-noremap <leader>b :CtrlPBuffer<cr>
-noremap <leader>d :CtrlPDir<cr>
-noremap <leader>q :CtrlPQuickfix<cr>
-noremap <leader>t :CtrlPTag<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 if has('win32')
   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
@@ -156,33 +169,15 @@ set wildmenu
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
-map <Leader>s :SyntasticToggleMode<CR>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 " }}}
 
 " Haskell {{{
-" map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> ti :GhcModTypeInsert<CR>
-map <silent> tt :GhcModType<CR>
-map <silent> tc :GhcModTypeClear<CR>
-
-" == neco-ghc ==
-
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-" == tabular ==
-
 let g:haskell_tabular = 1
-
-vmap a= :Tabularize /=<CR>
-vmap a; :Tabularize /::<CR>
-vmap a- :Tabularize /-><CR>
-vmap a, :Tabularize /<-<CR>
-vmap al :Tabularize /[\[\\|,]<CR>
-
 " }}}
 
 " LaTeX {{{
