@@ -70,9 +70,7 @@ if has( "gui_running" )
   set guioptions-=r
   set guioptions-=L
   set guifont=Fira\ Mono\ 12
-  if has('nvim')
-    GuiFont Fira\ Mono:h12
-  endif
+  set background=dark
   " colorscheme Tomorrow-Night-Bright
   " colorscheme quantum
   " let g:quantum_black = 1
@@ -81,7 +79,6 @@ if has( "gui_running" )
   " colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
-  set background=dark
   colorscheme abra
   " colorscheme bclear
 else
@@ -155,6 +152,7 @@ vmap al :Tabularize /[\[\\|,]<CR>
 " }}}
 
 " Mapping {{{
+let mapleader = ","
 nnoremap <F5> :make<CR>
 nnoremap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle

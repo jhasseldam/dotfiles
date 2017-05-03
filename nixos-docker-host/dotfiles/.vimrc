@@ -69,15 +69,8 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  "if has('win32')
-  "  set guifont=DejaVu_Sans_Mono_for_Powerline:h12:cANSI
-  "elseif has('unix')
-  set guifont=Fira\ Mono\ for\ Powerline\ 12
-  "endif
+  set guifont=Fira\ Mono\ 12
   set background=dark
-  if has("termguicolors")
-    set termguicolors
-  endif
   " colorscheme Tomorrow-Night-Bright
   " colorscheme quantum
   " let g:quantum_black = 1
@@ -159,6 +152,7 @@ vmap al :Tabularize /[\[\\|,]<CR>
 " }}}
 
 " Mapping {{{
+let mapleader = ","
 nnoremap <F5> :make<CR>
 nnoremap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
