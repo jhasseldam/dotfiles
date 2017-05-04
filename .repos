@@ -10,6 +10,7 @@ icicli
 kuvim-themes
 nixpkgs
 rabbit-flow
+rabbitmq
 sandbox
 scaffolding
 scripts
