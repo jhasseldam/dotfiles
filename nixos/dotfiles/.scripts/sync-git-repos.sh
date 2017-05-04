@@ -19,7 +19,7 @@ if [[ "$(ssh-add -L | wc -c)" -lt 100 ]]; then
 fi
 
 function clone_repo() {
-  git clone $1
+  git clone --recursive $1
 }
 
 function update_repo() {
@@ -27,6 +27,7 @@ function update_repo() {
   pushd ./ > /dev/null
   cd $name
   git pull --all
+  git submodule update --recursive --remote
   popd > /dev/null
 }
 
