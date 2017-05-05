@@ -11,7 +11,7 @@
   co = checkout
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --branches
   br = branch
-  d = diff
+  d = diff --word-diff=color
   dt = difftool --diff-filter=ACMRTUXB --no-prompt
   dtp = difftool --diff-filter=ACMRTUXB --prompt
   m = merge
