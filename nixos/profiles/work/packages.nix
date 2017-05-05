@@ -6,7 +6,7 @@
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
     # Internet
-    chromium
+    firefox chromium
     # Office
     octaveFull graphviz
     evince poppler_utils
