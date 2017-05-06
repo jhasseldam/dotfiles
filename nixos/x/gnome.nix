@@ -137,7 +137,7 @@ name='Files'
 
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1]
 binding='<Primary><Alt>b'
-command='chromium'
+command='firefox'
 name='Browser'
 
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
