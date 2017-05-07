@@ -8,8 +8,7 @@
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
     # Internet
-    firefox chromium hexchat irssi dropbox qbittorrent
-    tdesktop
+    firefox hexchat irssi dropbox qbittorrent
     # Office
     octaveFull graphviz texlive.combined.scheme-full
     evince poppler_utils
