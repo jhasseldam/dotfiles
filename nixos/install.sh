@@ -49,13 +49,17 @@ echo -e "${RED}## ${GREEN}Switching in ${RED}$MODE${GREEN} profile${NC}"
 echo ""
 pushd .
 cd "$TARGET/profiles/$MODE/"
-for dir in $(find . -iname "*.nix" -print); do
-  echo -e "${RED} * ${NC}$MODE${dir:1}$f ${RED}->${NC} ${dir:2}$f ..."
-  if [[ -f $TARGET/${dir:1}$f ]]; then rm $TARGET/${dir:1}$f; fi
-  ln -s $TARGET/profiles/$MODE${dir:1}$f $TARGET/${dir:1}$f
-done
 if [[ -f "$TARGET/profiles/$MODE/post-install.sh" ]]; then
   $TARGET/profiles/$MODE/post-install.sh
 fi
+for dir in $(find . -iname "*.nix" -print); do
+  echo -e "${RED} * ${NC}$MODE${dir:1}$f ${RED}->${NC} ${dir:2}$f ..."
+  if [[ -f $TARGET/${dir:1}$f ]]; then rm $TARGET/${dir:1}$f; fi
+  if [[ $TARGET == /mnt* ]]; then
+    cp $TARGET/profiles/$MODE${dir:1}$f $TARGET/${dir:1}$f
+  else
+    ln -s $TARGET/profiles/$MODE${dir:1}$f $TARGET/${dir:1}$f
+  fi
+done
 popd
 echo ""
