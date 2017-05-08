@@ -9,7 +9,7 @@ if [[ "$#" -ne 1 ]]; then
 fi
 
 MODE=$1
-TARGET=/etc/nixos
+TARGET=/mnt/etc/nixos
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
