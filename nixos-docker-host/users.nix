@@ -2,12 +2,12 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.kuznero = {
+  users.extraUsers.user = {
     isNormalUser = true;
-    home = "/home/kuznero";
-    description = "Roman Kuznetsov";
+    home = "/home/user";
+    description = "Default User";
     extraGroups = [ "wheel" "networkmanager" "docker" "vboxusers" ];
-    initialPassword = "kuznero";
+    initialPassword = "user";
     # shell = "/run/current-system/sw/bin/zsh";
   };
 }

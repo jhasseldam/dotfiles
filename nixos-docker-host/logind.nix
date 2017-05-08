@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Enable the X11 windowing system.
   services = {
     logind = {
       # From: http://lists.science.uu.nl/pipermail/nix-dev/2015-July/017657.html
