@@ -88,23 +88,6 @@ endif
 " }}}
 
 " Mapping {{{
-let mapleader=","
-nmap <F5> :make<CR>
-nmap <leader><leader> :nohlsearch<CR>
-" set scrolloff to toggle always placing cursor in the middle
-nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
-" visual block movement
-vmap J :m '>+1<CR>gv=gv
-vmap K :m '<-2<CR>gv=gv
-" highlight last inserted code
-nmap gV `[v`]
-" buffer management
-nmap <C-h> :bp<CR>
-nmap <C-l> :bn<CR>
-nmap <C-j> :bd<CR>
-map <leader>n :NERDTreeToggle<cr>
-" " Auto-detect encoding
-" :nmap <leader>x :FencAutoDetect<CR>
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
@@ -115,6 +98,23 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+let mapleader=","
+nmap <F5> :make<CR>
+nmap <leader><leader> :nohlsearch<CR>
+" set scrolloff to toggle always placing cursor in the middle
+nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
+" " visual block movement
+" vmap J :m '>+1<CR>gv=gv
+" vmap K :m '<-2<CR>gv=gv
+" " highlight last inserted code
+" nmap gV `[v`]
+" buffer management
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+nmap <C-j> :bd<CR>
+map <leader>n :NERDTree<cr>
+" " Auto-detect encoding
+" :nmap <leader>x :FencAutoDetect<CR>
 " ColorStepper Keys
 nmap <F6> <Plug>ColorstepPrev
 nmap <F7> <Plug>ColorstepNext
