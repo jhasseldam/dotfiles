@@ -11,7 +11,7 @@
     octaveFull graphviz
     evince poppler_utils
     # Common devel
-    gnumake diffuse
+    gnumake diffuse meld
     redis-desktop-manager
     pgadmin
   ];
