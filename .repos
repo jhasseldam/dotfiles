@@ -5,6 +5,7 @@ dotfiles
 fonts
 fs-sandbox
 hs-lambda
+hs-sandbox
 icicli
 kuvim-themes
 nixpkgs
