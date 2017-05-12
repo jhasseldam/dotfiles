@@ -5,7 +5,7 @@ dotfiles
 fonts
 fs-sandbox
 hs-lambda
-hs-rabbitbus
+hs-amqpbus
 hs-sandbox
 icicli
 kuvim-themes
