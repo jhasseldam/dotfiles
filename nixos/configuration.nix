@@ -25,7 +25,7 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    firefox.enableAdobeFlash = true;
+    firefox.enableAdobeFlash = false;
     pulseaudio = true;
   };
 
