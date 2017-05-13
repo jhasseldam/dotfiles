@@ -2,8 +2,8 @@
 
 {
   imports =
-    [ ./x/xfce.nix
-      # ./x/gnome.nix
-      # ./x/plasma.nix
+    [ /etc/nixos/x/xfce.nix
+      # /etc/nixos/x/gnome.nix
+      # /etc/nixos/x/plasma.nix
     ];
 }
