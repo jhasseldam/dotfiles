@@ -229,6 +229,16 @@ in {
     dependencies = [];
   };
 
+  vimwiki = buildVimPlugin {
+    name = "vimwiki";
+    src = fetchgit {
+      url = "https://github.com/vimwiki/vimwiki.git";
+      rev = "129c2818106bdb9230bbd99ee8eb81fa47c7a414";
+      sha256 = "0ypm54h23sy5lyjj85q82z26xk88mqvyfhxw3zdrdxxjks68vi4b";
+    };
+    dependencies = [];
+  };
+
   "kuvim-themes" = buildVimPlugin {
     name = "kuvim-themes";
     src = fetchgit {

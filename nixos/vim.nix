@@ -38,6 +38,7 @@
                 "toml"
                 "fsharp"
                 "elm"
+                "vimwiki"
                 "kuvim-themes"
                 "papercolor-theme"
                 "spacemacs-theme"
