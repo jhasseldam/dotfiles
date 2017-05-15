@@ -79,9 +79,9 @@ if has( "gui_running" )
   " colorscheme PaperColor
   " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
   " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
-  " colorscheme abra
+  colorscheme abra
   " colorscheme bclear
-  colorscheme winter
+  " colorscheme winter
 else
   set background=dark
   colorscheme default
