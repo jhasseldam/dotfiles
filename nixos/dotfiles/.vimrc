@@ -195,6 +195,11 @@ au BufEnter *.md set filetype=markdown
 au BufEnter *.md set syntax=markdown
 " }}}
 
+" Vimwiki {{{
+let g:vimwiki_list = [{'path':'~/.vimwiki', 'syntax':'markdown', 'ext':'.md'}]
+let g:vimwiki_global_ext = 0
+" }}}
+
 " Xml {{{
 " recognize Xml format
 au BufEnter *.xml set filetype=xml
