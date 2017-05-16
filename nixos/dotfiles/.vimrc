@@ -158,9 +158,9 @@ let g:ctrlp_path_nolim = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 if has('win32')
-  set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe
+  set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*\\obj\\*,*\\bin\\*,*.mdb,*.pdb
 else
-  set wildignore+=*/.stack-work/*,*/packages/*,*/tmp/*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe
+  set wildignore+=*/.stack-work/*,*/packages/*,*/tmp/*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*/obj/*,*/bin/*,*.mdb,*.pdb
 endif
 set wildmode=longest,list,full
 set wildmenu
