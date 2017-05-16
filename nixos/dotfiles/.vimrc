@@ -59,7 +59,6 @@ set lazyredraw
 if exists('g:loaded_fugitive')
   set statusline+=%{fugitive#statusline()}
 endif
-let g:NERDTreeWinPos = "right"
 " }}}
 
 " GUI {{{
@@ -114,7 +113,7 @@ nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nmap <C-j> :bd<CR>
-map <leader>n :NERDTree<cr>
+nmap <S-Tab> :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nmap <leader>x :FencAutoDetect<CR>
 " ColorStepper Keys
@@ -228,4 +227,20 @@ let g:fsharp_map_keys = 1
 " let g:fsharp_map_prefix = 'cp'
 let g:fsharp_map_gotodecl = 'g'
 let g:fsharp_map_gobackfromdecl = 'b'
+" }}}
+
+" NERDTree {{{
+let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinSize = 40
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['\.swp$']
+" let g:NERDTreeHighlightCursorline = 1
+" let g:NERDTreeCaseSensitiveSort = 1
+" let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeShowLineNumbers = 1
+" let g:NERDTreeQuitOnOpen = 1
+" let g:NERDTreeShowBookmarks = 1
+" let NERDTreeHijackNetrw = 1
+let g:NERDChristmasTree = 1
 " }}}
