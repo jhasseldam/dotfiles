@@ -59,6 +59,7 @@ set lazyredraw
 if exists('g:loaded_fugitive')
   set statusline+=%{fugitive#statusline()}
 endif
+let g:NERDTreeWinPos = "right"
 " }}}
 
 " GUI {{{
