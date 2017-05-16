@@ -113,7 +113,7 @@ nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nmap <C-j> :bd<CR>
-nmap <S-Tab> :call g:WorkaroundNERDTreeToggle()<cr>
+nmap <S-Tab> :NERDTreeToggle<cr>
 " " Auto-detect encoding
 " :nmap <leader>x :FencAutoDetect<CR>
 " ColorStepper Keys
@@ -239,11 +239,8 @@ let g:NERDTreeIgnore = ['\.swp$']
 " let g:NERDTreeCaseSensitiveSort = 1
 " let g:NERDTreeMinimalUI = 1
 " let g:NERDTreeShowLineNumbers = 1
-" let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 1
 " let g:NERDTreeShowBookmarks = 1
 " let NERDTreeHijackNetrw = 1
 let g:NERDChristmasTree = 1
-function! g:WorkaroundNERDTreeToggle()
-  try | NERDTreeToggle | catch | silent! NERDTree | endtry
-endfunction
 " }}}
