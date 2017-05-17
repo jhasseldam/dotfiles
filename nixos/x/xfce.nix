@@ -48,4 +48,16 @@
     udisks2.enable = true;
   };
 
+  system.activationScripts = {
+    gnomeDotfiles = {
+      text = ''
+        cd /home/kuznero
+        if [[ -d .icons/capitaine-cursors ]]; then rm -rf .icons/capitaine-cursors; fi
+        if [[ ! -d .icons ]]; then mkdir .icons; fi
+        ln -s /etc/nixos/dotfiles/.icons/capitaine-cursors .icons/capitaine-cursors
+      '';
+      deps = ["users"];
+    };
+  };
+
 }
