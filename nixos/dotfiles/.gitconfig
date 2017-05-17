@@ -30,3 +30,5 @@
   tool = diffuse
 [push]
   default = simple
+[credential]
+  helper = store
