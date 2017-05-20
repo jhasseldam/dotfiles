@@ -69,7 +69,7 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  set guifont=Fira\ Mono\ 12
+  set guifont=Fira\ Mono\ 14
   set background=dark
   " colorscheme Tomorrow-Night-Bright
   " colorscheme quantum
