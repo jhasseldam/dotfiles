@@ -305,18 +305,8 @@ values."
    ))
 
 (defun my-setup-indent (n)
-  ;; java/c/c++
   (setq-local c-basic-offset n)
-  ;; web development
-  (setq-local coffee-tab-width n) ; coffeescript
-  (setq-local javascript-indent-level n) ; javascript-mode
-  (setq-local js-indent-level n) ; js-mode
-  (setq-local js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
-  (setq-local web-mode-markup-indent-offset n) ; web-mode, html tag in html file
-  (setq-local web-mode-css-indent-offset n) ; web-mode, css in html file
-  (setq-local web-mode-code-indent-offset n) ; web-mode, js code in html file
-  (setq-local css-indent-offset n) ; css-mode
-  )
+  (setq-local fsharp-basic-offset n))
 
 (defun my-office-code-style ()
   (interactive)
@@ -342,8 +332,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (add-hook 'prog-mode-hook 'my-personal-code-style)
-  (setq markdown-command "pandoc --smart -f markdown -t html")
-  )
+  (setq markdown-command "pandoc --smart -f markdown -t html"))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -352,8 +341,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (global-hl-line-mode -1) ; Disable current line highlight
-  )
+  (global-hl-line-mode -1))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
