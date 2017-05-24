@@ -6,7 +6,7 @@
   ];
 
   system.activationScripts = {
-    tmuxDotfiles = {
+    emacsDotfiles = {
       text = ''
         PATH=${pkgs.git}/bin:$PATH
         cd /home/kuznero
