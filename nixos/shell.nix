@@ -8,7 +8,7 @@
   system.activationScripts = {
     shellDotfiles = {
       text = ''
-        ln -fs /etc/nixos/dotfiles/.bash_profile .bash_profile
+        ln -fs /etc/nixos/dotfiles/.profile .profile
       '';
       deps = ["users"];
     };
