@@ -8,6 +8,7 @@ in
 {
   environment.systemPackages = with pkgs; [
     unstable.stack
+    cabal2nix
   ];
 
   system.activationScripts = {
