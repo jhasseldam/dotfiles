@@ -22,7 +22,7 @@
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
-    source /etc/nixos/dotfiles/.bash_profile
+    source /etc/nixos/dotfiles/.profile
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
