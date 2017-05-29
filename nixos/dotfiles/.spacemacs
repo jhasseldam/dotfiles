@@ -309,7 +309,8 @@ values."
 
 (defun my-setup-indent (n)
   (setq-local c-basic-offset n)
-  (setq-local fsharp-basic-offset n))
+  (setq-local fsharp-indent-offset n))
+  ;; (setq-local fsharp-basic-offset n))
 
 (defun my-office-code-style ()
   (interactive)
