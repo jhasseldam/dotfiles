@@ -332,7 +332,12 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (add-hook 'prog-mode-hook 'my-personal-code-style)
-  (setq markdown-command "pandoc --smart -f markdown -t html"))
+  (setq markdown-command "pandoc --smart -f markdown -t html")
+  (set-face-bold-p 'bold nil)
+  (with-eval-after-load 'org
+    (setq org-agenda-files '("~/Projects/Kuznero/org"))
+    )
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
