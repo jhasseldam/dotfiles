@@ -4,6 +4,7 @@
 
   imports =
     [ ./devel/haskell.nix
+      ./devel/erlang.nix
       ./devel/dotnet.nix
       ./devel/java.nix
       ./devel/python.nix
