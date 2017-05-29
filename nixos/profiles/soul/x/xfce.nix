@@ -49,12 +49,9 @@
         enable = true;
         twoFingerScroll = true;
       };
-      videoDrivers = [ "nvidia" ];
     };
     udisks2.enable = true;
   };
-
-  hardware.opengl.driSupport32Bit = true;
 
   system.activationScripts = {
     gnomeDotfiles = {
