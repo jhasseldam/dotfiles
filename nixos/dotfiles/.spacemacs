@@ -355,11 +355,11 @@ you should place your code here."
     (custom-set-variables
       '(projectile-globally-ignored-files
         (append '("*.dll" "*.exe" "*.mdb" "*.pdb" "*.xml" "*.XML"
-                  "*.sigdata" "*.optdata" "*.gitignore" "*.gitattributes"
+                  "*.sigdata" "*.optdata" "*.gitignore" "*.gitattributes" "*.psmdcp"
                   "*.html" "*.srcsrv" "*.nupkg" "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg")
                 projectile-globally-ignored-files))
       '(projectile-globally-ignored-directories
-        (append '("bin" "obj" "Debug" "Release" "build" ".git")
+        (append '("bin" "obj" "Debug" "Release" "build" ".git" "packages")
                 projectile-globally-ignored-directories))
     ))
   )
