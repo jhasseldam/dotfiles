@@ -355,7 +355,7 @@ you should place your code here."
     (custom-set-variables
       '(projectile-globally-ignored-files
         (append '("*.dll" "*.exe" "*.mdb" "*.pdb" "*.xml" "*.XML"
-                  "*.sigdata" "*.gitignore" "*.gitattributes"
+                  "*.sigdata" "*.optdata" "*.gitignore" "*.gitattributes"
                   "*.html" "*.srcsrv" "*.nupkg")
                 projectile-globally-ignored-files))
       '(projectile-globally-ignored-directories
