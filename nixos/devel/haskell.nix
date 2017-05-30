@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    cabalInstall
+    cabal-install
     cabal2nix
   ];
 }
