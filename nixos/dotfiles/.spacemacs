@@ -356,7 +356,7 @@ you should place your code here."
       '(projectile-globally-ignored-files
         (append '("*.dll" "*.exe" "*.mdb" "*.pdb" "*.xml" "*.XML"
                   "*.sigdata" "*.optdata" "*.gitignore" "*.gitattributes"
-                  "*.html" "*.srcsrv" "*.nupkg")
+                  "*.html" "*.srcsrv" "*.nupkg" "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg")
                 projectile-globally-ignored-files))
       '(projectile-globally-ignored-directories
         (append '("bin" "obj" "Debug" "Release" "build" ".git")
