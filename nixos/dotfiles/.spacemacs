@@ -31,7 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     auto-completion
      better-defaults
      csharp
      docker
@@ -40,9 +39,10 @@ values."
      erlang
      fsharp
      git
-     haskell
-     ;; intero
-     ;; auto-completion (haskell :variables haskell-completion-backend 'intero)
+     auto-completion
+     (haskell :variables
+              haskell-completion-backend 'ghc-mod
+              haskell-enable-hindent-style "johan-tibell")
      helm
      html
      idris
