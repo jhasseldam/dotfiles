@@ -350,7 +350,19 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (global-hl-line-mode -1))
+  (global-hl-line-mode -1)
+  (with-eval-after-load 'projectile
+    (custom-set-variables
+      '(projectile-globally-ignored-files
+        (append '("*.dll" "*.exe" "*.mdb" "*.pdb" "*.xml" "*.XML"
+                  "*.sigdata" "*.gitignore" "*.gitattributes"
+                  "*.html" "*.srcsrv" "*.nupkg")
+                projectile-globally-ignored-files))
+      '(projectile-globally-ignored-directories
+        (append '("bin" "obj" "Debug" "Release" "build" ".git")
+                projectile-globally-ignored-directories))
+    ))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
