@@ -359,7 +359,7 @@ you should place your code here."
                   "*.html" "*.srcsrv" "*.nupkg" "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg")
                 projectile-globally-ignored-files))
       '(projectile-globally-ignored-directories
-        (append '("bin" "obj" "Debug" "Release" "build" ".git" "packages")
+        (append '("bin" "obj" "Debug" "Release" "build" ".git" "packages" "elm-stuff" ".stack-work")
                 projectile-globally-ignored-directories))
     ))
   )
