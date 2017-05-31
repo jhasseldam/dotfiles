@@ -3,9 +3,10 @@
 {
 
   imports =
-    [ ./devel/haskell.nix
+    [ ./devel/dotnet.nix
+      ./devel/elm.nix
       ./devel/erlang.nix
-      ./devel/dotnet.nix
+      ./devel/haskell.nix
       ./devel/java.nix
       ./devel/python.nix
     ];
