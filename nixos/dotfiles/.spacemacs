@@ -34,7 +34,10 @@ values."
      better-defaults
      csharp
      docker
-     elm
+     (elm :variables
+          elm-format-command "elm-format-0.18"
+          elm-reactor-port "8000"
+          elm-reactor-address "0.0.0.0")
      emacs-lisp
      erlang
      fsharp
