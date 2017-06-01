@@ -4,6 +4,7 @@ docker
 dotfiles
 fonts
 fs-sandbox
+gocd-server
 hs-lambda
 hs-amqpbus
 hs-sandbox
