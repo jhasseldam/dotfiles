@@ -185,8 +185,8 @@ in {
     name = "elm";
     src = fetchgit {
       url = "https://github.com/elmcast/elm-vim.git";
-      rev = "7760aed9f258cf6a7d2c56d547dd3ea45f832025";
-      sha256 = "1f1z2929aka2shkwb8z2ky26cvw2cgx7wdcikw9mljpgc1s7nl5d";
+      rev = "b47d013d1fdfecc9e19df8034439b8e379813696";
+      sha256 = "0ibmb02qal7q29brmq0jkd3rcnwp6yba9agza3av1x1ixvb61mlw";
     };
     dependencies = [];
   };
