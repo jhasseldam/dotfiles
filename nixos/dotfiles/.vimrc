@@ -140,6 +140,7 @@ vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 vmap a, :Tabularize /<-<CR>
 vmap al :Tabularize /[\[\\|,]<CR>
+map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 " }}}
 
 " Configure airline {{{
