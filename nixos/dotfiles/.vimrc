@@ -126,6 +126,8 @@ map <leader>b :CtrlPBuffer<cr>
 map <leader>d :CtrlPDir<cr>
 map <leader>q :CtrlPQuickfix<cr>
 map <leader>t :CtrlPTag<cr>
+" VimGrep - search for a word under cursor
+nnoremap <Leader>g "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
 " Syntastic
 map <leader>s :SyntasticToggleMode<CR>
 " Haskell
@@ -157,18 +159,46 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
-if has('win32')
-  set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*\\obj\\*,*\\bin\\*,*.mdb,*.pdb
-else
-  set wildignore+=*/.stack-work/*,*/packages/*,*/tmp/*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*/obj/*,*/bin/*,*.mdb,*.pdb
-endif
+" if has('win32')
+"   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*\\obj\\*,*\\bin\\*,*.mdb,*.pdb
+" else
+set wildignore+=*/.stack-work/*
+set wildignore+=*/packages/*
+set wildignore+=*/tmp/*
+set wildignore+=*/obj/*
+set wildignore+=*/bin/*
+set wildignore+=*/build/*
+set wildignore+=*/elm-stuff/*
+set wildignore+=*/.git/*
+set wildignore+=*/.cabal-sandbox/*
+set wildignore+=*.swp
+set wildignore+=*.swo
+set wildignore+=*.zip
+set wildignore+=*.dll
+set wildignore+=*.exe
+set wildignore+=*.mdb
+set wildignore+=*.pdb
+set wildignore+=*.xml
+set wildignore+=*.XML
+set wildignore+=*.sigdata
+set wildignore+=*.optdata
+set wildignore+=*.gitattributes
+set wildignore+=*.psmdcp
+set wildignore+=*.srcsrv
+set wildignore+=*.nupkg
+set wildignore+=*.png
+set wildignore+=*.jpg
+set wildignore+=*.jpeg
+set wildignore+=*.gif
+set wildignore+=*.svg
+" endif
 set wildmode=longest,list,full
 set wildmenu
 " }}}
 
 " Syntastic {{{
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -207,16 +237,15 @@ au BufReadPre *.xml setlocal foldmethod=indent
 " }}}
 
 " Elm {{{
-" let g:elm_jump_to_error = 0
-" let g:elm_make_output_file = "elm.js"
-" let g:elm_make_show_warnings = 0
-" let g:elm_syntastic_show_warnings = 0
-" let g:elm_browser_command = ""
-" let g:elm_detailed_complete = 0
-let g:elm_format_autosave = 1
+let g:elm_jump_to_error = 0
+let g:elm_make_output_file = "elm.js"
+let g:elm_make_show_warnings = 1
+let g:elm_syntastic_show_warnings = 1
+let g:elm_browser_command = ""
+let g:elm_detailed_complete = 0
+let g:elm_format_autosave = 0
+let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
-let g:elm_classic_highlighting = 0
-" au BufEnter *.elm nnoremap <buffer> <leader> f :ElmFormat<CR>
 " }}}
 
 " F# {{{

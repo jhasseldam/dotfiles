@@ -8,6 +8,7 @@
       ./devel/erlang.nix
       ./devel/haskell.nix
       ./devel/java.nix
+      ./devel/nodejs.nix
       ./devel/python.nix
     ];
 
