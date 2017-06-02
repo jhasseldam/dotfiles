@@ -127,7 +127,7 @@ map <leader>d :CtrlPDir<cr>
 map <leader>q :CtrlPQuickfix<cr>
 map <leader>t :CtrlPTag<cr>
 " VimGrep - search for a word under cursor
-nnoremap <Leader>g "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
+nnoremap <Leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
 " Syntastic
 map <leader>s :SyntasticToggleMode<CR>
 " Haskell
