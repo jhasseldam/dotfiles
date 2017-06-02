@@ -59,6 +59,42 @@ set lazyredraw
 if exists('g:loaded_fugitive')
   set statusline+=%{fugitive#statusline()}
 endif
+" if has('win32')
+"   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*\\obj\\*,*\\bin\\*,*.mdb,*.pdb
+" else
+set wildignore+=*/.stack-work/*
+set wildignore+=*/packages/*
+set wildignore+=*/tmp/*
+set wildignore+=*/obj/*
+set wildignore+=*/bin/*
+set wildignore+=*/build/*
+set wildignore+=*/elm-stuff/*
+set wildignore+=*/.git/*
+set wildignore+=*/.cabal-sandbox/*
+set wildignore+=*.swp
+set wildignore+=*.swo
+set wildignore+=*.zip
+set wildignore+=*.dll
+set wildignore+=*.exe
+set wildignore+=*.mdb
+set wildignore+=*.pdb
+set wildignore+=*.xml
+set wildignore+=*.XML
+set wildignore+=*.sigdata
+set wildignore+=*.optdata
+set wildignore+=*.gitattributes
+set wildignore+=*.psmdcp
+set wildignore+=*.srcsrv
+set wildignore+=*.nupkg
+set wildignore+=*.png
+set wildignore+=*.jpg
+set wildignore+=*.jpeg
+set wildignore+=*.gif
+set wildignore+=*.svg
+" endif
+set wildmode=longest,list,full
+set wildmenu
+set wildignorecase
 " }}}
 
 " GUI {{{
@@ -160,41 +196,6 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_path_nolim = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
-" if has('win32')
-"   set wildignore+=*\\.stack-work\\*,*\\packages\\*,*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox,*.dll,*.exe,*\\obj\\*,*\\bin\\*,*.mdb,*.pdb
-" else
-set wildignore+=*/.stack-work/*
-set wildignore+=*/packages/*
-set wildignore+=*/tmp/*
-set wildignore+=*/obj/*
-set wildignore+=*/bin/*
-set wildignore+=*/build/*
-set wildignore+=*/elm-stuff/*
-set wildignore+=*/.git/*
-set wildignore+=*/.cabal-sandbox/*
-set wildignore+=*.swp
-set wildignore+=*.swo
-set wildignore+=*.zip
-set wildignore+=*.dll
-set wildignore+=*.exe
-set wildignore+=*.mdb
-set wildignore+=*.pdb
-set wildignore+=*.xml
-set wildignore+=*.XML
-set wildignore+=*.sigdata
-set wildignore+=*.optdata
-set wildignore+=*.gitattributes
-set wildignore+=*.psmdcp
-set wildignore+=*.srcsrv
-set wildignore+=*.nupkg
-set wildignore+=*.png
-set wildignore+=*.jpg
-set wildignore+=*.jpeg
-set wildignore+=*.gif
-set wildignore+=*.svg
-" endif
-set wildmode=longest,list,full
-set wildmenu
 " }}}
 
 " Syntastic {{{
