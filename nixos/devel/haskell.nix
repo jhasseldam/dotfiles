@@ -4,16 +4,6 @@
   environment.systemPackages = with pkgs; with haskellPackages; [
     cabal-install
     cabal2nix
-    (ghcWithPackages (self : [
-      self.ghc-mod
-      self.hlint
-      self.hoogle
-      self.stylish-haskell
-      self.intero
-      self.hasktags
-      self.apply-refact
-      self.hindent
-    ]))
   ];
 
   system.activationScripts = {
