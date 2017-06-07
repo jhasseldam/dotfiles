@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; with haskellPackages; [
     cabal-install
     cabal2nix
+    threadscope
   ];
 
   system.activationScripts = {
