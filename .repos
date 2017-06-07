@@ -2,6 +2,7 @@ alpine-ghc
 blog
 docker
 dotfiles
+elm
 fonts
 fs-sandbox
 gocd-server
