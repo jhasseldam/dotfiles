@@ -140,11 +140,6 @@ nmap <F5> :make<CR>
 nmap <leader><leader> :nohlsearch<CR>
 " set scrolloff to toggle always placing cursor in the middle
 nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
-" " visual block movement
-" vmap J :m '>+1<CR>gv=gv
-" vmap K :m '<-2<CR>gv=gv
-" " highlight last inserted code
-" nmap gV `[v`]
 " buffer management
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
@@ -162,20 +157,23 @@ map <leader>b :CtrlPBuffer<cr>
 map <leader>d :CtrlPDir<cr>
 map <leader>q :CtrlPQuickfix<cr>
 map <leader>t :CtrlPTag<cr>
-" VimGrep - search for a word under cursor
+" VimGrep - global search for a word under cursor
 nnoremap <Leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
-" Syntastic
-map <leader>s :SyntasticToggleMode<CR>
 " Haskell
-" map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> ti :GhcModTypeInsert<CR>
-map <silent> tt :GhcModType<CR>
-map <silent> tc :GhcModTypeClear<CR>
-vmap a= :Tabularize /=<CR>
-vmap a; :Tabularize /::<CR>
-vmap a- :Tabularize /-><CR>
-vmap a, :Tabularize /<-<CR>
-vmap al :Tabularize /[\[\\|,]<CR>
+autocmd FileType haskell map <silent> <leader>. t :GhcModType<CR>
+autocmd FileType haskell map <silent> <leader>. T :GhcModTypeInsert<CR>
+autocmd FileType haskell map <silent> <leader>. c :GhcModTypeClear<CR>
+autocmd FileType haskell map <silent> <leader>. i :GhcModInfo<CR>
+autocmd FileType haskell map <silent> <leader>. I :GhcModInfoPreview<CR>
+autocmd FileType haskell map <silent> <leader>. l :GhcModLint<CR>
+autocmd FileType haskell map <silent> <leader>. e :GhcModExpand<CR>
+autocmd FileType haskell map <silent> <leader>. g :GhcModSigCodegen<CR>
+autocmd FileType haskell map <silent> <leader>. s :GhcModSplitFunCase<CR>
+autocmd FileType haskell vmap a= :Tabularize /=<CR>
+autocmd FileType haskell vmap a; :Tabularize /::<CR>
+autocmd FileType haskell vmap a- :Tabularize /-><CR>
+autocmd FileType haskell vmap a, :Tabularize /<-<CR>
+autocmd FileType haskell vmap al :Tabularize /[\[\\|,]<CR>
 map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 " }}}
 
