@@ -125,56 +125,45 @@ endif
 " }}}
 
 " Mapping {{{
-" Disable Arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-" Disable Arrow keys in Insert mode
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
 let mapleader=","
-nmap <F5> :make<CR>
-nmap <leader><leader> :nohlsearch<CR>
-" set scrolloff to toggle always placing cursor in the middle
+map <space> <leader>
+map <space><space> <leader><leader>
+nnoremap <F5> :make<CR>
+nnoremap <C-c> :nohlsearch<CR>
 nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
-" buffer management
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nmap <C-j> :bd<CR>
-nmap <S-Tab> :NERDTreeToggle<cr>
-" " Auto-detect encoding
-" :nmap <leader>x :FencAutoDetect<CR>
-" ColorStepper Keys
-nmap <F6> <Plug>ColorstepPrev
-nmap <F7> <Plug>ColorstepNext
-nmap <S-F7> <Plug>ColorstepReload
-" CtrlP
-map <leader>f :CtrlP<cr>
-map <leader>b :CtrlPBuffer<cr>
-map <leader>d :CtrlPDir<cr>
-map <leader>q :CtrlPQuickfix<cr>
-map <leader>t :CtrlPTag<cr>
-" VimGrep - global search for a word under cursor
-nnoremap <Leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
-" Haskell
-autocmd FileType haskell map <silent> <leader>. t :GhcModType<CR>
-autocmd FileType haskell map <silent> <leader>. T :GhcModTypeInsert<CR>
-autocmd FileType haskell map <silent> <leader>. c :GhcModTypeClear<CR>
-autocmd FileType haskell map <silent> <leader>. i :GhcModInfo<CR>
-autocmd FileType haskell map <silent> <leader>. I :GhcModInfoPreview<CR>
-autocmd FileType haskell map <silent> <leader>. l :GhcModLint<CR>
-autocmd FileType haskell map <silent> <leader>. e :GhcModExpand<CR>
-autocmd FileType haskell map <silent> <leader>. g :GhcModSigCodegen<CR>
-autocmd FileType haskell map <silent> <leader>. s :GhcModSplitFunCase<CR>
+nmap <S-Tab> :NERDTreeToggle<CR>
+nmap <F2> <Plug>ColorstepPrev
+nmap <F3> <Plug>ColorstepNext
+nmap <F4> <Plug>ColorstepReload
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
+autocmd FileType haskell map <silent> <leader>t :GhcModType<CR>
+autocmd FileType haskell map <silent> <leader>T :GhcModTypeInsert<CR>
+autocmd FileType haskell map <silent> <leader>c :GhcModTypeClear<CR>
+autocmd FileType haskell map <silent> <leader>i :GhcModInfo<CR>
+autocmd FileType haskell map <silent> <leader>I :GhcModInfoPreview<CR>
+autocmd FileType haskell map <silent> <leader>l :GhcModLint<CR>
+autocmd FileType haskell map <silent> <leader>e :GhcModExpand<CR>
+autocmd FileType haskell map <silent> <leader>g :GhcModSigCodegen<CR>
+autocmd FileType haskell map <silent> <leader>s :GhcModSplitFunCase<CR>
 autocmd FileType haskell vmap a= :Tabularize /=<CR>
 autocmd FileType haskell vmap a; :Tabularize /::<CR>
 autocmd FileType haskell vmap a- :Tabularize /-><CR>
 autocmd FileType haskell vmap a, :Tabularize /<-<CR>
 autocmd FileType haskell vmap al :Tabularize /[\[\\|,]<CR>
-map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+nnoremap <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 " }}}
 
 " Configure airline {{{
@@ -209,14 +198,6 @@ set statusline+=%*
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:haskell_tabular = 1
-" }}}
-
-" LaTeX {{{
-"au BufEnter *.tex setl tw=79 tx ts=4 sw=4 fo+=n2a
-au BufEnter *.tex setl tw=80
-if has('unix')
-  au BufEnter *.tex nnoremap <buffer> <F7> :silent !xdg-open '%:p:r.pdf' &<CR>
-endif
 " }}}
 
 " Markdown {{{
@@ -259,11 +240,11 @@ let g:fsharp_map_gobackfromdecl = 'b'
 " }}}
 
 " NERDTree {{{
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinPos = 'left'
 let g:NERDTreeWinSize = 40
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeIgnore = ['\.swp$', '^bin$', '^obj$']
+let g:NERDTreeIgnore = ['\.swp$', '^bin$', '^obj$', '^dist$']
 " let g:NERDTreeHighlightCursorline = 1
 " let g:NERDTreeCaseSensitiveSort = 1
 " let g:NERDTreeMinimalUI = 1
