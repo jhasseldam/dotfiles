@@ -17,12 +17,13 @@
     ZSH_THEME="amuse"
     export EDITOR='vim'
     export VISUAL='vim'
-    HISTFILE=~/.zhistory
+    HISTFILE=$HOME/.zhistory
     # setopt sharehistory
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
     source /etc/nixos/dotfiles/.bashrc
+    source $HOME/.scripts/ssh-start.sh
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
