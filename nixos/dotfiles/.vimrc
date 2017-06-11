@@ -105,19 +105,9 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  set guifont=Monospace\ 12
+  set guifont=monofur\ for\ Powerline\ 15
   set background=dark
-  " colorscheme Tomorrow-Night-Bright
-  " colorscheme quantum
-  " let g:quantum_black = 1
-  " let g:quantum_italics = 1
-  " colorscheme spacemacs-theme
-  " colorscheme PaperColor
-  " let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
-  " let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
-  colorscheme abra
-  " colorscheme bclear
-  " colorscheme winter
+  colorscheme kuznero-black-regular
 else
   set background=dark
   colorscheme default
