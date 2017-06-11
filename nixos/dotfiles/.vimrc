@@ -129,7 +129,8 @@ let mapleader=","
 map <space> <leader>
 map <space><space> <leader><leader>
 nnoremap <F5> :make<CR>
-nnoremap <C-c> :nohlsearch<CR>
+nnoremap <C-c> :cclose<CR>
+nnoremap <space><space> :nohlsearch<CR>
 nmap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
