@@ -195,6 +195,7 @@ let g:haskell_tabular = 1
 au BufEnter *.md set tw=80
 au BufEnter *.md set filetype=markdown
 au BufEnter *.md set syntax=markdown
+au BufEnter *.md set spell
 " }}}
 
 " Vimwiki {{{
