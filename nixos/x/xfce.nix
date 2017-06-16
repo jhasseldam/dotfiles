@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    libnotify
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin
     xfce.xfce4_xkb_plugin
