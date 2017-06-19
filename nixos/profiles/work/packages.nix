@@ -10,6 +10,8 @@
     # Office
     octaveFull graphviz texlive.combined.scheme-full
     evince poppler_utils
+    # Multimedia
+    vlc ffmpeg youtube-dl
     # Common devel
     gnumake diffuse meld
     redis-desktop-manager

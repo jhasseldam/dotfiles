@@ -13,7 +13,7 @@
     octaveFull graphviz texlive.combined.scheme-full
     evince poppler_utils
     # Multimedia
-    vlc exif ffmpeg gphoto2
+    vlc exif ffmpeg gphoto2 youtube-dl
     # Common devel
     gnumake diffuse meld
     redis-desktop-manager
