@@ -3,6 +3,11 @@
 {
   environment.systemPackages = with pkgs; [
     libnotify
+
+    gtk-engine-murrine
+    numix-gtk-theme
+    paper-icon-theme
+
     xfce.xfce4_cpufreq_plugin
     xfce.xfce4_systemload_plugin
     xfce.xfce4_xkb_plugin
