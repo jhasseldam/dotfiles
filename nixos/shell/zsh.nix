@@ -22,6 +22,7 @@
     setopt extendedhistory
     plugins=(git)
     source $ZSH/oh-my-zsh.sh
+    source /etc/nixos/dotfiles/.bashrc
     source $HOME/.scripts/ssh-start.sh
   '';
 
