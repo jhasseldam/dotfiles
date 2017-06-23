@@ -132,6 +132,9 @@ nmap <F4> <Plug>ColorstepReload
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
+nnoremap <leader>dd :diffthis<CR>
+nnoremap <leader>du :diffupdate<CR>
+nnoremap <leader>do :diffoff<CR>
 autocmd FileType haskell map <silent> <leader>t :GhcModType<CR>
 autocmd FileType haskell map <silent> <leader>T :GhcModTypeInsert<CR>
 autocmd FileType haskell map <silent> <leader>c :GhcModTypeClear<CR>
