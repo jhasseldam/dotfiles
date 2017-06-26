@@ -30,6 +30,17 @@
     pulseaudio = true;
   };
 
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+    pulseaudio = {
+      enable = true;
+      package = pkgs.pulseaudioFull;
+    };
+  };
+
   # Select internationalisation properties.
   i18n = {
     consoleFont = "Lat2-Terminus16";
