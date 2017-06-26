@@ -5,6 +5,9 @@
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
+    dbus dbus_daemon
+    # Devices
+    bluez bluez-tools blueman
     # Internet
     vivaldi firefox chatzilla
     # Office
