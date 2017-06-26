@@ -27,7 +27,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     firefox.enableAdobeFlash = false;
-    pulseaudio = true;
+    pulseaudio = false;
   };
 
   hardware = {
@@ -36,8 +36,8 @@
       powerOnBoot = true;
     };
     pulseaudio = {
-      enable = true;
-      package = pkgs.pulseaudioFull;
+      enable = false;
+      # package = pkgs.pulseaudioFull;
     };
   };
 

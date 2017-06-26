@@ -13,6 +13,9 @@
     ];
 
   environment.systemPackages = with pkgs; [
+    gnumake diffuse meld
+    redis-desktop-manager
+    pgadmin
     binutils
     jq
   ];
