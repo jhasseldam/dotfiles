@@ -107,7 +107,7 @@ if has( "gui_running" )
   set guioptions-=L
   set guifont=monofur\ for\ Powerline\ 15
   set background=dark
-  colorscheme abra
+  colorscheme eva01
 else
   set background=dark
   colorscheme default
