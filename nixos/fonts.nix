@@ -8,6 +8,8 @@
       anonymousPro
       cantarell_fonts
       dejavu_fonts
+      fira
+      fira-code
       fira-mono
       font-droid
       inconsolata

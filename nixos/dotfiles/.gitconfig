@@ -23,11 +23,11 @@
 [color]
   ui = true
 [diff]
-  tool = diffuse
+  tool = meld
 [difftool]
   prompt = false
 [merge]
-  tool = diffuse
+  tool = meld
 [push]
   default = simple
 [credential]
