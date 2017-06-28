@@ -12,7 +12,7 @@
     vivaldi firefox chatzilla
     # Office
     octaveFull graphviz texlive.combined.scheme-full
-    evince poppler_utils
+    evince poppler_utils keepass
     # Multimedia
     vlc ffmpeg youtube-dl
   ];
