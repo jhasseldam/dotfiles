@@ -9,7 +9,7 @@
     # Devices
     bluez bluez-tools blueman
     # Internet
-    vivaldi firefox chatzilla
+    vivaldi firefox chatzilla putty
     # Office
     octaveFull graphviz texlive.combined.scheme-full
     evince poppler_utils keepass
