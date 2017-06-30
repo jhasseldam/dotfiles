@@ -5,6 +5,14 @@
     cabal-install
     cabal2nix
     threadscope
+    # some useful libraries to avoid re-installing it all the time
+    ghc-mod
+    hakyll
+    hindent
+    hlint
+    hoogle
+    pandoc
+    stylish-haskell
   ];
 
   system.activationScripts = {
