@@ -3,15 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     ghc80Env
-    # ghc80ProfEnv
+    ghc80ProfEnv
   ];
 
   nixpkgs.config.packageOverrides = super: rec {
-    haskellPackages = super.haskellPackages.override {
-      overrides = self: super: {
-        ghc-syb-utils = pkgs.haskell.lib.dontCheck super.ghc-syb-utils;
-      };
-    };
     haskell802Packages = super.haskell.packages.ghc802.override {
       overrides = myHaskellPackages false;
     };
@@ -21,6 +16,7 @@
     myHaskellPackages = libProf: self: super:
       with pkgs.haskell.lib;
       rec {
+        ghc-syb-utils = pkgs.haskell.lib.dontCheck super.ghc-syb-utils;
         mkDerivation = args: super.mkDerivation (args // {
           enableLibraryProfiling = libProf;
           enableExecutableProfiling = false;
