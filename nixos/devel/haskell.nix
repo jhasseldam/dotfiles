@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     ghc80Env
-    ghc80ProfEnv
+    # ghc80ProfEnv
   ];
 
   nixpkgs.config.packageOverrides = super: rec {
