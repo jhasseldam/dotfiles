@@ -24,6 +24,11 @@
     source $ZSH/oh-my-zsh.sh
     source /etc/nixos/dotfiles/.bashrc
     source $HOME/.scripts/ssh-start.sh
+    alias za="$HOME/.scripts/za.sh"
+    alias zc="$HOME/.scripts/zc.sh"
+    alias zl="$HOME/.scripts/zl.sh"
+    alias zr="$HOME/.scripts/zr.sh"
+    zz () { root=$(~/.scripts/zz.sh $1) && cd $root }
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
