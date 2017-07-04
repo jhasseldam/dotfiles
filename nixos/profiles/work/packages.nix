@@ -11,7 +11,7 @@
     # Internet
     vivaldi firefox chatzilla putty
     # Office
-    octaveFull graphviz texlive.combined.scheme-full
+    octaveFull graphviz # texlive.combined.scheme-full
     evince poppler_utils keepass
     # Multimedia
     vlc ffmpeg youtube-dl
