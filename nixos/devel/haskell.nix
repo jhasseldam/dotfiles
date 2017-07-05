@@ -26,6 +26,7 @@
       name = "ghc80";
       paths = with haskell802Packages; [
         ( ghcWithHoogle ( haskellPackages: with haskellPackages; [
+            QuickCheck
             aeson
             amqp
             array
@@ -45,9 +46,9 @@
             memoize
             mtl
             pandoc
-            QuickCheck
             quickcheck-instances
             regex-compat
+            scotty
             stm
             template-haskell
             text
