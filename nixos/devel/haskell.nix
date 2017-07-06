@@ -52,6 +52,7 @@
             stm
             template-haskell
             text
+            timeit
             vector
           ] )
         )
