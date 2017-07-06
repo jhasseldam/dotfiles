@@ -15,6 +15,10 @@
     #   "8.8.8.8"
     #   "8.8.4.4"
     # ];
+    extraHosts =
+      if builtins.pathExists "/home/kuznero/.hosts"
+        then "${builtins.readFile /home/kuznero/.hosts}"
+        else "";
   };
   services.cntlm = {
     enable = true;
