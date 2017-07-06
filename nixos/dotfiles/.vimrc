@@ -192,6 +192,9 @@ set statusline+=%*
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:haskell_tabular = 1
+let g:hindent_on_save = 0
+let g:hindent_indent_size = 2
+let g:hindent_line_length = 100
 
 hi hsStructure gui=NONE guifg=#2060A0
 hi hsStatement gui=NONE guifg=#2060A0
