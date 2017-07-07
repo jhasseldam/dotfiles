@@ -9,4 +9,4 @@ if [[ "$#" -ne 1 ]]; then
 fi
 
 ROOT="$(dirname "$(readlink -f "$0")")"
-"$ROOT/_install.sh" $1 /mnt/etc/nixos
+"$ROOT/_install.sh" $1 /etc/nixos
