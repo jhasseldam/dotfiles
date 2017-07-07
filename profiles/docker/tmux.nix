@@ -7,7 +7,7 @@ in
     environment.systemPackages = with pkgs; [
       tmux
     ];
-  
+
     system.activationScripts = {
       tmuxDotfiles = {
         text = ''
@@ -21,5 +21,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }

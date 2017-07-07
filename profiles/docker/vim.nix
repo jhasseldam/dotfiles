@@ -5,7 +5,7 @@
   environment.systemPackages = with pkgs; [
     (
       let
-        vimrc = builtins.readFile ./dotfiles/.vimrc;
+        vimrc = builtins.readFile ../../dotfiles/.vimrc;
         rc = ''
           ${vimrc}
         '';
