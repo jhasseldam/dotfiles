@@ -9,7 +9,7 @@ if [[ "$#" -ne 1 ]]; then
 fi
 
 MODE=$1
-TARGET=/etc/nixos
+TARGET=/mnt/etc/nixos
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
@@ -52,6 +52,8 @@ cd "$TARGET/profiles/$MODE/"
 if [[ -f "$TARGET/profiles/$MODE/post-install.sh" ]]; then
   $TARGET/profiles/$MODE/post-install.sh
 fi
+
+echo ""
 for dir in $(find . -iname "*.nix" -print); do
   echo -e "${RED} * ${NC}$MODE${dir:1}$f ${RED}->${NC} ${dir:2}$f ..."
   if [[ -f $TARGET/${dir:1}$f ]]; then rm $TARGET/${dir:1}$f; fi
