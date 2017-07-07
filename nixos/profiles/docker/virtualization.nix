@@ -16,5 +16,5 @@
     };
   };
 
-  nixpkgs.config.virtualbox.enableExtensionPack = true;
+  nixpkgs.config.virtualbox.enableExtensionPack = false;
 }
