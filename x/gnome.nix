@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  global = (import ./global.nix);
+  global = (import ../global.nix);
 in
   {
     environment.systemPackages = with pkgs; [
@@ -9,7 +9,7 @@ in
       gnome3.gconf
       gnome3.gnome-tweak-tool
     ];
-  
+
     # [org.gnome.desktop.wm.keybindings]
     # activate-window-menu=["<Alt>space"]
     # always-on-top=[""]
@@ -96,7 +96,7 @@ in
     # toggle-on-all-workspaces=[""]
     # toggle-shaded=[""]
     # unmaximize=["<Super>Down", '<Alt>F5']
-  
+
     services = {
       openssh.enable = true;
       printing = {
@@ -115,44 +115,44 @@ in
   default-folder-viewer='icon-view'
   search-filter-time-type='last_modified'
   sort-directories-first=true
-  
+
   [org.gnome.nautilus.window-state]
   maximized=false
-  
+
   [org.gnome.nautilus.icon-view]
   default-zoom-level='standard'
-  
+
   [org.gnome.nautilus.list-view]
   default-visible-columns=['name', 'size', 'date_modified']
   default-zoom-level='standard'
   default-column-order=['name', 'size', 'type', 'owner', 'group', 'permissions', 'mime_type', 'where', 'date_modified', 'date_modified_with_time', 'date_accessed']
-  
+
   [org.gnome.settings-daemon.peripherals.keyboard]
   numlock-state='on'
-  
+
   [org.gnome.settings-daemon.plugins.media-keys]
   custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
-  
+
   [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom2]
   binding='<Primary><Alt>e'
   command='nautilus'
   name='Files'
-  
+
   [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1]
   binding='<Primary><Alt>b'
   command='firefox'
   name='Browser'
-  
+
   [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
   binding='<Primary><Alt>t'
   command='gnome-terminal'
   name='Terminal'
-  
+
   [org.gnome.terminal.legacy]
   mnemonics-enabled=true
   schema-version=uint32 3
   default-show-menubar=false
-  
+
   [org.gnome.terminal.legacy.profiles:.:d885a970-eb13-4158-ad0d-1fd89f2d749a]
   foreground-color='#C7C7C7C7C7C7'
   visible-name='peppermint'
@@ -167,7 +167,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#B3B3B3B3B3B3'
   background-color='#000000000000'
-  
+
   [org.gnome.terminal.legacy.profiles:.:153881c2-5d90-4273-87f1-7174fb90188e]
   foreground-color='#b4b4e1e1fdfd'
   visible-name='aco'
@@ -182,11 +182,11 @@ in
   bold-color-same-as-fg=true
   bold-color='#bebebebebebe'
   background-color='#1f1f13130505'
-  
+
   [org.gnome.terminal.legacy.profiles:]
   list=['ce90b1c2-06a9-4363-b0dc-5a091c5338b2', '93c63839-ec6b-45a6-9638-98f439300436', '1e862ef8-5203-4c74-aa42-accbc19ea3aa', '8072f016-e93a-4c2e-97b9-c91b3d133d3b', 'f286163b-4cb4-4c9e-9ffb-1355d1b7ff6e', '27d9c405-96f8-468c-9575-80aa7e5a226b', '5b54865f-afec-42af-97ba-77664d594c60', '11b1ac28-77ae-477d-8b17-a030de866f92', '2cdfa098-e4fe-401c-accf-8faa3506897e', '444b7c69-4d98-42fd-8113-21ef430c1045', 'ddccb70c-caac-4d66-80bc-4d6428b61ec5', '2df26ee3-46e0-447a-be7c-a35a88d01371', '153881c2-5d90-4273-87f1-7174fb90188e', '4b524d47-bd73-4dd3-bf01-97aa0194bdf5', '9b08589c-4ffc-4a75-a30c-530469e1baf8', 'dc15bc24-34a8-4995-b369-bda51d67cc60', '8001f286-e571-4bb8-9667-2f0a91f7e32d', '97c79b63-8564-49b2-a455-451506166f59', 'e3deb3fb-c9f5-4118-8718-3c0152712696', 'be1fc032-84e1-4139-b636-867cfad878d6', '53b6f3a5-81fd-4758-8770-11085535a8cc', '67c236d8-e1a0-46af-9150-cf437986d33a', '5b664499-46b5-481b-a6cc-c4f93a506b89', '220685fc-b41e-4c91-ab1f-c3b6e1564b1c', 'd885a970-eb13-4158-ad0d-1fd89f2d749a', '03a7fafe-832e-4f70-973d-2d5c4487a5ff', '48031313-89be-4f81-802f-76d1cb613c07', '390f5f50-5aa5-4058-9d22-b28c08d7ae22']
   default='5b54865f-afec-42af-97ba-77664d594c60'
-  
+
   [org.gnome.terminal.legacy.profiles:.:ddccb70c-caac-4d66-80bc-4d6428b61ec5]
   foreground-color='#FFFFFEFEFEFE'
   visible-name='tomorrow-night-blue'
@@ -201,7 +201,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#FFFFFEFEFEFE'
   background-color='#000024245151'
-  
+
   [org.gnome.terminal.legacy.profiles:.:5b54865f-afec-42af-97ba-77664d594c60]
   foreground-color='#2A2A2B2B3232'
   visible-name='one-light'
@@ -217,7 +217,7 @@ in
   bold-color='#8E8E8F8F9696'
   background-color='#F8F8F8F8F8F8'
   audible-bell=false
-  
+
   [org.gnome.terminal.legacy.profiles:.:9b08589c-4ffc-4a75-a30c-530469e1baf8]
   foreground-color='#C5C5C8C8C6C6'
   visible-name='tomorrow-night'
@@ -232,7 +232,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#FFFFFEFEFEFE'
   background-color='#1D1D1F1F2121'
-  
+
   [org.gnome.terminal.legacy.profiles:.:11b1ac28-77ae-477d-8b17-a030de866f92]
   foreground-color='#5C5C63637070'
   visible-name='one-dark'
@@ -247,7 +247,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#ABABB2B2BFBF'
   background-color='#1E1E21212727'
-  
+
   [org.gnome.terminal.legacy.profiles:.:2cdfa098-e4fe-401c-accf-8faa3506897e]
   foreground-color='#d9d9e6e6f2f2'
   visible-name='cai'
@@ -262,7 +262,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#808080808080'
   background-color='#090911111a1a'
-  
+
   [org.gnome.terminal.legacy.profiles:.:be1fc032-84e1-4139-b636-867cfad878d6]
   foreground-color='#1a1abcbc9c9c'
   visible-name='flat'
@@ -277,7 +277,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#bdbdc3c3c7c7'
   background-color='#1F1F2D2D3A3A'
-  
+
   [org.gnome.terminal.legacy.profiles:.:f286163b-4cb4-4c9e-9ffb-1355d1b7ff6e]
   foreground-color='#9494a3a3a5a5'
   visible-name='freya'
@@ -292,7 +292,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#9494a3a3a5a5'
   background-color='#25252e2e3232'
-  
+
   [org.gnome.terminal.legacy.profiles:.:67c236d8-e1a0-46af-9150-cf437986d33a]
   foreground-color='#9494A3A3A5A5'
   visible-name='dracula'
@@ -307,7 +307,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#9494A3A3A5A5'
   background-color='#28282a2a3636'
-  
+
   [org.gnome.terminal.legacy.profiles:.:4b524d47-bd73-4dd3-bf01-97aa0194bdf5]
   foreground-color='#a9a9bebed8d8'
   visible-name='bim'
@@ -322,7 +322,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#919189898888'
   background-color='#010128284949'
-  
+
   [org.gnome.terminal.legacy.profiles:.:dc15bc24-34a8-4995-b369-bda51d67cc60]
   foreground-color='#F7F7F7F7F7F7'
   visible-name='smyck'
@@ -337,7 +337,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#B0B0B0B0B0B0'
   background-color='#242424242424'
-  
+
   [org.gnome.terminal.legacy.profiles:.:ce90b1c2-06a9-4363-b0dc-5a091c5338b2]
   foreground-color='#ebebdbdbb2b2'
   visible-name='gruvbox'
@@ -352,7 +352,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#d6d65d5d0e0e'
   background-color='#282828282828'
-  
+
   [org.gnome.terminal.legacy.profiles:.:220685fc-b41e-4c91-ab1f-c3b6e1564b1c]
   foreground-color='#ffffffffffff'
   visible-name='tin'
@@ -367,7 +367,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#ffffffffffff'
   background-color='#2e2e2e2e3535'
-  
+
   [org.gnome.terminal.legacy.profiles:.:2df26ee3-46e0-447a-be7c-a35a88d01371]
   foreground-color='#f2f2f2f2f2f2'
   visible-name='elio'
@@ -382,7 +382,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#f2f2f2f2f2f2'
   background-color='#04041A1A3B3B'
-  
+
   [org.gnome.terminal.legacy.profiles:.:27d9c405-96f8-468c-9575-80aa7e5a226b]
   foreground-color='#f8f8f8f8f2f2'
   visible-name='monokai'
@@ -397,7 +397,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#f9f9f8f8f5f5'
   background-color='#272728282222'
-  
+
   [org.gnome.terminal.legacy.profiles:.:8072f016-e93a-4c2e-97b9-c91b3d133d3b]
   foreground-color='#48488282cdcd'
   visible-name='shel'
@@ -412,7 +412,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#919189898888'
   background-color='#2a2a20201f1f'
-  
+
   [org.gnome.terminal.legacy.profiles:.:8001f286-e571-4bb8-9667-2f0a91f7e32d]
   foreground-color='#d9d9e6e6f2f2'
   visible-name='pali'
@@ -427,7 +427,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#F2F2F2F2F2F2'
   background-color='#23232E2E3737'
-  
+
   [org.gnome.terminal.legacy.profiles:.:1e862ef8-5203-4c74-aa42-accbc19ea3aa]
   foreground-color='#f2f2f2f2f2f2'
   visible-name='elementary'
@@ -442,7 +442,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#f2f2f2f2f2f2'
   background-color='#101010101010'
-  
+
   [org.gnome.terminal.legacy.profiles:.:48031313-89be-4f81-802f-76d1cb613c07]
   foreground-color='#838394949696'
   visible-name='solarized-dark'
@@ -457,7 +457,7 @@ in
   bold-color-same-as-fg=false
   bold-color='#93A1A1'
   background-color='#00002B2B3636'
-  
+
   [org.gnome.terminal.legacy.profiles:.:e3deb3fb-c9f5-4118-8718-3c0152712696]
   foreground-color='#232347476a6a'
   visible-name='mar'
@@ -473,7 +473,7 @@ in
   bold-color='#f8f8f8f8f8f8'
   background-color='#ffffffffffff'
   audible-bell=false
-  
+
   [org.gnome.terminal.legacy.profiles:.:5b664499-46b5-481b-a6cc-c4f93a506b89]
   foreground-color='#D4D4D4D4D4D4'
   visible-name='chalk'
@@ -488,7 +488,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#D4D4D4D4D4D4'
   background-color='#2D2D2D2D2D2D'
-  
+
   [org.gnome.terminal.legacy.profiles:.:97c79b63-8564-49b2-a455-451506166f59]
   foreground-color='#97979C9CACAC'
   visible-name='ocean'
@@ -503,7 +503,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#EEEEEDEDEEEE'
   background-color='#1C1C1F1F2727'
-  
+
   [org.gnome.terminal.legacy.profiles:.:03a7fafe-832e-4f70-973d-2d5c4487a5ff]
   foreground-color='#65657B7B8383'
   visible-name='solarized-light'
@@ -518,7 +518,7 @@ in
   bold-color-same-as-fg=false
   bold-color='#586E75'
   background-color='#FDFDF6F6E3E3'
-  
+
   [org.gnome.terminal.legacy.profiles:.:93c63839-ec6b-45a6-9638-98f439300436]
   foreground-color='#E9E9E9E9E9E9'
   visible-name='tomorrow-night-bright'
@@ -533,7 +533,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#FFFFFEFEFEFE'
   background-color='#000000000000'
-  
+
   [org.gnome.terminal.legacy.profiles:.:444b7c69-4d98-42fd-8113-21ef430c1045]
   foreground-color='#d9d9e6e6f2f2'
   visible-name='vag'
@@ -548,7 +548,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#8a8a8a8a8a8a'
   background-color='#19191f1f1d1d'
-  
+
   [org.gnome.terminal.legacy.profiles:.:53b6f3a5-81fd-4758-8770-11085535a8cc]
   foreground-color='#4D4D4D4D4C4C'
   visible-name='tomorrow'
@@ -563,7 +563,7 @@ in
   bold-color-same-as-fg=true
   bold-color='#FFFFFEFEFEFE'
   background-color='#FFFFFFFFFFFF'
-  
+
   [org.gnome.terminal.legacy.profiles:.:390f5f50-5aa5-4058-9d22-b28c08d7ae22]
   foreground-color='#b4b4e1e1fdfd'
   visible-name='aci'
@@ -578,10 +578,10 @@ in
   bold-color-same-as-fg=true
   bold-color='#b6b6b6b6b6b6'
   background-color='#0d0d19192626'
-  
+
   [org.gnome.desktop.peripherals.touchpad]
   tap-to-click=true
-  
+
   [org.gnome.desktop.interface]
   close-show-date=true
   cursor-theme='capitaine-cursors'
@@ -593,7 +593,7 @@ in
       gnome3.gnome-keyring.enable = true;
       udisks2.enable = true;
     };
-  
+
     system.activationScripts = {
       gnomeDotfiles = {
         text = ''
@@ -605,5 +605,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }

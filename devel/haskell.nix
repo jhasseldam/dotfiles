@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 
 let
-  global = (import ./global.nix);
+  global = (import ../global.nix);
 in
   {
     environment.systemPackages = with pkgs; [
       ghc80Env
       # ghc80ProfEnv
     ];
-  
+
     nixpkgs.config.packageOverrides = super: rec {
       haskell802Packages = super.haskell.packages.ghc802.override {
         overrides = myHaskellPackages false;
@@ -86,7 +86,7 @@ in
         ];
       };
     };
-  
+
     system.activationScripts = {
       haskellSetup = {
         text = ''
@@ -99,5 +99,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }

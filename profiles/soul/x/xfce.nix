@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  global = (import ./global.nix);
+  global = (import ../global.nix);
 in
   {
     environment.systemPackages = with pkgs; [

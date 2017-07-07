@@ -1,16 +1,16 @@
 { config, pkgs, ... }:
 
 let
-  global = (import ./global.nix);
+  global = (import ../global.nix);
 in
   {
     environment.systemPackages = with pkgs; [
       libnotify
-  
+
       gtk-engine-murrine
       numix-gtk-theme
       paper-icon-theme
-  
+
       xfce.xfce4_cpufreq_plugin
       xfce.xfce4_systemload_plugin
       xfce.xfce4_xkb_plugin
@@ -56,7 +56,7 @@ in
       };
       udisks2.enable = true;
     };
-  
+
     system.activationScripts = {
       gnomeDotfiles = {
         text = ''
@@ -68,5 +68,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }

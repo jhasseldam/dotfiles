@@ -20,7 +20,7 @@ in
       # ];
       extraHosts =
         if builtins.pathExists "/home/${global.userName}/.hosts"
-          then "${builtins.readFile /home/${global.userName}/.hosts}"
+          then builtins.readFile "/home/${global.userName}/.hosts"
           else "";
     };
     services.cntlm = {

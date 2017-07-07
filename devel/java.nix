@@ -1,13 +1,13 @@
 { config, pkgs, ... }:
 
 let
-  global = (import ./global.nix);
+  global = (import ../global.nix);
 in
   {
     environment.systemPackages = with pkgs; [
       maven jdk
     ];
-  
+
     system.activationScripts = {
       mavenSetup = {
         text = ''
@@ -20,5 +20,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }
