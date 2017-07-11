@@ -11,6 +11,7 @@ hs-amqpbus
 hs-sandbox
 icicli
 kuvim-themes
+monitor
 nixpkgs
 rabbitmq
 sandbox
