@@ -57,6 +57,7 @@ in
               text
               timeit
               vector
+              wai-cors
             ] )
           )
           alex
