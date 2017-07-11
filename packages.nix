@@ -11,7 +11,7 @@
     # Devices
     bluez bluez-tools blueman
     # Internet
-    vivaldi firefox chatzilla irssi dropbox qbittorrent putty
+    vivaldi firefox chatzilla irssi slack dropbox qbittorrent putty
     # Office
     octaveFull graphviz texlive.combined.scheme-full
     evince poppler_utils
