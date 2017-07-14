@@ -57,7 +57,13 @@ in
               text
               timeit
               vector
+              wai
+              wai-app-static
               wai-cors
+              wai-extra
+              wai-logger
+              wai-middleware-static
+              wai-routes
             ] )
           )
           alex
