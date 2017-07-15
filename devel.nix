@@ -18,6 +18,7 @@
     pgadmin
     binutils
     jq
+    tree
   ];
 
 }
