@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # terminal emulators
+    terminology
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
