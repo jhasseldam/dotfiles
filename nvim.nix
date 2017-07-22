@@ -37,6 +37,9 @@ in
               "fsharp"
               "elm"
               "kuvim-themes"
+              "papercolor-theme"
+              "spacemacs-theme"
+              "quantum-theme"
               "colorschemes"
               "colorstepper"
           ]; }

@@ -241,6 +241,36 @@ in {
     dependencies = [];
   };
 
+  "papercolor-theme" = buildVimPlugin {
+    name = "papercolor-theme";
+    src = fetchgit {
+      url = "https://github.com/NLKNguyen/papercolor-theme";
+      rev = "2649bb8dbea94a852f78650556152304f5838b14";
+      sha256 = "0q47v8rx7p0b7rygbp3agrixqv1dipy07kap5q646c9hfc97vjvk";
+    };
+    dependencies = [];
+  };
+
+  "spacemacs-theme" = buildVimPlugin {
+    name = "spacemacs-theme";
+    src = fetchgit {
+      url = "https://github.com/colepeters/spacemacs-theme.vim";
+      rev = "056bba9bd05a2c97c63c28216a1c232cfb91529e";
+      sha256 = "0iy3i6waigk759p2z59mrxkjc0p412y7d8zf3cjak4a9sh1sh6qz";
+    };
+    dependencies = [];
+  };
+
+  "quantum-theme" = buildVimPlugin {
+    name = "quantum-theme";
+    src = fetchgit {
+      url = "https://github.com/tyrannicaltoucan/vim-quantum";
+      rev = "18be01e1e7d517ce8a96d20ed25eddd79bac8949";
+      sha256 = "1wgpqs100v0p35vk3mwhg59qhhv8kb2nqnql8s4mv5a61lwxhrpr";
+    };
+    dependencies = [];
+  };
+
   "colorschemes" = buildVimPlugin {
     name = "colorschemes";
     src = fetchgit {
