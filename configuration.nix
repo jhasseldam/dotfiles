@@ -5,7 +5,7 @@
     [ # Include the results of the hardware scan.
       ./bootloader.nix
       ./devel.nix
-      ./emacs.nix
+      # ./emacs.nix
       ./fonts.nix
       ./git.nix
       ./hardware-configuration.nix

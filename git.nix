@@ -6,7 +6,6 @@ in
   {
     environment.systemPackages = with pkgs; [
       gitAndTools.gitFull
-      gitg
     ];
   
     system.activationScripts = {
