@@ -17,7 +17,5 @@
     # Office
     octaveFull graphviz # texlive.combined.scheme-full
     evince poppler_utils keepass
-    # Multimedia
-    vlc ffmpeg youtube-dl
   ];
 }
