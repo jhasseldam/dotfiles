@@ -5,15 +5,15 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      ghc82Env
-      # ghc82ProfEnv
+      ghc80Env
+      # ghc80ProfEnv
     ];
 
     nixpkgs.config.packageOverrides = super: rec {
-      haskell821Packages = super.haskell.packages.ghc821.override {
+      haskell802Packages = super.haskell.packages.ghc802.override {
         overrides = myHaskellPackages false;
       };
-      profiledHaskell821Packages = super.haskell.packages.ghc821.override {
+      profiledHaskell802Packages = super.haskell.packages.ghc802.override {
         overrides = myHaskellPackages true;
       };
       myHaskellPackages = libProf: self: super:
@@ -25,9 +25,9 @@ in
             enableExecutableProfiling = false;
           });
         };
-      ghc82Env = super.pkgs.buildEnv {
-        name = "ghc82";
-        paths = with haskell821Packages; [
+      ghc80Env = super.pkgs.buildEnv {
+        name = "ghc80";
+        paths = with haskell802Packages; [
           ( ghcWithHoogle ( haskellPackages: with haskellPackages; [
               QuickCheck
               aeson
@@ -82,10 +82,10 @@ in
           threadscope
         ];
       };
-      ghc82ProfEnv = super.pkgs.myEnvFun {
-        name = "ghc82prof";
-        buildInputs = with profiledHaskell821Packages; [
-          profiledHaskell821Packages.ghc
+      ghc80ProfEnv = super.pkgs.myEnvFun {
+        name = "ghc80prof";
+        buildInputs = with profiledHaskell802Packages; [
+          profiledHaskell802Packages.ghc
           cabal-install
           ghc-core
           hlint
