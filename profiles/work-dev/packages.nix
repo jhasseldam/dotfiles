@@ -6,7 +6,7 @@
     wget curl htop inetutils zip unzip
     dbus dbus_daemon
     # Internet
-    vivaldi slack
+    chromium slack
     # Office
     evince keepass
   ];
