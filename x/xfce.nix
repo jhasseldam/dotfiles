@@ -42,6 +42,7 @@ in
         enable = true;
         layout = "us";
         # xkbOptions = "eurosign:e";
+        startDbusSession = true;
         displayManager.lightdm.enable = true;
         desktopManager.xfce = {
           enable = true;
@@ -57,6 +58,10 @@ in
         };
       };
       udisks2.enable = true;
+      dbus = {
+        enable = true;
+        packages = with pkgs; [ gnome3.dconf ];
+      };
     };
 
     system.activationScripts = {
