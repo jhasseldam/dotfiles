@@ -27,17 +27,12 @@
   nixpkgs.config = {
     allowUnfree = true;
     firefox.enableAdobeFlash = false;
-    pulseaudio = false;
   };
 
   hardware = {
     bluetooth = {
       enable = true;
       powerOnBoot = true;
-    };
-    pulseaudio = {
-      enable = false;
-      # package = pkgs.pulseaudioFull;
     };
   };
 

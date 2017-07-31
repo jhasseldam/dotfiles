@@ -28,7 +28,6 @@ in
       # xfce.xfce4_eyes_plugin
       # xfce.xfce4_fsguard_plugin
       xfce.xfce4_genmon_plugin
-      # xfce.xfce4_pulseaudio_plugin
       # xfce.xfce4_weather_plugin
       # xfce.xfce4_whiskermenu_plugin
     ];
