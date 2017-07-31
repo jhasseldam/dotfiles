@@ -15,6 +15,7 @@
   environment.systemPackages = with pkgs; [
     gnumake
     binutils
+    pgadmin
     jq
     tree
   ];
