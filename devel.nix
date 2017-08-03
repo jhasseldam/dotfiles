@@ -14,12 +14,10 @@
 
   environment.systemPackages = with pkgs; [
     gnumake
-    meld
-    redis-desktop-manager
-    pgadmin
     binutils
     jq
     tree
+    meld
   ];
 
 }
