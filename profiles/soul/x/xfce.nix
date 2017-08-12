@@ -44,8 +44,8 @@ in
           ];
         };
         resolutions = [
-          # { x = 1920; y = 1080; }
-          { x = 1600; y = 900; }
+          { x = 1920; y = 1080; }
+          # { x = 1600; y = 900; }
         ];
         xrandrHeads = [ "eDP1" "DP1" ];
         synaptics = {
