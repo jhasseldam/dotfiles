@@ -10,6 +10,6 @@
     # Internet
     chromium slack
     # Office
-    evince keepass
+    libreoffice evince keepass
   ];
 }
