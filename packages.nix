@@ -12,7 +12,7 @@
     dbus dbus_daemon
     xclip
     # Internet
-    chromium chatzilla irssi slack dropbox qbittorrent putty
+    chromium firefox chatzilla irssi slack dropbox qbittorrent putty
     # Office
     wpsoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
     evince poppler_utils
