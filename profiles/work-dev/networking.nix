@@ -18,10 +18,9 @@ in
       #   "8.8.8.8"
       #   "8.8.4.4"
       # ];
-      extraHosts =
-        if builtins.pathExists "/home/${global.userName}/.hosts"
-          then builtins.readFile "/home/${global.userName}/.hosts"
-          else "";
+      extraHosts = ''
+        146.185.144.154 lipa.ms.mff.cuni.cz
+      '';
     };
     services.cntlm = {
       enable = true;

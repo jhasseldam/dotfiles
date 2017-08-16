@@ -14,7 +14,7 @@
     # Internet
     chromium firefox chatzilla irssi slack dropbox qbittorrent putty
     # Office
-    wpsoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
+    libreoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
     evince poppler_utils
     # Multimedia
     vlc exif ffmpeg gphoto2 youtube-dl
