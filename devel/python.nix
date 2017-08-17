@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    python27Full
+    python35Full
+    python35Packages.jupyter
+    python35Packages.numpy
   ];
 }
