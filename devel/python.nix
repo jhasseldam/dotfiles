@@ -15,6 +15,8 @@
     python35Packages.notebook
     python35Packages.qtconsole
     python35Packages.widgetsnbextension
+    python35Packages.ipython
+    python35Packages.setuptools
     python35Packages.numpy
   ];
 }
