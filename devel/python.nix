@@ -19,4 +19,8 @@
     python35Packages.setuptools
     python35Packages.numpy
   ];
+
+  # to start jupyter-notebook, go into nix-shell like this:
+  # nix-shell -p 'python3.withPackages (ps: with ps; [ jupyter ])'
+  # and then start `jupyter-notebook`
 }
