@@ -58,7 +58,7 @@ in
           }
       )
     ];
-  
+
     system.activationScripts = {
       vimDotfiles = {
         text = ''
@@ -72,5 +72,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }
