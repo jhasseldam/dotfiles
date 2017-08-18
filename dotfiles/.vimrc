@@ -106,10 +106,10 @@ if has( "gui_running" )
   set guioptions-=r
   set guioptions-=L
   set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 12
-  " set background=dark
-  " colorscheme kuznero-eva-regular
-  set background=light
-  colorscheme vc
+  set background=dark
+  colorscheme kuznero-eva-regular
+  " set background=light
+  " colorscheme vc
 else
   set background=dark
   colorscheme default
