@@ -26,6 +26,14 @@ in
       # xfce.xfce4_weather_plugin
       # xfce.xfce4_whiskermenu_plugin
     ];
+
+    hardware = {
+      bumblebee = {
+        connectDisplay = true;
+        enable = true;
+      };
+    };
+
     services = {
       openssh.enable = true;
       printing = {
@@ -36,26 +44,32 @@ in
         enable = true;
         layout = "us";
         # xkbOptions = "eurosign:e";
-        displayManager.lightdm.enable = true;
+        displayManager = {
+          lightdm.enable = true;
+          sessionCommands = ''
+            xrandr --output eDP-1 --scale 0.5x0.5
+          '';
+        };
         desktopManager.xfce = {
           enable = true;
           thunarPlugins = with pkgs.xfce; [
             thunar-archive-plugin thunar-dropbox-plugin thunar_volman
           ];
         };
-        resolutions = [
-          { x = 1920; y = 1080; }
-          # { x = 1600; y = 900; }
-        ];
-        xrandrHeads = [ "eDP1" "DP1" ];
+        # resolutions = [
+        #   { x = 1920; y = 1080; }
+        #   # { x = 1600; y = 900; }
+        # ];
+        # xrandrHeads = [ "eDP1" "DP1" ];
         synaptics = {
           enable = true;
           twoFingerScroll = true;
         };
+        videoDrivers = [ "intel nvidia" ];
       };
       udisks2.enable = true;
     };
-  
+
     system.activationScripts = {
       gnomeDotfiles = {
         text = ''
@@ -67,5 +81,5 @@ in
         deps = ["users"];
       };
     };
-  
+
   }
