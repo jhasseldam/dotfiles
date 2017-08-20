@@ -13,5 +13,7 @@
     libreoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
     evince poppler_utils
     keepass
+    # Stuff
+    cmatrix xscreensaver
   ];
 }

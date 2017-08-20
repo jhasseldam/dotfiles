@@ -18,5 +18,7 @@
     evince poppler_utils
     # Multimedia
     vlc exif ffmpeg gphoto2 youtube-dl
+    # Stuff
+    cmatrix xscreensaver
   ];
 }
