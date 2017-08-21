@@ -39,6 +39,7 @@
                 "quantum-theme"
                 "colorschemes"
                 "colorstepper"
+                "supertab"
             ]; }
           ];
         }

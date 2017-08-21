@@ -262,3 +262,7 @@ let g:NERDTreeQuitOnOpen = 1
 " let NERDTreeHijackNetrw = 1
 let g:NERDChristmasTree = 1
 " }}}
+
+" SuperTab {{{
+let g:SuperTabDefaultCompletionType = "context"
+" }}}

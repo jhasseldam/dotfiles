@@ -289,5 +289,15 @@ in {
     dependencies = [];
   };
 
+  "supertab" = buildVimPlugin {
+    name = "supertab";
+    src = fetchgit {
+      url = "https://github.com/ervandew/supertab";
+      rev = "22aac5c2cb6a8ebe906bf1495eb727717390e62e";
+      sha256 = "1m70rx9ba2aqydfr9yxsrff61qyzmnda24qkgn666ypnsai7cfbn";
+    };
+    dependencies = [];
+  };
+
   # more?
 }

@@ -42,6 +42,7 @@ in
               "quantum-theme"
               "colorschemes"
               "colorstepper"
+              "supertab"
           ]; }
           # { names = [
           #   # "elm-vim"
