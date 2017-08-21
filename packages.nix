@@ -15,7 +15,7 @@
     chromium firefox hexchat irssi slack dropbox qbittorrent putty
     # Office
     libreoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
-    evince poppler_utils
+    evince poppler_utils taskwarrior
     # Multimedia
     vlc exif ffmpeg gphoto2 youtube-dl
     # Stuff
