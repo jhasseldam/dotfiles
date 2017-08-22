@@ -299,5 +299,15 @@ in {
     dependencies = [];
   };
 
+  "taskwarrior" = buildVimPlugin {
+    name = "taskwarrior";
+    src = fetchgit {
+      url = "https://github.com/blindFS/vim-taskwarrior.git";
+      rev = "8ae6c5ee2ed54d759a58a8d9f67bc76430e3bd25";
+      sha256 = "0scfcqzbfqfkw6qkljv1jg8lsw0f8zajhy2vzwhrdjvpqzsmhv1a";
+    };
+    dependencies = [];
+  };
+
   # more?
 }

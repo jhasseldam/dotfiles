@@ -40,6 +40,7 @@
                 "colorschemes"
                 "colorstepper"
                 "supertab"
+                "taskwarrior"
             ]; }
           ];
         }

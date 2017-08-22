@@ -49,6 +49,7 @@ in
                   "colorschemes"
                   "colorstepper"
                   "supertab"
+                  "taskwarrior"
               ]; }
               # { names = [
               #   # "elm-vim"
