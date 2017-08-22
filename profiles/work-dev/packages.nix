@@ -11,7 +11,7 @@
     chromium slack
     # Office
     libreoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
-    evince poppler_utils taskwarrior keepass
+    evince poppler_utils taskwarrior vit keepass
     # Stuff
     cmatrix xscreensaver
   ];
