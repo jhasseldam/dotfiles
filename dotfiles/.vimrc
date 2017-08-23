@@ -109,6 +109,8 @@ if has( "gui_running" )
   set background=dark
   colorscheme quantum
   hi Conceal ctermfg=7 ctermbg=8 guifg=LightGray guibg=#263238
+  hi Search term=reverse ctermfg=236 ctermbg=221 guifg=#222222 guibg=#ff7777
+  hi IncSearch term=reverse cterm=reverse ctermfg=221 gui=reverse guifg=#ff4444 guibg=#222222
   " Syntax highlighting
   hi Comment ctermfg=102 ctermbg=NONE cterm=NONE guifg=#878787 guibg=NONE gui=italic
   hi Constant ctermfg=156 ctermbg=NONE cterm=NONE guifg=#AFFF87 guibg=NONE gui=NONE
