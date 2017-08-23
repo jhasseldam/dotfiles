@@ -254,7 +254,9 @@ nmap <F3> <Plug>ColorstepNext
 nmap <F4> <Plug>ColorstepReload
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
+" nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/g **/*<CR>:cw<CR>
+nnoremap <leader>/ "zyiw:vimgrep /<C-r>z/gj **/*.%:e<CR>:cw<CR>
+nnoremap <leader>g "zyiw:vimgrep /<C-r>z/gj **/*
 nnoremap <leader>dd :diffthis<CR>
 nnoremap <leader>du :diffupdate<CR>
 nnoremap <leader>do :diffoff<CR>
