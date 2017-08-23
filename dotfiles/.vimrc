@@ -107,9 +107,128 @@ if has( "gui_running" )
   set guioptions-=L
   set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 12
   set background=dark
-  colorscheme kuznero-eva-regular
-  " set background=light
-  " colorscheme vc
+  colorscheme quantum
+  hi Conceal ctermfg=7 ctermbg=8 guifg=LightGray guibg=#263238
+  " Syntax highlighting
+  hi Comment ctermfg=102 ctermbg=NONE cterm=NONE guifg=#878787 guibg=NONE gui=italic
+  hi Constant ctermfg=156 ctermbg=NONE cterm=NONE guifg=#AFFF87 guibg=NONE gui=NONE
+  hi String ctermfg=151 ctermbg=NONE cterm=NONE guifg=#AFD7AF guibg=NONE gui=NONE
+  hi Number ctermfg=179 ctermbg=NONE cterm=NONE guifg=#D7AF5F guibg=NONE gui=NONE
+  hi PreProc ctermfg=135 ctermbg=NONE cterm=NONE guifg=#AF5FFF guibg=NONE gui=NONE
+  hi Identifier ctermfg=147 ctermbg=NONE cterm=NONE guifg=#AFAFFF guibg=NONE gui=NONE
+  hi Statement ctermfg=171 ctermbg=NONE cterm=NONE guifg=#D75FFF guibg=NONE gui=NONE
+  hi Type ctermfg=156 ctermbg=NONE cterm=NONE guifg=#AFFF87 guibg=NONE gui=NONE
+  hi Special ctermfg=179 ctermbg=NONE cterm=NONE guifg=#D7AF5F guibg=NONE gui=NONE
+  hi Underlined ctermfg=119 ctermbg=NONE cterm=underline guifg=#87FF5F guibg=NONE gui=underline
+  hi Error ctermfg=168 ctermbg=NONE cterm=underline guifg=#D75F87 guibg=NONE gui=underline
+  hi Todo ctermfg=168 ctermbg=NONE cterm=NONE guifg=#D75F87 guibg=NONE gui=NONE
+  "hi Ignore
+  hi link Character Constant
+  hi link Boolean Constant
+  hi link Float Number
+  hi link Function Identifier
+  hi link Conditional Statement
+  hi link Repeat Statement
+  hi link Operator Statement
+  hi link Keyword Statement
+  hi link Label Statement
+  hi link Exception Statement
+  hi link Include Preproc
+  hi link Define Preproc
+  hi link Macro PreProc
+  hi link PreCondit PreProc
+  hi link StorageClass Type
+  hi link Structure Type
+  hi link Typedef Type
+  hi link SpecialChar Special
+  hi link Tag Special
+  hi link Delimiter Special
+  hi link SpecialComment Special
+  hi link Debug Special
+  " HTML
+  hi link htmlTag Statement
+  hi link htmlTagName Constant
+  hi link htmlEndTag Statement
+  hi link htmlSpecialTagName Number
+  hi link htmlArg Statement
+  hi link javaScript Normal
+  hi htmlItalic ctermfg=252 ctermbg=NONE cterm=NONE
+  " XML
+  hi link xmlEndTag Keyword
+  " Javascript
+  hi link javaScriptIdentifier Type
+  hi link javaScriptDOMMethods Normal
+  hi link javaScriptDOMProperties Normal
+  hi link javaScriptNumber Number
+  hi link javaScriptParens Preproc
+  hi link javaScriptFuncArg Normal
+  hi javaScriptFuncDef ctermfg=168 ctermbg=NONE cterm=NONE guifg=#D75F87 guibg=NONE gui=NONE
+  " Ruby
+  hi rubyRegexp ctermfg=168 ctermbg=NONE cterm=NONE guifg=#D75F87 guibg=NONE gui=NONE
+  hi rubyRegexpDelimiter ctermfg=168 ctermbg=NONE cterm=NONE guifg=#D75F87 guibg=NONE gui=NONE
+  hi rubyIdentifier ctermfg=252 ctermbg=NONE cterm=NONE guifg=#D0D0D0 guibg=NONE gui=NONE
+  hi link rubyAccess Special
+  hi link rubyConstant Constant
+  hi link rubyFunction Constant
+  hi link rubyKeyword Number
+  hi link rubySymbol Identifier
+  hi link rubySymbolDelimiter Delimiter
+  hi link rubyClassVariable Identifier
+  hi link rubyInstanceVariable Identifier
+  hi link rubyBlockParameter Normal
+  hi link rubyBoolean Normal
+  hi link rubyPseudoVariable Constant
+  hi link rubyPredefinedVariable Type
+  " eruby
+  hi link erubyDelimiter Special
+  " Python
+  hi link pythonFunction Constant
+  " CoffeeScript
+  hi link coffeeBlock Preproc
+  hi link coffeeSpecialIdent Normal
+  hi link coffeeObject Constant
+  " hi link coffeeSpecialIdent Number
+  " php
+  hi link phpParent Normal
+  " go
+  hi link goDirective Preproc
+  hi link goDeclaration Preproc
+  hi link goField Special
+  hi link goFunction Type
+  hi link goFunctionCall Identifier
+  hi link goMethodCall Identifier
+  hi link goReceiverType Identifier
+  " Markdown
+  hi markdownH3 ctermfg=135 ctermbg=NONE cterm=NONE guifg=#AF5FFF guibg=NONE gui=NONE
+  hi markdownH4 ctermfg=135 ctermbg=NONE cterm=NONE guifg=#AF5FFF guibg=NONE gui=NONE
+  hi markdownH5 ctermfg=135 ctermbg=NONE cterm=NONE guifg=#AF5FFF guibg=NONE gui=NONE
+  hi markdownH6 ctermfg=135 ctermbg=NONE cterm=NONE guifg=#AF5FFF guibg=NONE gui=NONE
+  " vim-gitgutter
+  hi GitGutterAdd ctermfg=156 ctermbg=NONE cterm=NONE guifg=#AFFF87 guibg=NONE gui=NONE
+  hi GitGutterChange ctermfg=179 ctermbg=NONE cterm=NONE guifg=#D7AF5F guibg=NONE gui=NONE
+  hi GitGutterDelete ctermfg=168 ctermbg=NONE cterm=NONE guifg=#D75F87 guibg=NONE gui=NONE
+  " Haskell
+  "hi cPreCondit ctermfg=166 guifg=#cb4b16
+  hi VarId ctermfg=33 guifg=#cccccc
+  "hi ConId ctermfg=136 guifg=#b58900
+  hi hsImport ctermfg=125 guifg=#d33682
+  hi hsString ctermfg=244 guifg=#00cc00
+  hi hsStructure ctermfg=37 guifg=cyan
+  hi hs_hlFunctionName ctermfg=33 guifg=#8888ff
+  hi hsStatement ctermfg=37 guifg=cyan
+  hi hsImportLabel ctermfg=37 guifg=cyan
+  hi hsComment ctermfg=37 guifg=#aa6666
+  "hi hs_OpFunctionName ctermfg=136 guifg=#b58900
+  hi hs_DeclareFunction ctermfg=166 guifg=#cb4b16
+  hi hsVarSym ctermfg=37 guifg=orange
+  hi hsType ctermfg=136 guifg=#ff6666
+  hi hsTypedef ctermfg=37 guifg=#2aa198
+  hi hsModuleName ctermfg=64 guifg=orange
+  hi hsModuleStartLabel ctermfg=125 guifg=cyan
+  hi link hsImportParams Delimiter
+  hi link hsDelimTypeExport Delimiter
+  hi link hsModuleStartLabel hsStructure
+  hi link hsModuleWhereLabel hsModuleStartLabel
 else
   set background=dark
   colorscheme default
