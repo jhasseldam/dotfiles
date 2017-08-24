@@ -18,6 +18,7 @@
     jq
     tree
     meld
+    file
     redis-desktop-manager
     pgadmin
   ];
