@@ -20,5 +20,7 @@
     vlc exif ffmpeg gphoto2 youtube-dl
     # Stuff
     cmatrix xscreensaver
+    # File systems
+    exfat
   ];
 }
