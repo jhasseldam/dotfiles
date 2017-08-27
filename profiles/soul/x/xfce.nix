@@ -6,22 +6,27 @@ in
   {
     environment.systemPackages = with pkgs; [
       libnotify
-      xfce.xfce4_cpufreq_plugin
+
+      gtk-engine-murrine
+      numix-gtk-theme
+      paper-icon-theme
+
+      # xfce.xfce4_cpufreq_plugin
       xfce.xfce4_systemload_plugin
       xfce.xfce4_xkb_plugin
-      xfce.xfce4_embed_plugin
+      # xfce.xfce4_embed_plugin
       xfce.xfce4_battery_plugin
-      xfce.xfce4_verve_plugin
+      # xfce.xfce4_verve_plugin
       # xfce.xfce4_notes_plugin
       # xfce.xfce4_dict_plugin
       xfce.xfce4_clipman_plugin
       xfce.xfce4_datetime_plugin
-      xfce.xfce4_netload_plugin
-      xfce.gigolo
+      # xfce.xfce4_netload_plugin
+      # xfce.gigolo
       xfce.xfce4taskmanager
-      xfce.xfce4_cpugraph_plugin
+      # xfce.xfce4_cpugraph_plugin
       # xfce.xfce4_eyes_plugin
-      xfce.xfce4_fsguard_plugin
+      # xfce.xfce4_fsguard_plugin
       xfce.xfce4_genmon_plugin
       # xfce.xfce4_weather_plugin
       # xfce.xfce4_whiskermenu_plugin
@@ -44,6 +49,7 @@ in
         enable = true;
         layout = "us";
         # xkbOptions = "eurosign:e";
+        startDbusSession = true;
         displayManager = {
           lightdm.enable = true;
           sessionCommands = ''
@@ -53,7 +59,9 @@ in
         desktopManager.xfce = {
           enable = true;
           thunarPlugins = with pkgs.xfce; [
-            thunar-archive-plugin thunar-dropbox-plugin thunar_volman
+            thunar-archive-plugin
+            thunar-dropbox-plugin
+            thunar_volman
           ];
         };
         # resolutions = [
@@ -68,6 +76,10 @@ in
         videoDrivers = [ "intel nvidia" ];
       };
       udisks2.enable = true;
+      dbus = {
+        enable = true;
+        packages = with pkgs; [ gnome3.dconf ];
+      };
     };
 
     system.activationScripts = {
