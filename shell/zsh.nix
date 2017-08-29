@@ -20,7 +20,7 @@
     HISTFILE=$HOME/.zhistory
     # setopt sharehistory
     setopt extendedhistory
-    plugins=(git)
+    plugins=(git git-extras colored-man-pages docker github tmux taskwarrior)
     source $ZSH/oh-my-zsh.sh
     source /etc/nixos/dotfiles/.bashrc
     source $HOME/.scripts/ssh-start.sh
