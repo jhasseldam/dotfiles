@@ -2,6 +2,7 @@
 
 {
   fonts = {
+    enableCoreFonts = true;
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
@@ -12,11 +13,14 @@
       fira-code
       fira-mono
       font-droid
+      hack-font
       inconsolata
+      iosevka
       liberation_ttf
-      terminus_font
-      vistafonts
       powerline-fonts
+      terminus_font
+      unifont
+      vistafonts
     ];
   };
 }
