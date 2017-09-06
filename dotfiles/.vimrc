@@ -105,7 +105,7 @@ if has( "gui_running" )
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 12
+  set guifont=Iosevka\ 14
   set background=dark
   colorscheme quantum
   hi Conceal ctermfg=7 ctermbg=8 guifg=LightGray guibg=#263238
