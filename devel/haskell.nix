@@ -5,15 +5,15 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      ghc80Env
-      # ghc80ProfEnv
+      ghc82Env
+      # ghc82ProfEnv
     ];
 
     nixpkgs.config.packageOverrides = super: rec {
-      haskell802Packages = super.haskell.packages.ghc802.override {
+      haskell821Packages = super.haskell.packages.ghc821.override {
         overrides = myHaskellPackages false;
       };
-      profiledHaskell802Packages = super.haskell.packages.ghc802.override {
+      profiledHaskell821Packages = super.haskell.packages.ghc821.override {
         overrides = myHaskellPackages true;
       };
       myHaskellPackages = libProf: self: super:
@@ -25,67 +25,40 @@ in
             enableExecutableProfiling = false;
           });
         };
-      ghc80Env = super.pkgs.buildEnv {
-        name = "ghc80";
-        paths = with haskell802Packages; [
+      ghc82Env = super.pkgs.buildEnv {
+        name = "ghc82";
+        paths = with haskell821Packages; [
           ( ghcWithHoogle ( haskellPackages: with haskellPackages; [
               QuickCheck
               aeson
               amqp
-              array
               async
               attoparsec
               base
               bytestring
               containers
               directory
-              hakyll
-              hashable
               hspec
               hspec-expectations-pretty-diff
               lens
               linear
-              logging
-              memoize
               mtl
-              pandoc
               quickcheck-instances
               regex-compat
               scotty
               stm
               template-haskell
               text
-              timeit
               vector
-              wai
-              wai-app-static
-              wai-cors
-              wai-extra
-              wai-logger
-              wai-middleware-static
-              wai-routes
             ] )
           )
-          alex
-          cabal-install
           cabal2nix
-          ghc-core
-          ghc-mod
-          hakyll
-          happy
-          hasktags
-          hindent
-          hlint
-          hpack
-          pandoc
-          stylish-haskell
-          threadscope
         ];
       };
-      ghc80ProfEnv = super.pkgs.myEnvFun {
-        name = "ghc80prof";
-        buildInputs = with profiledHaskell802Packages; [
-          profiledHaskell802Packages.ghc
+      ghc82ProfEnv = super.pkgs.myEnvFun {
+        name = "ghc82prof";
+        buildInputs = with profiledHaskell821Packages; [
+          profiledHaskell821Packages.ghc
           cabal-install
           ghc-core
           hlint
