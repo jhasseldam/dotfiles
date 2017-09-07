@@ -27,3 +27,7 @@ echo ""
 sed -i "s/\"user\"/\"$user\"/" "$ROOT/networking.nix"
 sed -i "s/\"password\"/\"$password\"/" "$ROOT/networking.nix"
 sed -i "s/\"domain\"/\"$domain\"/" "$ROOT/networking.nix"
+
+sed -i "s/\"domain=domain\"/\"domain=$domain\"/" "$ROOT/fs.nix"
+sed -i "s/\"username=username\"/\"username=$user\"/" "$ROOT/fs.nix"
+sed -i "s/\"password=password\"/\"password=$password\"/" "$ROOT/fs.nix"
