@@ -4,8 +4,6 @@
   environment.systemPackages = with pkgs; [
     # Terminal emulators
     enlightenment.terminology
-    # Security
-    truecrypt
     # Common
     wget curl bind htop gksu ntfs3g inetutils
     zip unzip gparted
