@@ -52,6 +52,7 @@ in
               vector
             ] )
           )
+          cabal-install
           cabal2nix
         ];
       };
