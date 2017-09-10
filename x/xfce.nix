@@ -8,8 +8,23 @@ in
       libnotify
 
       gtk-engine-murrine
+      adapta-gtk-theme
+      flat-plat
       numix-gtk-theme
+      paper-gtk-theme
       paper-icon-theme
+      clearlooks-phenix
+      elementary-icon-theme
+      faba-icon-theme
+      hicolor_icon_theme
+      maia-icon-theme
+      moka-icon-theme
+      numix-icon-theme
+      numix-icon-theme-circle
+      numix-icon-theme-square
+      tango-icon-theme
+      theme-vertex
+      zuki-themes
 
       # xfce.xfce4_cpufreq_plugin
       xfce.xfce4_systemload_plugin
