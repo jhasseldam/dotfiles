@@ -6,6 +6,7 @@
       ./bootloader.nix
       ./devel.nix
       # ./emacs.nix
+      ./environment.nix
       ./fs.nix
       ./fonts.nix
       ./git.nix

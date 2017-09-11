@@ -24,11 +24,6 @@
     source $ZSH/oh-my-zsh.sh
     source /etc/nixos/dotfiles/.bashrc
     source $HOME/.scripts/ssh-start.sh
-    alias gvim='vim -g'
-    alias za="$HOME/.scripts/za.sh"
-    alias zc="$HOME/.scripts/zc.sh"
-    alias zl="$HOME/.scripts/zl.sh"
-    alias zr="$HOME/.scripts/zr.sh"
     zz () { root=$("$HOME/.scripts/zz.sh" "$1") && cd "$root" }
   '';
 
