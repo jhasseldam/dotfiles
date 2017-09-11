@@ -13,5 +13,7 @@
     libreoffice evince poppler_utils taskwarrior vit keepass
     # Stuff
     cmatrix xscreensaver
+    # Security
+    veracrypt
   ];
 }

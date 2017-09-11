@@ -20,5 +20,7 @@
     cmatrix xscreensaver
     # File systems
     exfat
+    # Security
+    veracrypt
   ];
 }
