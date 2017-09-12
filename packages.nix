@@ -21,6 +21,6 @@
     # File systems
     exfat
     # Security
-    veracrypt
+    # veracrypt
   ];
 }

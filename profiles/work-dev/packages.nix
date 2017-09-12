@@ -14,6 +14,6 @@
     # Stuff
     cmatrix xscreensaver
     # Security
-    veracrypt
+    # veracrypt
   ];
 }
