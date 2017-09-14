@@ -11,6 +11,7 @@
     chromium slack
     # Office
     libreoffice evince poppler_utils taskwarrior vit keepass
+    texlive.combined.scheme-full
     # Stuff
     cmatrix xscreensaver
     # Security
