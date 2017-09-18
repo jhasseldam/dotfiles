@@ -50,6 +50,7 @@ in
                   "colorstepper"
                   "supertab"
                   "taskwarrior"
+                  "nix"
               ]; }
               # { names = [
               #   # "elm-vim"
