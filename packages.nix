@@ -2,25 +2,23 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Terminal emulators
-    enlightenment.terminology
     # Common
-    wget curl bind htop gksu ntfs3g inetutils
-    zip unzip gparted
-    dbus dbus_daemon
-    xclip
+    wget curl htop gksu inetutils
+    zip unzip dbus dbus_daemon xclip
     # Internet
-    chromium firefox hexchat irssi slack dropbox qbittorrent putty
+    chromium hexchat slack dropbox qbittorrent
     # Office
-    libreoffice octaveFull graphviz texlive.combined.scheme-full gnuplot
+    libreoffice texlive.combined.scheme-full
     evince poppler_utils taskwarrior vit
-    # Multimedia
-    vlc exif ffmpeg gphoto2 youtube-dl
     # Stuff
     cmatrix xscreensaver
     # File systems
-    exfat
+    ntfs3g exfat
     # Security
-    # veracrypt
+    veracrypt keepass
+    # Data
+    octaveFull graphviz gnuplot
+    # Multimedia
+    vlc exif ffmpeg gphoto2 youtube-dl
   ];
 }

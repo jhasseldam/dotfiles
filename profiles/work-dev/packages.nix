@@ -2,19 +2,21 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Terminal emulators
-    enlightenment.terminology
     # Common
-    wget curl htop inetutils zip unzip
-    dbus dbus_daemon
+    wget curl htop gksu inetutils
+    zip unzip dbus dbus_daemon xclip
     # Internet
     chromium slack
     # Office
-    libreoffice evince poppler_utils taskwarrior vit keepass
-    texlive.combined.scheme-full
+    libreoffice texlive.combined.scheme-full
+    evince poppler_utils taskwarrior vit
     # Stuff
     cmatrix xscreensaver
+    # File systems
+    ntfs3g exfat
     # Security
-    # veracrypt
+    veracrypt keepass
+    # Data
+    octaveFull graphviz gnuplot
   ];
 }
