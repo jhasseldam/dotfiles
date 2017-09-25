@@ -20,5 +20,7 @@
     octaveFull graphviz gnuplot
     # Multimedia
     vlc exif ffmpeg gphoto2 youtube-dl
+    # Music
+    musescore
   ];
 }
