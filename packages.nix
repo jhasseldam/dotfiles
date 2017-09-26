@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+let
+  unstable = (import (fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz) {
+    inherit (config.nixpkgs) config system;
+  }).pkgs;
+in
 {
   environment.systemPackages = with pkgs; [
     # Common
@@ -15,7 +20,7 @@
     # File systems
     ntfs3g exfat
     # Security
-    veracrypt keepass
+    unstable.veracrypt keepass
     # Data
     octaveFull graphviz gnuplot
     # Multimedia

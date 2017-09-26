@@ -2,7 +2,7 @@
 
 {
   fonts = {
-    enableCoreFonts = true;
+    enableCoreFonts = false;
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [

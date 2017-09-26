@@ -5,9 +5,9 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      # ghc80Env
+      ghc80Env
       # ghc80ProfEnv
-      ghc82Env
+      # ghc82Env
       # ghc82ProfEnv
     ];
 
