@@ -13,7 +13,7 @@ in
     # Internet
     chromium slack
     # Office
-    libreoffice texlive.combined.scheme-full
+    libreoffice # texlive.combined.scheme-full
     evince poppler_utils taskwarrior vit
     # Stuff
     cmatrix xscreensaver

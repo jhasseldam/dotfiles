@@ -1,5 +1,5 @@
 {
-  userName = "kuznero";
-  userDescription = "Roman Kuznetsov";
-  userInitialPassword = "kuznero";
+  userName = "jvh";
+  userDescription = "Joachim Hasseldam";
+  userInitialPassword = "jvh";
 }
