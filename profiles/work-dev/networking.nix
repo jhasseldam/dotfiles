@@ -20,6 +20,8 @@ in
       # ];
       extraHosts = ''
         146.185.144.154 lipa.ms.mff.cuni.cz
+	127.0.0.1 postgres
+	127.0.0.1 rabbit
       '';
     };
     services.cntlm = {

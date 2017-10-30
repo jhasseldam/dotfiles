@@ -23,5 +23,10 @@ in
     unstable.veracrypt keepass
     # Data
     octaveFull graphviz gnuplot
+    # Look and feel
+    arc-icon-theme
+    arc-theme
+    gcc
+    netcat-gnu
   ];
 }

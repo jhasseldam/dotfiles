@@ -25,6 +25,7 @@
     source /etc/nixos/dotfiles/.bashrc
     source $HOME/.scripts/ssh-start.sh
     zz () { root=$("$HOME/.scripts/zz.sh" "$1") && cd "$root" }
+    alias prices='cd ~/Tfs/Tools/build/app && mono PriceSimulation.exe && cd -'
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
